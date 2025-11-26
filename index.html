@@ -5,46 +5,63 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Minimal Tailwind CSS landing page template" />
-    <title>Landing — Your Product</title>
-
-    <!-- Tailwind Play CDN (good for prototypes). Replace with a proper Tailwind build for production. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <title>nightFolio</title>
 
-    <!-- Optional: configure Tailwind via the CDN config -->
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        bg: '#030303',
-                        accent: '#f59e0b'
-                    }
-                }
-            }
-        }
-    </script>
-
-    <!-- Fallback font stack (replace with your preferred font or webfont) -->
     <style>
         :root {
             --max-w: 1600px;
+            --bg: #000000;
+        }
+
+        body {
+            font-family: "Saira Condensed", sans-serif;
+            color: #e7e7e7;
+        }
+
+        html,
+        h1.h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        strong {
+            font-family: "Saira Condensed", sans-serif !important;
+        }
+
+        text {
+            font-family: var(--font-saira);
+            letter-spacing: 6px;
+            font-variant-ligatures: none;
+            animation: rotate 25s linear infinite;
+            transform-origin: center center;
+        }
+
+        @keyframes rotate {
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
 
-<body class="antialiased bg-[var(--bg)] text-white dark:bg-slate-900 dark:text-slate-200">
+<body class="antialiased bg-[var(--bg)]">
 
     <!-- Page wrapper -->
     <div class="min-h-screen flex flex-col">
 
         <!-- NAV -->
         <header
-            class="hidden sticky top-0 z-40 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border-b border-slate-200 dark:border-slate-700">
+            class="hidden sticky top-0 z-40 bg-[#e7e7e7]/60 dark:bg-slate-900/60 backdrop-blur-md border-b border-slate-200 dark:border-slate-700">
             <div class="mx-auto w-full max-w-[var(--max-w)] px-6 py-4 flex items-center justify-between">
                 <a href="#" class="flex items-center gap-3">
                     <div
-                        class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold">
+                        class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center text-[#e7e7e7] font-bold">
                         YP</div>
                     <span class="font-semibold text-lg">YourProduct</span>
                 </a>
@@ -82,63 +99,254 @@
 
         <!-- HERO -->
         <main class="flex-1">
-            <section class="mx-auto w-full max-w-[var(--max-w)] px-6 py-2">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                    <div>
-                        <h1 class="text-4xl sm:text-9xl uppercase font-normal tracking-tighter">Brand & Freelancer
-                            Website
-                            Designer</h1>
+            <section class="px-6 py-4 relative">
+                <div
+                    class="bg-[url('assets/bg.jpeg')] bg-cover bg-center absolute top-0 left-0 w-full h-full -z-10 grayscale opacity-10">
+                </div>
+                <div class="mx-auto w-full max-w-[var(--max-w)] ">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                        <div>
+                            <h1 class="text-4xl sm:text-9xl uppercase font-normal">Brand & Freelancer
+                                Website
+                                Designer</h1>
 
-                        <div class="my-8 flex items-center flex-wrap gap-3">
+                            <div class="my-12 flex items-center flex-wrap gap-2">
 
-                            <a href="#github"
-                                class="uppercase text-2xl font-normal inline-flex items-center gap-2 dark:border-slate-700">github</a>
-                            <a href="#dribble"
-                                class="uppercase text-2xl font-normal inline-flex items-center gap-2 dark:border-slate-700">dribble</a>
-                            <a href="#linkedin"
-                                class="uppercase text-2xl font-normal inline-flex items-center gap-2 dark:border-slate-700">linkedin</a>
-                            <a href="/lestTalks.html"
-                                class="ml-10 uppercase text-4xl inline-flex items-center gap-3 bg-primary text-white font-normal shadow hover:opacity-95">lestTalks</a>
+                                <a href="#github"
+                                    class="uppercase text-3xl font-normal inline-flex items-center gap-0 dark:border-slate-700">github
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                        class="group-hover:-translate-y-7 group-hover:translate-x-7 size-8"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke="currentColor">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                                            <polyline points="7 7 17 7 17 17"></polyline>
+                                        </g>
+                                    </svg>
+                                </a>
+                                <a href="#dribble"
+                                    class="uppercase text-3xl font-normal inline-flex items-center gap-0 dark:border-slate-700">dribble
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                        class="group-hover:-translate-y-7 group-hover:translate-x-7 size-8"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke="currentColor">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                                            <polyline points="7 7 17 7 17 17"></polyline>
+                                        </g>
+                                    </svg></a>
+                                <a href="#linkedin"
+                                    class="uppercase text-3xl font-normal inline-flex items-center gap-0 dark:border-slate-700">linkedin
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                        class="group-hover:-translate-y-7 group-hover:translate-x-7 size-8"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke="currentColor">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                                            <polyline points="7 7 17 7 17 17"></polyline>
+                                        </g>
+                                    </svg></a>
+                                <button class="ml-12 group lg:text-5xl text-3xl uppercase flex gap-2 items-center "
+                                    name="portfolio">
+                                    my work
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                        class="size-9 group-hover:rotate-90 duration transition-all"
+                                        stroke="currentColor">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                                            <polyline points="12 5 19 12 12 19"></polyline>
+                                        </g>
+                                    </svg>
+
+                                </button>
+                            </div>
+                            <p class="text-2xl font-medium">Based in Mohali, India</p>
                         </div>
-                    </div>
+                        <div class="flex items-center justify-center relative">
+                            <!-- <img src="bg.jpeg" alt="Illustration"
+                                class="w-full h-auto rounded-lg shadow-lg dark:border-slate-800"> -->
+                            <button class="size-48 group circular-text absolute left-0 bottom-0 ">
+                                <div
+                                    class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 position-center size-[34px] z-10 stroke-[#e7e7e7] overflow-hidden">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="white"
+                                        class="size-[34px] group-hover:translate-y-0 -translate-y-8 z-10">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                                            <polyline points="19 12 12 19 5 12"></polyline>
+                                        </g>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="white"
+                                        class="absolute left-0 top-0 size-[34px] group-hover:translate-y-8">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                                            <polyline points="19 12 12 19 5 12"></polyline>
+                                        </g>
+                                    </svg>
+                                </div>
 
-                    <!-- Illustration / image placeholder -->
-                    <div class="flex items-center justify-center">
-                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGVzaWduJTIwd2Vic2l0ZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
-                            alt="Illustration" class="w-full h-auto rounded-lg shadow-lg dark:border-slate-800">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:lang="en"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500"
+                                    class="absolute left-[-34px] -top-8 size-64 rounded-full scale-up" stroke="none"
+                                    fill="white">
+                                    <defs>
+                                        <path id="textcircle" d="M250,400
+                    a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z" transform="rotate(12,250,250)"></path>
+                                    </defs>
+                                    <g class="textcircle">
+                                        <text textLength="940" class="fill-[var(--text-primary)] text-5xl uppercase">
+                                            <textPath xlink:href="#textcircle" aria-label="CSS &amp; SVG are awesome"
+                                                textLength="940">
+                                                hire me ✺ hire me ✺ hire me ✺ hire me ✺&nbsp;
+                                            </textPath>
+                                        </text>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- FEATURES -->
-            <section id="features" class="border-t border-slate-100 dark:border-slate-800">
-                <div class="mx-auto w-full max-w-[var(--max-w)] px-6 py-16">
-                    <h2 class="text-2xl font-semibold">Features</h2>
-                    <p class="mt-2 text-slate-500 dark:text-slate-400 max-w-2xl">What makes this product great — short
-                        bullets with small icons.</p>
+            <!-- Name -->
+            <section class="sticky top-0 bg-black z-10">
+                <div class="w-full">
+                    <h2
+                        class=" text-[18vw] tracking-tight leading-[0.8] border-y-8 flex justify-center items-center flex-nowrap font-bold uppercase">
+                        Unknown</h2>
+                </div>
+            </section>
 
-                    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div class="p-6 rounded-lg border border-slate-100 dark:border-slate-800">
-                            <h3 class="font-semibold">Fast to build</h3>
-                            <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">A small starting point with good
-                                defaults and accessibility in mind.</p>
+            <!-- Experience -->
+            <section class="sticky! top-0 bg-[var(--bg-secondary)] py-16 z-10">
+                <div class="achievements wrapper grid lg:grid-cols-3 md:grid-cols-1 gap-16">
+                    <div class="group md:space-y-0 space-y-16 flex flex-col items-center justify-between">
+                        <div class="space-y-4 text-center w-full">
+                            <h1 class="lg:text-8xl text-7xl font-medium">110+</h1>
+                            <h1 class="lg:text-4xl text-3xl uppercase">projects</h1>
                         </div>
+                    </div>
 
-                        <div class="p-6 rounded-lg border border-slate-100 dark:border-slate-800">
-                            <h3 class="font-semibold">Responsive</h3>
-                            <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">Looks great on phones, tablets
-                                and desktops.</p>
+                    <div class="group md:space-y-0 space-y-16 flex flex-col items-center justify-between">
+                        <div class="space-y-4 text-center w-full">
+                            <h1 class="lg:text-8xl text-7xl font-medium">5+</h1>
+                            <h1 class="lg:text-4xl text-3xl uppercase">years of experience</h1>
                         </div>
+                    </div>
 
-                        <div class="p-6 rounded-lg border border-slate-100 dark:border-slate-800">
-                            <h3 class="font-semibold">Customizable</h3>
-                            <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">Easily extend the design system
-                                to match your brand.</p>
+                    <div class="group md:space-y-0 space-y-16 flex flex-col items-center justify-between">
+                        <div class="space-y-4 text-center w-full">
+                            <h1 class="lg:text-8xl text-7xl font-medium">100+</h1>
+                            <h1 class="lg:text-4xl text-3xl uppercase">happy clients</h1>
                         </div>
                     </div>
                 </div>
             </section>
 
+            <!-- Portfolio  -->
+            <div class="space-y-8 max-w-[var(--max-w)] mx-auto px-6 py-16">
+                <!-- <hr class="separator"
+                    style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);"> -->
+                <div class="wrapper">
+                    <div class="flex lg:justify-between lg:flex-row flex-col gap-4 items-center">
+                        <p class="lg:w-[600px] lg:text-4xl text-lg text-query short-description">“I design sleek,
+                            high—performance web experience that help brands stand out.”</p>
+
+                        <!-- my work CTA -->
+                        <div class="magnetic"
+                            style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+                            <button
+                                class="custom-button nav-button text-primary flex gap-2 items-center group lg:text-5xl text-3xl uppercase"
+                                name="portfolio">my work
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                    class="size-9 group-hover:rotate-90 duration transition-all" stroke="currentColor">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                    </g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="grid md:gap-4 gap-2 grid-cols-3">
+                        <div class="md:space-y-4 space-y-2 ">
+                            <div class="relative h-80 overflow-hidden rounded-xl">
+                                <img src="assets/product_01.png" alt="Portfolio" 1="" class="object-cover">
+                            </div>
+                            <div class="relative h-80 overflow-hidden rounded-xl">
+                                <img src="assets/product_02.jpg" alt="Grocery" class="object-cover">
+                            </div>
+                            <div class="relative h-80 overflow-hidden rounded-xl">
+                                <img src="assets/product_03.jpg" alt="Admin" class="object-cover">
+                            </div>
+                        </div>
+                        <div class="md:space-y-4 space-y-2 ">
+                            <div class="relative h-80 overflow-hidden rounded-xl">
+                                <img src="assets/product_01.png" alt="Grocery" app="" class="object-cover">
+                            </div>
+                            <div class="relative h-80 overflow-hidden rounded-xl">
+                                <img src="assets/product_02.jpg" alt="Portfolio" 2="" class="object-cover">
+                            </div>
+                            <div class="relative h-80 overflow-hidden rounded-xl">
+                                <img src="assets/product_04.png" alt="Portfolio" 3="" class="object-cover">
+                            </div>
+                        </div>
+                        <div class="md:space-y-4 space-y-2 ">
+                            <div class="relative h-80 overflow-hidden rounded-xl">
+                                <img src="assets/product_01.png" alt="logo" 1="" class="object-cover">
+                            </div>
+                            <div class="relative h-80 overflow-hidden rounded-xl">
+                                <img src="assets/product_01.png" alt="Furniture" class="object-cover">
+                            </div>
+                            <div class="relative h-80 overflow-hidden rounded-xl">
+                                <img src="assets/product_03.jpg" alt="logo" 2="" class="object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About us -->
+            <section class="px-6 py-16">
+                <div class="mx-auto w-full max-w-[var(--max-w)] text-center">
+                    <h2 class="text-4xl font-semibold mb-6">About Me</h2>
+                    <p class="text-lg text-slate-500 dark:text-slate-400 max-w-3xl mx-auto">I am a passionate web
+                        designer with over 5 years of experience in creating stunning and user-friendly websites. My
+                        goal
+                        is to help businesses establish a strong online presence through innovative design and seamless
+                        user experiences.</p>
+                </div>
+                <!-- Image -->
+                <div class="mt-12 flex justify-center">
+                    <img src="assets/product_01.png" alt="About Me" class="w-full max-w-3xl rounded-lg shadow-lg">
+                </div>
+            </section>
             <!-- CTA -->
             <section class="bg-slate-50 dark:bg-slate-800">
                 <div
@@ -149,39 +357,10 @@
                             required.</p>
                     </div>
                     <div class="flex gap-3">
-                        <a href="#signup" class="px-5 py-3 rounded-md bg-primary text-white font-semibold">Start
+                        <a href="#signup" class="px-5 py-3 rounded-md bg-primary text-[#e7e7e7] font-semibold">Start
                             free</a>
                         <a href="#contact"
                             class="px-5 py-3 rounded-md border border-slate-200 dark:border-slate-700">Contact sales</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- PRICING -->
-            <section id="pricing" class="mx-auto w-full max-w-[var(--max-w)] px-6 py-16">
-                <h2 class="text-2xl font-semibold">Pricing</h2>
-                <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
-                    <div class="p-6 rounded-lg border border-slate-100 dark:border-slate-800">
-                        <div class="text-lg font-semibold">Free</div>
-                        <div class="mt-4 text-3xl font-extrabold">$0</div>
-                        <p class="mt-4 text-sm text-slate-500 dark:text-slate-400">Basic features for personal use.</p>
-                        <a class="mt-6 inline-block px-4 py-2 rounded-md border text-sm">Get started</a>
-                    </div>
-
-                    <div class="p-6 rounded-lg border border-slate-100 dark:border-slate-800 shadow-lg">
-                        <div class="text-lg font-semibold">Pro</div>
-                        <div class="mt-4 text-3xl font-extrabold">$12<span class="text-sm font-medium">/mo</span></div>
-                        <p class="mt-4 text-sm text-slate-500 dark:text-slate-400">For teams and professionals.</p>
-                        <a class="mt-6 inline-block px-4 py-2 rounded-md bg-primary text-white font-semibold">Buy
-                            now</a>
-                    </div>
-
-                    <div class="p-6 rounded-lg border border-slate-100 dark:border-slate-800">
-                        <div class="text-lg font-semibold">Enterprise</div>
-                        <div class="mt-4 text-3xl font-extrabold">Custom</div>
-                        <p class="mt-4 text-sm text-slate-500 dark:text-slate-400">Contact us for volume pricing and
-                            SSO.</p>
-                        <a class="mt-6 inline-block px-4 py-2 rounded-md border text-sm">Contact</a>
                     </div>
                 </div>
             </section>
