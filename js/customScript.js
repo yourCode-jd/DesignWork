@@ -178,3 +178,38 @@ gsap.utils.toArray(".gridImg").forEach((img) => {
     },
   });
 });
+
+// =========== About ============
+gsap.registerPlugin(ScrollTrigger);
+
+const heading = document.querySelector("h2.text-[250px]");
+
+// wrap text (JS only — HTML unchanged)
+const html = heading.innerHTML;
+
+heading.classList.add("text-reveal");
+
+heading.innerHTML = `
+  <span class="reveal-base">${html}</span>
+  <span class="reveal-fill-wrap">
+    <span class="reveal-fill">${html}</span>
+  </span>
+`;
+
+const fillWrap = heading.querySelector(".reveal-fill-wrap");
+
+// reveal animation
+gsap.fromTo(
+  fillWrap,
+  { scaleX: 0 },
+  {
+    scaleX: 1,
+    ease: "none",
+    scrollTrigger: {
+      trigger: heading,
+      start: "top 80%",
+      end: "top 20%",
+      scrub: true, // smooth + reverse
+    },
+  }
+);
