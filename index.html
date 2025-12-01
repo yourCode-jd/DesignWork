@@ -9,15 +9,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Saira+Condensed:wght@400;600;700;800&display=swap"
         rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>nightFolio</title>
 </head>
 
 <body class="antialiased bg-[var(--bg)]">
+    <!-- Loader -->
+    <div id="page-loader" class="fixed inset-0 z-[9999] flex items-center justify-center bg-black">
+        <svg class="w-16 h-16 text-white animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor"
+                d="M4 12a8 8 0 018-8v4l3-3-3-3v4a8 8 0 100 16v-4l-3 3 3 3v-4a8 8 0 01-8-8z"></path>
+        </svg>
+    </div>
+
 
     <!-- Page wrapper -->
     <div class="min-h-screen flex flex-col">
@@ -65,16 +77,19 @@
         </header>
 
         <!-- HERO -->
-        <main class="flex-1">
-            <section class="px-6 py-4 relative">
+        <main class="flex-1 hero-preloader">
+
+            <!-- Hero -->
+            <section class="px-6 relative ">
                 <div
                     class="bg-[url('assets/images/bg.jpeg')] bg-cover bg-center absolute top-0 left-0 w-full h-full -z-10 grayscale opacity-10">
                 </div>
                 <div class="mx-auto w-full max-w-[var(--max-w)] ">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                        <div>
+                    <div class="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-20 items-center h-screen">
+
+                        <div class="">
                             <h1 class="text-4xl sm:text-9xl uppercase font-normal">Brand & Freelancer
-                                Website
+                                Website <br>
                                 Designer</h1>
 
                             <div class="my-12 flex items-center flex-wrap gap-2">
@@ -140,11 +155,11 @@
 
                                 </button>
                             </div>
-                            <p class="text-2xl font-medium">Based in Mohali, India</p>
+                            <h2 class="text-2xl font-medium">Based in Mohali, India</h2>
                         </div>
                         <div class="flex items-center justify-center relative">
-                            <!-- <img src="bg.jpeg" alt="Illustration"
-                                class="w-full h-auto rounded-lg shadow-lg dark:border-slate-800"> -->
+                            <img src="/assets/images/html.svg" alt="Illustration"
+                                class="lg:w-[600px] w-96 mx-auto h-auto rounded-lg shadow-lg">
                             <button class="size-48 group circular-text absolute left-0 bottom-0 ">
                                 <div
                                     class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 position-center size-[34px] z-10 stroke-[#e7e7e7] overflow-hidden">
@@ -191,112 +206,104 @@
                                 </svg>
                             </button>
                         </div>
+
                     </div>
                 </div>
             </section>
 
             <!-- Name -->
-            <section class="px-6 sticky top-0 bg-black z-10">
+            <section class="Name px-6 bg-black z-10 overflow-hidden">
                 <div class="w-full">
                     <h2
-                        class=" text-[18vw] tracking-tight leading-[0.8] border-y-8 flex justify-center items-center flex-nowrap font-bold uppercase">
-                        Unknown</h2>
+                        class=" text-[16.5vw] tracking-tight leading-[1] flex justify-center items-center flex-nowrap font-bold uppercase">
+                        Jaspreet Singh</h2>
                 </div>
             </section>
 
             <!-- Experience -->
-            <section class="px-6 sticky! top-0 bg-[var(--bg-secondary)] py-16 z-10">
+            <section class="px-6 bg-[var(--bg-secondary)] py-16 z-10">
                 <div class="achievements wrapper grid lg:grid-cols-3 md:grid-cols-1 gap-16">
-                    <div class="group md:space-y-0 space-y-16 flex flex-col items-center justify-between">
-                        <div class="space-y-4 text-center w-full">
-                            <h1 class="lg:text-8xl text-7xl font-medium">110+</h1>
+
+                    <div class="group flex flex-col items-center">
+                        <div class="space-y-4 text-center">
+                            <h1 class="counter lg:text-8xl text-7xl font-medium" data-count="110">
+                                0+
+                            </h1>
                             <h1 class="lg:text-4xl text-3xl uppercase">projects</h1>
                         </div>
                     </div>
 
-                    <div class="group md:space-y-0 space-y-16 flex flex-col items-center justify-between">
-                        <div class="space-y-4 text-center w-full">
-                            <h1 class="lg:text-8xl text-7xl font-medium">5+</h1>
+                    <div class="group flex flex-col items-center">
+                        <div class="space-y-4 text-center">
+                            <h1 class="counter lg:text-8xl text-7xl font-medium" data-count="5">
+                                0+
+                            </h1>
                             <h1 class="lg:text-4xl text-3xl uppercase">years of experience</h1>
                         </div>
                     </div>
 
-                    <div class="group md:space-y-0 space-y-16 flex flex-col items-center justify-between">
-                        <div class="space-y-4 text-center w-full">
-                            <h1 class="lg:text-8xl text-7xl font-medium">100+</h1>
+                    <div class="group flex flex-col items-center">
+                        <div class="space-y-4 text-center">
+                            <h1 class="counter lg:text-8xl text-7xl font-medium" data-count="100">
+                                0+
+                            </h1>
                             <h1 class="lg:text-4xl text-3xl uppercase">happy clients</h1>
                         </div>
                     </div>
+
                 </div>
             </section>
 
-            <!-- Portfolio  -->
-            <div class="px-6 py-16">
-                <!-- <hr class="separator"
-                    style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);"> -->
-                <div class="space-y-8 max-w-[var(--max-w)] mx-auto ">
-                    <div class="wrapper">
-                        <div class="flex lg:justify-between lg:flex-row flex-col gap-4 items-center">
-                            <p class="lg:w-[600px] lg:text-4xl text-lg text-query short-description">“I design sleek,
-                                high—performance web experience that help brands stand out.”</p>
+            <!-- Portfolio Display  -->
+            <div class="px-6 py-16 work-section overflow-hidden">
+                <hr class="saprator mb-16">
+                <div class="wrapper">
+                    <div class="flex lg:justify-between flex-col lg:flex-row gap-4 items-center">
+                        <p class="workCTA lg:w-[700px] lg:text-3xl text-lg">
+                            “I design sleek, high—performance web experience that help brands stand out.”
+                        </p>
+                        <button class="workCTA ml-12 group lg:text-5xl text-3xl uppercase flex gap-2 items-center "
+                            name="portfolio">
+                            my work
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="size-9 group-hover:rotate-90 duration transition-all" stroke="currentColor">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                </g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </g>
+                            </svg>
 
-                            <!-- my work CTA -->
-                            <div class="magnetic"
-                                style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
-                                <button
-                                    class="custom-button nav-button text-primary flex gap-2 items-center group lg:text-5xl text-3xl uppercase"
-                                    name="portfolio">my work
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                                        class="size-9 group-hover:rotate-90 duration transition-all"
-                                        stroke="currentColor">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
-                                        </g>
-                                        <g id="SVGRepo_iconCarrier">
-                                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                                            <polyline points="12 5 19 12 12 19"></polyline>
-                                        </g>
-                                    </svg>
-                                </button>
-                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gridContent grid md:gap-4 gap-2 grid-cols-3 mt-16">
+                    <div class="md:space-y-4 space-y-2">
+                        <div class="relative h-96 overflow-hidden rounded-xl">
+                            <img src="/assets/images/product_01.png" class="gridImg object-cover">
+                        </div>
+                        <div class="relative h-96 overflow-hidden rounded-xl">
+                            <img src="/assets/images/product_02.jpg" class="gridImg object-cover">
                         </div>
                     </div>
-                    <div class="">
-                        <div class="grid md:gap-4 gap-2 grid-cols-3">
-                            <div class="md:space-y-4 space-y-2 ">
-                                <div class="relative h-80 overflow-hidden rounded-xl">
-                                    <img src="/assets/images/product_01.png" alt="Portfolio" 1="" class="object-cover">
-                                </div>
-                                <div class="relative h-80 overflow-hidden rounded-xl">
-                                    <img src="/assets/images/product_02.jpg" alt="Grocery" class="object-cover">
-                                </div>
-                                <div class="relative h-80 overflow-hidden rounded-xl">
-                                    <img src="/assets/images/product_03.jpg" alt="Admin" class="object-cover">
-                                </div>
-                            </div>
-                            <div class="md:space-y-4 space-y-2 ">
-                                <div class="relative h-80 overflow-hidden rounded-xl">
-                                    <img src="/assets/images/product_01.png" alt="Grocery" app="" class="object-cover">
-                                </div>
-                                <div class="relative h-80 overflow-hidden rounded-xl">
-                                    <img src="/assets/images/product_02.jpg" alt="Portfolio" 2="" class="object-cover">
-                                </div>
-                                <div class="relative h-80 overflow-hidden rounded-xl">
-                                    <img src="/assets/images/product_04.png" alt="Portfolio" 3="" class="object-cover">
-                                </div>
-                            </div>
-                            <div class="md:space-y-4 space-y-2 ">
-                                <div class="relative h-80 overflow-hidden rounded-xl">
-                                    <img src="/assets/images/product_01.png" alt="logo" 1="" class="object-cover">
-                                </div>
-                                <div class="relative h-80 overflow-hidden rounded-xl">
-                                    <img src="/assets/images/product_01.png" alt="Furniture" class="object-cover">
-                                </div>
-                                <div class="relative h-80 overflow-hidden rounded-xl">
-                                    <img src="/assets/images/product_03.jpg" alt="logo" 2="" class="object-cover">
-                                </div>
-                            </div>
+                    <div class="md:space-y-4 space-y-2">
+                        <div class="relative h-96 overflow-hidden rounded-xl">
+                            <img src="/assets/images/product_03.jpg" class="gridImg object-cover">
+                        </div>
+                        <div class="relative h-96 overflow-hidden rounded-xl">
+                            <img src="/assets/images/product_04.png" class="gridImg object-cover">
+                        </div>
+                    </div>
+                    <div class="md:space-y-4 space-y-2">
+                        <div class="relative h-96 overflow-hidden rounded-xl">
+                            <img src="/assets/images/product_01.png" class="gridImg object-cover">
+                        </div>
+                        <div class="relative h-96 overflow-hidden rounded-xl">
+                            <img src="/assets/images/product_02.jpg" class="gridImg object-cover">
                         </div>
                     </div>
                 </div>
@@ -380,9 +387,9 @@
                                         <div class="flex items-center gap-6">
                                             <span
                                                 class="text-neutral-400 text-3xl group-hover:text-neutral-400">01</span>
-                                            <span class="text-white text-3xl tracking-wider group-hover:text-black">
+                                            <h1 class="text-white text-3xl tracking-wider group-hover:text-black">
                                                 RESPONSIVE DESIGN
-                                            </span>
+                                            </h1>
                                         </div>
                                         <span class="text-white text-3xl group-hover:text-neutral-400">100%</span>
                                     </div>
@@ -405,9 +412,9 @@
                                         <div class="flex items-center gap-6">
                                             <span
                                                 class="text-neutral-400 text-3xl group-hover:text-neutral-400">02</span>
-                                            <span class="text-white text-3xl tracking-wider group-hover:text-black">
+                                            <h1 class="text-white text-3xl tracking-wider group-hover:text-black">
                                                 CODING
-                                            </span>
+                                            </h1>
                                         </div>
                                         <span class="text-white text-3xl group-hover:text-neutral-400">90%</span>
                                     </div>
@@ -430,9 +437,9 @@
                                         <div class="flex items-center gap-6">
                                             <span
                                                 class="text-neutral-400 text-3xl group-hover:text-neutral-400">03</span>
-                                            <span class="text-white text-3xl tracking-wider group-hover:text-black">
+                                            <h1 class="text-white text-3xl tracking-wider group-hover:text-black">
                                                 PROBLEM SOLVING
-                                            </span>
+                                            </h1>
                                         </div>
                                         <span class="text-white text-3xl group-hover:text-neutral-400">88%</span>
                                     </div>
@@ -455,9 +462,10 @@
                                         <div class="flex items-center gap-6">
                                             <span
                                                 class="text-neutral-400 text-3xl group-hover:text-neutral-400">03</span>
-                                            <span class="text-white text-3xl tracking-wider group-hover:text-black">
+                                            <h1
+                                                class="text-white text-3xl uppercase tracking-wider group-hover:text-black">
                                                 Communication
-                                            </span>
+                                            </h1>
                                         </div>
                                         <span class="text-white text-3xl group-hover:text-neutral-400">88%</span>
                                     </div>
@@ -480,9 +488,10 @@
                                         <div class="flex items-center gap-6">
                                             <span
                                                 class="text-neutral-400 text-3xl group-hover:text-neutral-400">03</span>
-                                            <span class="text-white text-3xl tracking-wider group-hover:text-black">
+                                            <h1
+                                                class="text-white uppercase text-3xl tracking-wider group-hover:text-black">
                                                 Project Management
-                                            </span>
+                                            </h1>
                                         </div>
                                         <span class="text-white text-3xl group-hover:text-neutral-400">88%</span>
                                     </div>
@@ -1155,77 +1164,68 @@
             <div
                 class="w-full bg-[url('assets/images/bg.jpeg')] bg-cover bg-center bg-fixed h-screen flex flex-col items-center justify-center relative">
                 <div
-                    class="w-full h-full absolute left-0 top-0 backdrop-blur-[2px] bg-gradient-to-t from-[#000000] via-[#000000] to-transparent">
+                    class="w-full h-full absolute left-0 top-0 backdrop-blur-[2px] bg-[radial-gradient(circle,rgba(255,255,255,0)_0%,rgba(0,0,0,1)_65%)]">
                 </div>
-                <div class="px-6 py-6 text-sm text-black">
-                    © <span id="year"></span> YourCompany — All rights reserved.
-                </div>
-                <div class="my-12 flex items-center flex-wrap gap-2">
+                <div class="z-10 w-full">
+                    <div class="text-2xl text-center">
+                        © <span id="year"></span> YourCompany — All rights reserved.
+                    </div>
+                    <div class="my-12 flex items-center justify-center flex-wrap gap-2">
 
-                    <a href="#github"
-                        class="uppercase text-3xl font-normal inline-flex items-center gap-0 dark:border-slate-700">github
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                            class="group-hover:-translate-y-7 group-hover:translate-x-7 size-8" stroke-width="1.5"
-                            stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
-                            </g>
-                            <g id="SVGRepo_iconCarrier">
-                                <line x1="7" y1="17" x2="17" y2="7"></line>
-                                <polyline points="7 7 17 7 17 17"></polyline>
-                            </g>
-                        </svg>
-                    </a>
-                    <a href="#dribble"
-                        class="uppercase text-3xl font-normal inline-flex items-center gap-0 dark:border-slate-700">dribble
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                            class="group-hover:-translate-y-7 group-hover:translate-x-7 size-8" stroke-width="1.5"
-                            stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
-                            </g>
-                            <g id="SVGRepo_iconCarrier">
-                                <line x1="7" y1="17" x2="17" y2="7"></line>
-                                <polyline points="7 7 17 7 17 17"></polyline>
-                            </g>
-                        </svg></a>
-                    <a href="#linkedin"
-                        class="uppercase text-3xl font-normal inline-flex items-center gap-0 dark:border-slate-700">linkedin
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                            class="group-hover:-translate-y-7 group-hover:translate-x-7 size-8" stroke-width="1.5"
-                            stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
-                            </g>
-                            <g id="SVGRepo_iconCarrier">
-                                <line x1="7" y1="17" x2="17" y2="7"></line>
-                                <polyline points="7 7 17 7 17 17"></polyline>
-                            </g>
-                        </svg></a>
-                    <button class="ml-12 group lg:text-5xl text-3xl uppercase flex gap-2 items-center "
-                        name="portfolio">
-                        my work
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5"
-                            stroke-linecap="round" stroke-linejoin="round"
-                            class="size-9 group-hover:rotate-90 duration transition-all" stroke="currentColor">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
-                            </g>
-                            <g id="SVGRepo_iconCarrier">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                <polyline points="12 5 19 12 12 19"></polyline>
-                            </g>
-                        </svg>
-
-                    </button>
+                        <a href="#github"
+                            class="uppercase text-3xl font-normal inline-flex items-center gap-0 dark:border-slate-700">github
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                class="group-hover:-translate-y-7 group-hover:translate-x-7 size-8" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                </g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="#dribble"
+                            class="uppercase text-3xl font-normal inline-flex items-center gap-0 dark:border-slate-700">dribble
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                class="group-hover:-translate-y-7 group-hover:translate-x-7 size-8" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                </g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </g>
+                            </svg></a>
+                        <a href="#linkedin"
+                            class="uppercase text-3xl font-normal inline-flex items-center gap-0 dark:border-slate-700">linkedin
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                class="group-hover:-translate-y-7 group-hover:translate-x-7 size-8" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                </g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </g>
+                            </svg></a>
+                    </div>
+                    <!-- Name -->
+                    <h2
+                        class=" text-[18vw] tracking-tight leading-[0.8] flex justify-center items-center flex-nowrap font-bold uppercase">
+                        Unknown
+                    </h2>
                 </div>
             </div>
         </main>
     </div>
 
     <!-- scrollTrigger -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="js/customScript.js"></script>
 </body>
 

@@ -1,23 +1,28 @@
 :root {
     --max-w: 1600px;
     --bg: #000000;
-    --font-saira: "Saira Condensed", sans-serif;
-    --font-poppins: "Poppins", sans-serif;
+    --font-body: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-heading: 'Saira Condensed', system-ui, sans-serif;
 }
 
 body {
-    font-family: "Saira Condensed", sans-serif;
+    font-family: var(--font-body);
     color: #e7e7e7;
 }
 
-html,
-h1.h2,
+h1,
+h2,
 h3,
 h4,
 h5,
 h6,
-strong {
-    font-family: "Saira Condensed", sans-serif !important;
+strong,
+a {
+    font-family: var(--font-heading);
+}
+
+button {
+    font-family: var(--font-heading) !important;
 }
 
 text {
@@ -47,4 +52,30 @@ text {
     100% {
         transform: rotate(360deg);
     }
+}
+
+/* hide hero text until JS runs */
+.hero-preloader {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ensure hr scales from left and looks clean */
+hr.mb-16 {
+    transform-origin: center center;
+    width: 100%;
+    height: 2px;
+    /* adjust thickness */
+    background: currentColor;
+    /* inherits color */
+}
+
+/* make sure images can animate inside container */
+.relative img {
+    transform-origin: center center;
+    will-change: transform, opacity;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

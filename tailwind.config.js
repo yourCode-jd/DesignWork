@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        saira: ["Saira Condensed", "sans-serif"],
-        poppins: ["Poppins", "sans-serif"],
+        body: ["Poppins", "system-ui", "sans-serif"],
+        heading: ["Saira Condensed", "system-ui", "sans-serif"],
       },
     },
   },
