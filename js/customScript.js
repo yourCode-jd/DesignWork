@@ -171,10 +171,10 @@ gsap.utils.toArray(".gridImg").forEach((img) => {
     ease: "power2.out",
     scrollTrigger: {
       trigger: img,
-      start: "top 95%", // image enters viewport
-      end: "bottom 20%", // image exits viewport
+      start: "top 70%", // image enters viewport
+      end: "bottom 50%", // image exits viewport
       scrub: true,
-      // markers: true
+      // markers: true,
     },
   });
 });
@@ -182,34 +182,61 @@ gsap.utils.toArray(".gridImg").forEach((img) => {
 // =========== About ============
 gsap.registerPlugin(ScrollTrigger);
 
-const heading = document.querySelector("h2.text-[250px]");
+gsap.utils.toArray(".text-reveal").forEach((section) => {
+  const texts = section.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span");
 
-// wrap text (JS only — HTML unchanged)
-const html = heading.innerHTML;
+  texts.forEach((el) => {
+    gsap.set(el, { backgroundSize: "0% 100%" });
 
-heading.classList.add("text-reveal");
+    gsap.to(el, {
+      backgroundSize: "100% 100%",
+      ease: "none",
+      scrollTrigger: {
+        trigger: section,
+        start: "top center",
+        end: "bottom 50%",
+        scrub: true,
+        // markers: true,
+      },
+    });
+  });
+});
 
-heading.innerHTML = `
-  <span class="reveal-base">${html}</span>
-  <span class="reveal-fill-wrap">
-    <span class="reveal-fill">${html}</span>
-  </span>
-`;
+// ========== Portfolio ===========
+gsap.registerPlugin(ScrollTrigger);
 
-const fillWrap = heading.querySelector(".reveal-fill-wrap");
-
-// reveal animation
-gsap.fromTo(
-  fillWrap,
-  { scaleX: 0 },
-  {
-    scaleX: 1,
-    ease: "none",
-    scrollTrigger: {
-      trigger: heading,
-      start: "top 80%",
-      end: "top 20%",
-      scrub: true, // smooth + reverse
-    },
-  }
+const projectRows = gsap.utils.toArray(
+  ".portfolio-items > div" // each project grid
 );
+
+projectRows.forEach((row) => {
+  const imageWrapper = row.querySelector(".relative");
+
+  if (!imageWrapper) return;
+
+  // Initial state (subtle, safe)
+  gsap.set(imageWrapper, {
+    scale: 2,
+    opacity: 0,
+    y: 60,
+    transformOrigin: "center center",
+    willChange: "transform, opacity",
+  });
+
+  // Scroll animation
+  gsap.to(imageWrapper, {
+    scale: 1,
+    opacity: 1,
+    y: 0,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: row,
+      start: "top 75%",
+      end: "top 45%",
+      scrub: 1,
+      invalidateOnRefresh: true,
+
+      // markers: true
+    },
+  });
+});
