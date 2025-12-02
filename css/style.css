@@ -5,6 +5,23 @@
     --font-heading: 'Saira Condensed', system-ui, sans-serif;
 }
 
+html.lenis {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+[data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+
 body {
     font-family: var(--font-body);
     color: #e7e7e7;
@@ -109,4 +126,42 @@ text {
     white-space: pre-line;
 }
 
-/* ========== Portfolio ============= */
+/* ========== Lets Talk ============= */
+
+.mask-x {
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
+}
+
+.outlinedText {
+    color: #000000;
+    text-shadow: 1px 1px 0 #e7e7e7, -1px 1px 0 #e7e7e7, 1px -1px 0 #e7e7e7, -1px -1px 0 #e7e7e7;
+}
+
+.animate-scroll-x {
+    animation: auto linear 0s infinite normal none running scrollX;
+}
+
+.rotation {
+    animation: 6s linear 0s infinite normal none running rotation;
+}
+
+@keyframes rotation {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scrollX {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
