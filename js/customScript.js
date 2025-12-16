@@ -202,41 +202,32 @@ gsap.utils.toArray(".text-reveal").forEach((section) => {
   });
 });
 
-// ========== Portfolio ===========
+// =========== Portfolio ===========
 gsap.registerPlugin(ScrollTrigger);
 
-const projectRows = gsap.utils.toArray(
-  ".portfolio-items > div" // each project grid
-);
+const cards = gsap.utils.toArray(".featureWrapper");
 
-projectRows.forEach((row) => {
-  const imageWrapper = row.querySelector(".relative");
-
-  if (!imageWrapper) return;
-
-  // Initial state (subtle, safe)
-  gsap.set(imageWrapper, {
-    scale: 2,
+cards.forEach((card) => {
+  gsap.set(card, {
     opacity: 0,
-    y: 60,
+    y: 40,
+    scale: 1.08,
     transformOrigin: "center center",
     willChange: "transform, opacity",
   });
 
-  // Scroll animation
-  gsap.to(imageWrapper, {
-    scale: 1,
+  gsap.to(card, {
     opacity: 1,
     y: 0,
-    ease: "power2.out",
+    scale: 1,
+    ease: "power3.out",
     scrollTrigger: {
-      trigger: row,
-      start: "top 75%",
-      end: "top 45%",
-      scrub: 1,
+      trigger: card,
+      start: "top 80%",
+      end: "top 55%",
+      scrub: true,
       invalidateOnRefresh: true,
-
-      // markers: true
+      // markers: true,
     },
   });
 });
