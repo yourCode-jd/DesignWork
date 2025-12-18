@@ -5,26 +5,15 @@
     --font-heading: 'Saira Condensed', system-ui, sans-serif;
 }
 
-html.lenis {
-    height: auto;
-}
-
-.lenis.lenis-smooth {
-    scroll-behavior: auto;
-}
-
-.lenis.lenis-stopped {
-    overflow: hidden;
-}
-
-[data-lenis-prevent] {
-    overscroll-behavior: contain;
+html {
+    scroll-behavior: smooth;
 }
 
 
 body {
     font-family: var(--font-body);
     color: #e7e7e7;
+    cursor: none;
 }
 
 h1,
@@ -163,5 +152,37 @@ text {
 
     100% {
         transform: translateX(0px);
+    }
+}
+
+/* ======= Custom cursor ========= */
+
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease-out, width 0.15s ease-out, height 0.15s ease-out;
+    mix-blend-mode: difference;
+}
+
+.cursor-hover {
+    width: 50px;
+    height: 50px;
+}
+
+@media (hover: none) {
+    body {
+        cursor: auto;
+    }
+
+    .custom-cursor {
+        display: none;
     }
 }

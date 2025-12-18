@@ -1,8 +1,55 @@
 // ======================
+// GSAP Plugins (register once)
+// ======================
+gsap.registerPlugin(ScrollTrigger);
+
+// ======================
+// Custom cursor (optimized & relaxed)
+// ======================
+const cursor = document.querySelector(".custom-cursor");
+
+if (cursor && window.innerWidth > 1024) {
+  let mouseX = 0,
+    mouseY = 0,
+    cursorX = 0,
+    cursorY = 0,
+    lastTime = 0;
+
+  document.addEventListener("mousemove", (e) => {
+    const now = performance.now();
+    if (now - lastTime < 16) return; // ~60fps
+    lastTime = now;
+
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  function animateCursor() {
+    cursorX += (mouseX - cursorX) * 0.12;
+    cursorY += (mouseY - cursorY) * 0.12;
+
+    cursor.style.transform = `translate(${cursorX}px, ${cursorY}px) translate(-50%, -50%)`;
+    requestAnimationFrame(animateCursor);
+  }
+
+  animateCursor();
+
+  document.querySelectorAll("a, button").forEach((el) => {
+    el.addEventListener("mouseenter", () =>
+      cursor.classList.add("cursor-hover")
+    );
+    el.addEventListener("mouseleave", () =>
+      cursor.classList.remove("cursor-hover")
+    );
+  });
+}
+
+// ======================
 // Mobile nav toggle
 // ======================
 const btn = document.getElementById("mobileNavBtn");
 const menu = document.getElementById("mobileNav");
+
 btn &&
   btn.addEventListener("click", () => {
     menu.classList.toggle("hidden");
@@ -18,23 +65,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const hero = document.querySelector(".hero-preloader");
 
   window.onload = () => {
-    const tl = gsap.timeline({ defaults: { ease: "power3.inOut" } });
+    requestIdleCallback(() => {
+      const tl = gsap.timeline({ defaults: { ease: "power3.inOut" } });
 
-    // Step 1: Animate loader out (fade + scale)
-    tl.to(loader, {
-      opacity: 0,
-      scale: 0.8,
-      duration: 0.8,
-    })
-
-      // Step 2: Remove loader from DOM
-      .add(() => loader.remove())
-
-      // Step 3: Reveal hero section before animation
-      .add(() => gsap.set(hero, { opacity: 1, pointerEvents: "auto" }))
-
-      // Step 4: Start hero animation
-      .add(initHeroAnimation);
+      tl.to(loader, {
+        opacity: 0,
+        scale: 0.8,
+        duration: 0.8,
+      })
+        .add(() => loader && loader.remove())
+        .add(() => gsap.set(hero, { opacity: 1, pointerEvents: "auto" }))
+        .add(initHeroAnimation);
+    });
   };
 });
 
@@ -42,7 +84,10 @@ document.addEventListener("DOMContentLoaded", () => {
 // Hero animation function
 // ======================
 function initHeroAnimation() {
-  const hero = document.querySelector("section");
+  const hero =
+    document.querySelector(".hero-preloader") ||
+    document.querySelector("section");
+
   if (!hero) return;
 
   const title = hero.querySelector("h1");
@@ -50,31 +95,22 @@ function initHeroAnimation() {
   const location = hero.querySelector("h2");
   const image = hero.querySelector("img");
 
-  // Initial states
   gsap.set([title, ctas, location, image], { opacity: 0, y: 20 });
 
   const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-  // Title
   tl.to(title, { y: 0, opacity: 1, duration: 1.2 })
-
-    // CTA links/buttons, staggered slightly after title
     .to(ctas, { y: 0, opacity: 1, duration: 1, stagger: 0.1 }, "-=0.5")
-
-    // Location text, overlaps slightly with last CTA
     .to(location, { y: 0, opacity: 1, duration: 0.8 }, "-=0.6")
-
-    // Hero image, appears last smoothly
     .to(image, { scale: 1, y: 0, opacity: 1, duration: 1 }, "-=0.7");
 }
 
-// Animate name
+// ======================
+// Name animation
+// ======================
 gsap.fromTo(
-  ".Name h2",
-  {
-    scale: 2,
-    color: "#000000",
-  },
+  ".Name h2,.Name p",
+  { scale: 2, color: "#000000" },
   {
     scale: 1,
     color: "#ffffff",
@@ -87,8 +123,9 @@ gsap.fromTo(
   }
 );
 
-// ========== Counter ===========
-
+// ======================
+// Counter
+// ======================
 gsap.utils.toArray(".counter").forEach((counter) => {
   const target = +counter.dataset.count;
 
@@ -100,15 +137,11 @@ gsap.utils.toArray(".counter").forEach((counter) => {
       duration: 1.8,
       ease: "power1.out",
       snap: { innerText: 1 },
-
       scrollTrigger: {
         trigger: counter,
         start: "top 80%",
-        end: "top 20%",
-        scrub: true,
-        toggleActions: "play reverse play reverse",
+        once: true,
       },
-
       onUpdate() {
         counter.innerText = Math.floor(counter.innerText) + "+";
       },
@@ -116,22 +149,21 @@ gsap.utils.toArray(".counter").forEach((counter) => {
   );
 });
 
-// ======= Grid section ==========
-gsap.registerPlugin(ScrollTrigger);
-
+// ======================
+// Work / Grid Section
+// ======================
 const section = document.querySelector(".work-section");
 
-// ---------------- Separator animation (full window)
+// Separator
 gsap.from(".saprator", {
   scaleX: 0,
   transformOrigin: "center center",
   ease: "power2.out",
   scrollTrigger: {
     trigger: section,
-    start: "top bottom", // section enters bottom of viewport
-    end: "bottom top", // section leaves top of viewport
+    start: "top bottom",
+    end: "bottom top",
     scrub: true,
-    // markers: true
   },
 });
 
@@ -141,15 +173,13 @@ gsap.from(".gridContent", {
   ease: "power2.out",
   scrollTrigger: {
     trigger: section,
-    start: "top bottom", // section enters bottom of viewport
-    end: "bottom top", // section leaves top of viewport
+    start: "top bottom",
+    end: "bottom top",
     scrub: true,
-    // markers: true
   },
 });
 
-// ---------------- Text + Button animation
-gsap.from(section.querySelectorAll(".workCTA"), {
+gsap.from(section?.querySelectorAll(".workCTA"), {
   y: 60,
   opacity: 0,
   stagger: 0.15,
@@ -159,11 +189,10 @@ gsap.from(section.querySelectorAll(".workCTA"), {
     start: "top bottom",
     end: "bottom top",
     scrub: true,
-    // markers: true
   },
 });
 
-// ---------------- Images animation
+// Images
 gsap.utils.toArray(".gridImg").forEach((img) => {
   gsap.from(img, {
     scale: 1.2,
@@ -171,17 +200,16 @@ gsap.utils.toArray(".gridImg").forEach((img) => {
     ease: "power2.out",
     scrollTrigger: {
       trigger: img,
-      start: "top 70%", // image enters viewport
-      end: "bottom 50%", // image exits viewport
+      start: "top 70%",
+      end: "bottom 50%",
       scrub: true,
-      // markers: true,
     },
   });
 });
 
-// =========== About ============
-gsap.registerPlugin(ScrollTrigger);
-
+// ======================
+// About text reveal
+// ======================
 gsap.utils.toArray(".text-reveal").forEach((section) => {
   const texts = section.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span");
 
@@ -196,23 +224,19 @@ gsap.utils.toArray(".text-reveal").forEach((section) => {
         start: "top center",
         end: "bottom 50%",
         scrub: true,
-        // markers: true,
       },
     });
   });
 });
 
-// =========== Portfolio ===========
-gsap.registerPlugin(ScrollTrigger);
-
-const cards = gsap.utils.toArray(".featureWrapper");
-
-cards.forEach((card) => {
+// ======================
+// Portfolio cards
+// ======================
+gsap.utils.toArray(".featureWrapper").forEach((card) => {
   gsap.set(card, {
     opacity: 0,
     y: 40,
     scale: 1.08,
-    transformOrigin: "center center",
     willChange: "transform, opacity",
   });
 
@@ -226,10 +250,71 @@ cards.forEach((card) => {
       start: "top 80%",
       end: "top 55%",
       scrub: true,
-      invalidateOnRefresh: true,
-      // markers: true,
+    },
+    onComplete: () => {
+      gsap.set(card, { willChange: "auto" });
     },
   });
 });
 
-// =========== Contact ===========
+// ======================
+// Contact form (Formspree)
+// ======================
+const form = document.getElementById("contact-form");
+
+form &&
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = form.querySelector('[name="name"]');
+    const email = form.querySelector('[name="email"]');
+    const message = form.querySelector('[name="message"]');
+
+    const nameError = form.querySelector(".name-error");
+    const emailError = form.querySelector(".email-error");
+    const messageError = form.querySelector(".message-error");
+
+    let isValid = true;
+
+    nameError.textContent = "";
+    emailError.textContent = "";
+    messageError.textContent = "";
+
+    if (!name.value.trim()) {
+      nameError.textContent = "Name is required";
+      isValid = false;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email.value.trim()) {
+      emailError.textContent = "Email is required";
+      isValid = false;
+    } else if (!emailPattern.test(email.value)) {
+      emailError.textContent = "Enter a valid email";
+      isValid = false;
+    }
+
+    if (!message.value.trim()) {
+      messageError.textContent = "Message is required";
+      isValid = false;
+    }
+
+    if (!isValid) return;
+
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { Accept: "application/json" },
+    })
+      .then((res) => {
+        if (res.ok) {
+          form.reset();
+          console.log("Message sent successfully");
+        } else {
+          console.log("Form submission failed");
+        }
+      })
+      .catch(() => {
+        console.log("Network error");
+      });
+  });
