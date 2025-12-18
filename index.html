@@ -5,19 +5,28 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Minimal Tailwind CSS landing page template" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+
+    <!-- Preconnect for faster font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <!-- Preload Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Saira+Condensed:wght@400;600;700;800&display=swap"
         rel="stylesheet">
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
-    <title>nightFolio</title>
+
+    <title>PxFixer JD</title>
 </head>
+
 
 <body class="antialiased bg-[var(--bg)]">
     <!-- Loader -->
@@ -81,11 +90,11 @@
 
             <!-- Hero -->
             <section class="px-6 relative ">
-                <div
+                <!-- <div
                     class="bg-[url('assets/images/bg.jpeg')] bg-cover bg-center absolute top-0 left-0 w-full h-full -z-10 grayscale opacity-10">
-                </div>
+                </div> -->
                 <div class="mx-auto w-full max-w-[var(--max-w)] ">
-                    <div class="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-20 items-center h-screen">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center h-screen">
 
                         <div class="">
                             <div
@@ -145,10 +154,10 @@
                             <h2 class="text-xl font-medium hover:tracking-wider transition-all">Based in Mohali, India
                             </h2>
                         </div>
-                        <div class="flex items-center justify-center relative">
-                            <img src="assets/images/html.svg" alt="Illustration" loading="eager" fetchpriority="high"
-                                class="lg:w-[600px] w-96 mx-auto h-auto rounded-lg shadow-lg">
-                            <div class="size-48 group circular-text absolute left-0 bottom-0">
+                        <div class="flex items-center justify-center relative w-[500px] max-w-full mx-auto">
+                            <img src="assets/images/hero.webp" alt="Illustration" loading="eager" fetchpriority="high"
+                                class="mx-auto h-auto rounded-lg shadow-lg">
+                            <div class="size-48 group circular-text absolute -left-10 bottom-0">
                                 <div
                                     class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 position-center size-[34px] z-10 stroke-[#e7e7e7] overflow-hidden">
 
@@ -227,7 +236,7 @@
                                         visual
                                         hierarchy.</p>
 
-                                    <a href="#javascript:void(0)"
+                                    <a href="#"
                                         class="group flex capitalize items-center text-2xl rounded-full relative transition-transform duration-300 ease-out mt-4">
                                         <span class="relative">
                                             View Project
@@ -255,7 +264,7 @@
                                         and
                                         visual
                                         hierarchy.</p>
-                                    <a href="#javascript:void(0)"
+                                    <a href="#"
                                         class="group flex capitalize items-center text-2xl rounded-full relative transition-transform duration-300 ease-out mt-4">
                                         <span class="relative">
                                             View Project
@@ -527,56 +536,56 @@
                                 <li class="w-32">
                                     <div
                                         class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center p-10">
-                                        <img src="assets/images/html.svg" alt="html">
+                                        <img src="assets/images/html.svg" alt="html wrapper" loading="lazy">
                                     </div>
                                     <p class="text-white text-base uppercase mt-3 text-center">Html</p>
                                 </li>
                                 <li class="w-32">
                                     <div
                                         class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center p-10">
-                                        <img src="assets/images/css.svg" alt="css">
+                                        <img src="assets/images/css.svg" alt="css wrapper" loading="lazy">
                                     </div>
                                     <p class="text-white text-base uppercase mt-3 text-center">css</p>
                                 </li>
                                 <li class="w-32">
                                     <div
                                         class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center p-10">
-                                        <img src="assets/images/js.svg" alt="js">
+                                        <img src="assets/images/js.svg" alt="js wrapper" loading="lazy">
                                     </div>
                                     <p class="text-white text-base uppercase mt-3 text-center">js</p>
                                 </li>
                                 <li class="w-32">
                                     <div
                                         class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center p-10">
-                                        <img src="assets/images/tailwind.svg" alt="tailwind">
+                                        <img src="assets/images/tailwind.svg" alt="tailwind wrapper" loading="lazy">
                                     </div>
                                     <p class="text-white text-base uppercase mt-3 text-center">tailwind</p>
                                 </li>
                                 <li class="w-32">
                                     <div
                                         class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center p-10">
-                                        <img src="assets/images/ts.svg" alt="ts">
+                                        <img src="assets/images/ts.svg" alt="ts wrapper" loading="lazy">
                                     </div>
                                     <p class="text-white text-base uppercase mt-3 text-center">ts</p>
                                 </li>
                                 <li class="w-32">
                                     <div
                                         class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center p-10">
-                                        <img src="assets/images/reactjs.svg" alt="reactjs">
+                                        <img src="assets/images/reactjs.svg" alt="reactjs wrapper" loading="lazy">
                                     </div>
                                     <p class="text-white text-base uppercase mt-3 text-center">reactjs</p>
                                 </li>
                                 <li class="w-32">
                                     <div
                                         class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center p-10">
-                                        <img src="assets/images/nextjs.svg" alt="nextjs">
+                                        <img src="assets/images/nextjs.svg" alt="nextjs wrapper" loading="lazy">
                                     </div>
                                     <p class="text-white text-base uppercase mt-3 text-center">nextjs</p>
                                 </li>
                                 <li class="w-32">
                                     <div
                                         class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center p-10">
-                                        <img src="assets/images/figma.svg" alt="figma">
+                                        <img src="assets/images/figma.svg" alt="figma wrapper" loading="lazy">
                                     </div>
                                     <p class="text-white text-base uppercase mt-3 text-center">figma</p>
                                 </li>
@@ -726,7 +735,7 @@
                                     class="relative group mx-auto flex justify-center items-center border border-[#232323] rounded-3xl">
                                     <div
                                         class=" grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col p-16">
-                                        <img src="assets/images/services1.png" alt="services1">
+                                        <img src="assets/images/services1.png" alt="services1" loading="lazy">
                                         <h1 class="text-4xl uppercase mb-2">Website Design</h1>
                                         <p class="text-base">Modern, responsive layouts</p>
                                     </div>
@@ -735,7 +744,7 @@
                                     class="relative group mx-auto flex justify-center items-center border border-[#232323] rounded-3xl">
                                     <div
                                         class=" grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col p-16">
-                                        <img src="assets/images/services2.png" alt="services2">
+                                        <img src="assets/images/services2.png" alt="services2" loading="lazy">
                                         <h1 class="text-4xl uppercase mb-2">Landing Pages</h1>
                                         <p class="text-base">Conversion-focused pages</p>
                                     </div>
@@ -744,7 +753,7 @@
                                     class="relative group mx-auto flex justify-center items-center border border-[#232323] rounded-3xl">
                                     <div
                                         class=" grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col p-16">
-                                        <img src="assets/images/services3.png" alt="services3">
+                                        <img src="assets/images/services3.png" alt="services3" loading="lazy">
                                         <h1 class="text-4xl uppercase mb-2">UI/UX Design</h1>
                                         <p class="text-base">User-centered interfaces</p>
                                     </div>
@@ -753,7 +762,7 @@
                                     class="relative group mx-auto flex justify-center items-center border border-[#232323] rounded-3xl">
                                     <div
                                         class=" grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col p-16">
-                                        <img src="assets/images/services4.png" alt="services4">
+                                        <img src="assets/images/services4.png" alt="services4" loading="lazy">
                                         <h1 class="text-4xl uppercase mb-2">Design Systems</h1>
                                         <p class="text-base">Scalable UI foundations</p>
                                     </div>
@@ -762,7 +771,7 @@
                                     class="relative group mx-auto flex justify-center items-center border border-[#232323] rounded-3xl">
                                     <div
                                         class=" grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col p-16">
-                                        <img src="assets/images/services5.png" alt="services5">
+                                        <img src="assets/images/services5.png" alt="services5" loading="lazy">
                                         <h1 class="text-4xl uppercase mb-2">Redesigns</h1>
                                         <p class="text-base">Usability & visual upgrades</p>
                                     </div>
@@ -771,7 +780,7 @@
                                     class="relative group mx-auto flex justify-center items-center border border-[#232323] rounded-3xl">
                                     <div
                                         class=" grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col p-16">
-                                        <img src="assets/images/services6.png" alt="services6">
+                                        <img src="assets/images/services6.png" alt="services6" loading="lazy">
                                         <h1 class="text-4xl uppercase mb-2">Design Consulting</h1>
                                         <p class="text-base">Clarity & direction</p>
                                     </div>
@@ -918,15 +927,12 @@
 
             <!-- Copyright -->
             <footer
-                class="w-full bg-[url('assets/images/footerBgg.png')] bg-contain bg-top bg-fixed h-screen flex flex-col items-center justify-center relative bg-black">
+                class="w-full bg-[url('assets/images/footerBg.webp')] bg-contain bg-top bg-fixed h-screen flex flex-col items-center justify-center relative bg-black">
                 <div
-                    class="w-full h-full absolute left-0 top-0 backdrop-blur-[1px] bg-[radial-gradient(circle,rgba(255,255,255,0)_0%,rgba(0,0,0,1)_95%)]">
+                    class="w-full h-full absolute left-0 top-0 backdrop-blur-[3px] bg-[radial-gradient(circle,rgba(255,255,255,0)_0%,rgba(0,0,0,1)_95%)]">
                 </div>
                 <div class="z-10 w-full">
-                    <div class="text-2xl text-center">
-                        © <span id="year"></span> YourCompany — All rights reserved.
-                    </div>
-                    <div class="my-12 flex items-center justify-center flex-wrap gap-2">
+                    <!-- <div class="mt-12 flex items-center justify-center flex-wrap gap-2">
 
                         <a href="#featured-work" class="group inline-flex items-center gap-2 uppercase lg:text-5xl text-3xl font-normal
                                      relative transition-transform duration-300 ease-out hover:translate-x-1">
@@ -965,7 +971,7 @@
 
                             </svg>
                         </a>
-                    </div>
+                    </div> -->
                     <!-- Name -->
                     <div class="block h-min">
                         <a href="#top">
@@ -975,6 +981,9 @@
                             </h2>
                         </a>
                     </div>
+                    <div class="text-2xl text-center">
+                        © <span id="year"></span> YourCompany — All rights reserved.
+                    </div>
                 </div>
             </footer>
         </main>
@@ -982,11 +991,12 @@
 
     <!-- Custom Cursor -->
     <div class="custom-cursor"></div>
-
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- scrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="js/customScript.js"></script>
+    <script src="js/customScript.js" defer></script>
 </body>
 
 </html>
