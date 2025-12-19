@@ -189,7 +189,7 @@ object-fit: contain; */
 /* ======= Footer ========= */
 
 footer {
-    background-image: url('/assets/images/NewProject.webp');
+    background-image: url('../assets/images/NewProject.webp');
     background-size: contain;
     background-attachment: fixed;
 }
