@@ -21,6 +21,9 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Saira+Condensed:wght@400;600;700;800&display=swap"
         rel="stylesheet">
 
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -94,25 +97,26 @@
                     class="bg-[url('assets/images/bg.jpeg')] bg-cover bg-center absolute top-0 left-0 w-full h-full -z-10 grayscale opacity-10">
                 </div> -->
                 <div class="mx-auto w-full max-w-[var(--max-w)] ">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center h-screen">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center lg:h-screen py-12 lg:py-0">
 
-                        <div class="">
+                        <div class="order-1 lg:-order-1">
                             <div
-                                class="text-2xl uppercase font-normal bg-white/10 backdrop-blur-lg px-4 py-2 inline-block mb-2">
+                                class="2xl:text-2xl text-xl uppercase font-normal bg-white/10 backdrop-blur-lg px-4 py-2 inline-block mb-2">
                                 WEB DESIGNER FOR MODERN BRANDS & STARTUPS
                             </div>
-                            <h1 class="text-5xl sm:text-8xl uppercase font-normal my-4">
-                                High-Performance Websites That <br>Convert & Scale
+                            <h1 class="text-5xl md:text-6xl xl:text-7xl 2xl:text-8xl uppercase font-normal my-4">
+                                High-Performance Websites That <lg:br>Convert & Scale
                             </h1>
-                            <p class="text-xl max-w-lg leading-relaxed tracking-wider">UI/UX-focused web design for
+                            <p class="sm:text-xl text-base max-w-lg leading-relaxed tracking-wider">UI/UX-focused web
+                                design for
                                 modern brands and
                                 startups,
                                 built for clarity, performance, and growth.
                             </p>
 
-                            <div class="my-12 flex items-center flex-wrap gap-2">
+                            <div class="sm:my-12 my-8 flex items-center flex-wrap gap-2">
                                 <!-- my work -->
-                                <a href="#featured-work" class="group inline-flex items-center gap-2 uppercase lg:text-5xl text-3xl font-normal
+                                <a href="#featured-work" class="group inline-flex items-center gap-2 uppercase 2xl:text-5xl sm:text-3xl text-xl font-normal
                                      relative transition-transform duration-300 ease-out hover:translate-x-1">
                                     <span class="relative">
                                         View my work
@@ -121,7 +125,7 @@
                                         </span>
                                     </span>
 
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-10 transition-all duration-300 ease-out
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-6 sm:size-10 transition-all duration-300 ease-out
                                       group-hover:rotate-180 group-hover:scale-125" stroke="currentColor"
                                         stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
 
@@ -131,7 +135,7 @@
                                     </svg>
                                 </a>
 
-                                <a href="#contact" class="ml-12 group inline-flex items-center gap-2 uppercase lg:text-5xl text-3xl font-normal
+                                <a href="#contact" class="2xl:ml-12 sm:ml-6 ml-2 group inline-flex items-center gap-2 uppercase 2xl:text-5xl sm:text-3xl text-xl font-normal
                                      relative transition-transform duration-300 ease-out hover:translate-x-1">
                                     <span class="relative">
                                         Contact Me
@@ -140,7 +144,7 @@
                                         </span>
                                     </span>
 
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-10 transition-all duration-300 ease-out
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-6 sm:size-10 transition-all duration-300 ease-out
                                       group-hover:rotate-180 group-hover:scale-125" stroke="currentColor"
                                         stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
 
@@ -154,16 +158,18 @@
                             <h2 class="text-xl font-medium hover:tracking-wider transition-all">Based in Mohali, India
                             </h2>
                         </div>
-                        <div class="flex items-center justify-center relative w-[500px] max-w-full mx-auto">
-                            <img src="assets/images/hero.webp" alt="Illustration" loading="eager" fetchpriority="high"
+                        <div
+                            class="flex items-center justify-center relative lg:w-[500px] w-[250px] max-w-full mx-auto">
+                            <img src="assets/images/html.svg" alt="Illustration" loading="eager" fetchpriority="high"
                                 class="mx-auto h-auto rounded-lg shadow-lg">
-                            <div class="size-48 group circular-text absolute -left-10 bottom-0">
+                            <div
+                                class="lg:size-48 sm:size-32 size-20 group circular-text absolute -left-4 sm:-left-10 bottom-0">
                                 <div
-                                    class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 position-center size-[34px] z-10 stroke-[#e7e7e7] overflow-hidden">
+                                    class="absolute 2xl:left-1/2 sm:left-[42%] left-[32%] 2xl:top-1/2 sm:top-[43%] top-[32%] -translate-x-1/2 -translate-y-1/2 position-center sm:size-[34px] size-[24px] z-10 stroke-[#e7e7e7] overflow-hidden">
 
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                         stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="white"
-                                        class="hover:scale-150 transition-all absolute left-0 top-0 size-[34px] ">
+                                        class="hover:scale-150 transition-all absolute left-0 top-0 sm:size-[34px] size-[24px] ">
                                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
                                         </g>
@@ -176,7 +182,7 @@
 
                                 <svg xmlns="http://www.w3.org/2000/svg" xml:lang="en"
                                     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500"
-                                    class="group absolute left-[-34px] -top-8 size-64 rounded-full scale-up"
+                                    class="group absolute left-[-34px] -top-8 2xl:size-64 size-46 rounded-full scale-up"
                                     stroke="none" fill="white">
                                     <defs>
                                         <path id="textcircle" d="M250,400
@@ -198,37 +204,41 @@
             </section>
 
             <!-- Name -->
-            <section class="Name px-6 bg-black z-10 overflow-hidden mb-12">
+            <section class="Name px-6 bg-black z-10 overflow-hidden sm:mb-12">
                 <div class="w-full">
                     <h2
-                        class=" text-[16.5vw] tracking-tight leading-[1] flex justify-center items-center flex-nowrap font-bold uppercase">
+                        class=" text-[16.5vw] tracking-tight leading-[1] flex justify-center items-center flex-nowrap font-bold uppercase text-center">
                         Jaspreet Singh</h2>
-                    <p class="text-[3.5vw] text-center">Web Designer · UI/UX · Product-Focused</p>
+                    <p class="2xl:text-7xl xl:text-6xl lg:text-5xl sm:text-4xl text-2xl text-center">Web Designer ·
+                        UI/UX
+                        ·
+                        Product-Focused</p>
                 </div>
             </section>
 
             <!-- Featured Work -->
-            <section id="featured-work" class="px-6 py-16">
+            <section id="featured-work" class="px-6 sm:py-16 py-12">
                 <div class="mx-auto w-full max-w-[var(--max-w)]">
-                    <div class="grid grid-cols-1 gap-20 items-center">
+                    <div class="grid grid-cols-1 sm:gap-20 gap-10 items-center">
                         <div class="text-reveal text-center">
                             <span class="text-2xl uppercase mb-6 flex items-center gap-5 justify-center">
                                 <div class="block w-4 h-4 rotate-45 bg-white angleRotate"></div>
                                 Portfolio
                             </span>
 
-                            <h2 class="text-[200px] font-semibold leading-[.8] uppercase">
+                            <h2 class="text-[16.5vw] font-semibold leading-[.8] uppercase">
                                 Featured<br />Work
                             </h2>
                         </div>
                         <div
-                            class="portfolio-items grid grid-cols-1 md:grid-cols-2 gap-20 items-center overflow-hidden">
+                            class="portfolio-items grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20 items-center overflow-hidden">
                             <!-- Project -->
                             <div
-                                class="featureWrapper w-full relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-lg border border-[#232323] mx-auto p-10">
+                                class="featureWrapper w-full h-full relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-lg border border-[#232323] mx-auto sm:p-10 p-5">
 
                                 <div class="flex flex-col">
-                                    <h2 class="text-5xl capitalize font-semibold">SaaS Product Landing Page</h2>
+                                    <h2 class="text-3xl lg:text-5xl capitalize font-semibold">SaaS Product Landing Page
+                                    </h2>
                                     <p class="text-base opacity-50 mt-2">Concept · UI/UX Design · Conversion-Focused</p>
                                     <p class="text-base max-w-sm mt-4">Landing page concept focused on clarity,
                                         layout,
@@ -254,10 +264,11 @@
                                 </div>
                             </div>
                             <div
-                                class="featureWrapper w-full relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-lg border border-[#232323] mx-auto p-10">
+                                class="featureWrapper w-full h-full relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-lg border border-[#232323] mx-auto sm:p-10 p-5">
 
                                 <div class="flex flex-col">
-                                    <h2 class="text-5xl capitalize font-semibold">Startup Product Website</h2>
+                                    <h2 class="text-3xl lg:text-5xl capitalize font-semibold">Startup Product Website
+                                    </h2>
                                     <p class="text-base opacity-50 mt-2">UI/UX · Visual Design · Landing Page</p>
                                     <p class="text-base max-w-sm mt-4">Landing page concept focused on clarity,
                                         layout,
@@ -289,16 +300,16 @@
             </section>
 
             <!-- About us -->
-            <section class="px-6 py-16">
+            <section class="px-6 sm:py-16 py-12">
                 <div class="mx-auto w-full max-w-[var(--max-w)]">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 sm:gap-20 gap-10 items-center">
                         <div class="text-reveal">
                             <span class="text-2xl uppercase mb-6 flex items-center gap-5">
                                 <div class="block w-4 h-4 rotate-45 bg-white angleRotate"></div>
                                 About
                             </span>
 
-                            <h2 class="text-[250px] font-semibold leading-[.8] uppercase">
+                            <h2 class="text-[16.5vw] font-semibold leading-[.8] uppercase">
                                 About<br />Me
                             </h2>
                         </div>
@@ -306,7 +317,8 @@
 
                         <!-- Image -->
                         <div class="flex justify-start">
-                            <h2 class="text-3xl max-w-xl leading-normal font-[poppins]">Web designer with experience
+                            <h2 class="sm:text-3xl text-xl max-w-xl leading-normal font-[poppins]">Web designer with
+                                experience
                                 working on real-world product and client-facing websites. I focus on clarity, usability,
                                 and performance-driven design that supports business goals.
                             </h2>
@@ -314,10 +326,11 @@
                     </div>
 
                     <!-- How do i work -->
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start py-24">
-                        <div class="sticky top-48">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 sm:gap-20 gap-10 items-start py-12 sm:py-20 lg:py-24">
+                        <div class="lg:sticky lg:top-48">
                             <div class="text-reveal">
-                                <h2 class="text-8xl font-semibold mb-6 uppercase ">How <br> I Work</h2>
+                                <h2 class="text-5xl sm:text-6xl lg:text-8xl font-semibold sm:mb-6 uppercase ">How <br> I
+                                    Work</h2>
                             </div>
 
                         </div>
@@ -329,8 +342,10 @@
                                         class="text-xl mb-4 text-black bg-white p-2 w-10 h-10 rounded-lg flex justify-center items-center">
                                         01</div>
                                     <div class="text-reveal">
-                                        <p class="text-2xl max-w-xl leading-normal font-[poppins]">
-                                            <span class="block font-semibold uppercase text-4xl mb-2">Research &
+                                        <p class="sm:text-2xl text-xl max-w-xl leading-normal font-[poppins]">
+                                            <span
+                                                class="block font-semibold uppercase sm:text-4xl text-3xl mb-2">Research
+                                                &
                                                 Strategy</span>
                                             Understanding user goals, business needs, and product direction before
                                             design.
@@ -342,8 +357,8 @@
                                         class="text-xl mb-4 text-black bg-white p-2 w-10 h-10 rounded-lg flex justify-center items-center">
                                         02</div>
                                     <div class="text-reveal">
-                                        <p class="text-2xl max-w-xl leading-normal font-[poppins]">
-                                            <span class="block font-semibold uppercase text-4xl mb-2">UX
+                                        <p class="sm:text-2xl text-xl max-w-xl leading-normal font-[poppins]">
+                                            <span class="block font-semibold uppercase sm:text-4xl text-3xl mb-2">UX
                                                 Structure</span>
                                             Creating clear layouts and flows to guide users effectively.
                                         </p>
@@ -354,8 +369,8 @@
                                         class="text-xl mb-4 text-black bg-white p-2 w-10 h-10 rounded-lg flex justify-center items-center">
                                         03</div>
                                     <div class="text-reveal">
-                                        <p class="text-2xl max-w-xl leading-normal font-[poppins]">
-                                            <span class="block font-semibold uppercase text-4xl mb-2">Visual
+                                        <p class="sm:text-2xl text-xl max-w-xl leading-normal font-[poppins]">
+                                            <span class="block font-semibold uppercase sm:text-4xl text-3xl mb-2">Visual
                                                 Design</span>
                                             Crafting clean, modern interfaces with strong hierarchy and consistency.
                                         </p>
@@ -366,8 +381,10 @@
                                         class="text-xl mb-4 text-black bg-white p-2 w-10 h-10 rounded-lg flex justify-center items-center">
                                         04</div>
                                     <div class="text-reveal">
-                                        <p class="text-2xl max-w-xl leading-normal font-[poppins]">
-                                            <span class="block font-semibold uppercase text-4xl mb-2">Handoff &
+                                        <p class="sm:text-2xl text-xl max-w-xl leading-normal font-[poppins]">
+                                            <span
+                                                class="block font-semibold uppercase sm:text-4xl text-3xl mb-2">Handoff
+                                                &
                                                 Collaboration</span>
                                             Preparing developer-ready designs and collaborating closely with teams.
                                         </p>
@@ -378,10 +395,11 @@
                     </div>
 
                     <!-- My skills -->
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start py-24">
-                        <div class="sticky top-48">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 sm:gap-20 gap-10 items-start py-12 sm:py-20 lg:py-24">
+                        <div class="lg:sticky lg:top-48">
                             <div class="text-reveal">
-                                <h2 class="text-8xl font-semibold mb-6 uppercase ">My <br> Skills</h2>
+                                <h2 class="text-5xl sm:text-6xl lg:text-8xl font-semibold sm:mb-6 uppercase ">My <br>
+                                    Skills</h2>
                             </div>
                         </div>
                         <!-- Skill content -->
@@ -389,11 +407,11 @@
 
 
                             <div class="space-y-4">
-                                <h2 class="text-4xl font-semibold mb-6 uppercase ">Core Skills</h2>
+                                <h2 class="sm:text-4xl text-3xl font-semibold mb-6 uppercase ">Core Skills</h2>
                                 <!-- Skill item -->
                                 <div class="group">
                                     <div class="relative flex items-center bg-neutral-900 border border-neutral-800
-                                    rounded-full h-20 overflow-hidden
+                                    rounded-full sm:h-20 h-16 overflow-hidden
                                     transition-all duration-300
                                     ">
 
@@ -408,7 +426,8 @@
                                             <div class="flex items-center gap-6">
                                                 <span
                                                     class="text-neutral-400 text-3xl group-hover:text-neutral-400">01</span>
-                                                <h1 class="text-white text-4xl uppercase group-hover:text-black">
+                                                <h1
+                                                    class="text-white text-3xl sm:text-4xl uppercase group-hover:text-black">
                                                     UI Design
                                                 </h1>
                                             </div>
@@ -420,7 +439,7 @@
                                 <!-- Skill item -->
                                 <div class="group">
                                     <div class="relative flex items-center bg-neutral-900 border border-neutral-800
-                                rounded-full h-20 overflow-hidden
+                                rounded-full sm:h-20 h-16 overflow-hidden
                                 transition-all duration-300
                                 ">
 
@@ -433,7 +452,8 @@
                                             <div class="flex items-center gap-6">
                                                 <span
                                                     class="text-neutral-400 text-3xl group-hover:text-neutral-400">02</span>
-                                                <h1 class="text-white text-4xl uppercase  group-hover:text-black">
+                                                <h1
+                                                    class="text-white text-3xl sm:text-4xl uppercase  group-hover:text-black">
                                                     UX Design
                                                 </h1>
                                             </div>
@@ -445,7 +465,7 @@
                                 <!-- Skill item -->
                                 <div class="group">
                                     <div class="relative flex items-center bg-neutral-900 border border-neutral-800
-                                    rounded-full h-20 overflow-hidden
+                                    rounded-full sm:h-20 h-16 overflow-hidden
                                     transition-all duration-300
                                     ">
 
@@ -458,7 +478,8 @@
                                             <div class="flex items-center gap-6">
                                                 <span
                                                     class="text-neutral-400 text-3xl group-hover:text-neutral-400">03</span>
-                                                <h1 class="text-white text-4xl uppercase group-hover:text-black">
+                                                <h1
+                                                    class="text-white text-3xl sm:text-4xl uppercase group-hover:text-black">
                                                     Web Design
                                                 </h1>
                                             </div>
@@ -470,7 +491,7 @@
                                 <!-- Skill item -->
                                 <div class="group">
                                     <div class="relative flex items-center bg-neutral-900 border border-neutral-800
-                                    rounded-full h-20 overflow-hidden
+                                    rounded-full sm:h-20 h-16 overflow-hidden
                                     transition-all duration-300
                                     ">
 
@@ -483,7 +504,8 @@
                                             <div class="flex items-center gap-6">
                                                 <span
                                                     class="text-neutral-400 text-3xl group-hover:text-neutral-400">04</span>
-                                                <h1 class="text-white text-4xl uppercase group-hover:text-black">
+                                                <h1
+                                                    class="text-white text-3xl sm:text-4xl uppercase group-hover:text-black">
                                                     Design Systems
                                                 </h1>
                                             </div>
@@ -495,7 +517,7 @@
                                 <!-- Skill item -->
                                 <div class="group">
                                     <div class="relative flex items-center bg-neutral-900 border border-neutral-800
-                                    rounded-full h-20 overflow-hidden
+                                    rounded-full sm:h-20 h-16 overflow-hidden
                                     transition-all duration-300
                                     ">
 
@@ -508,7 +530,8 @@
                                             <div class="flex items-center gap-6">
                                                 <span
                                                     class="text-neutral-400 text-3xl group-hover:text-neutral-400">05</span>
-                                                <h1 class="text-white uppercase text-4xl group-hover:text-black">
+                                                <h1
+                                                    class="text-white uppercase text-3xl sm:text-4xl group-hover:text-black truncate w-1/2 sm:w-auto">
                                                     Responsive & Interaction Design
                                                 </h1>
                                             </div>
@@ -523,68 +546,70 @@
                     </div>
 
                     <!-- Tech Stack -->
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start py-24">
-                        <div class="sticky top-48">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 sm:gap-20 gap-10 items-start py-12 sm:py-20 lg:py-24">
+                        <div class="lg:sticky lg:top-48">
                             <div class="text-reveal">
-                                <h2 class="text-8xl font-semibold mb-6 uppercase ">My <br> Tech Stack</h2>
+                                <h2 class="text-5xl sm:text-6xl lg:text-8xl font-semibold sm:mb-6 uppercase ">My <br>
+                                    Tech
+                                    Stack</h2>
                             </div>
                         </div>
                         <!-- Image -->
                         <div class="max-w-xl ">
-                            <h2 class="text-4xl font-semibold mb-6 uppercase">Tools / Awareness</h2>
-                            <ul class="grid grid-cols-4 gap-7">
-                                <li class="w-32">
+                            <h2 class="sm:text-4xl text-3xl font-semibold mb-6 uppercase">Tools / Awareness</h2>
+                            <ul class="grid md:grid-cols-4 grid-cols-3 gap-7">
+                                <li class="w-20 sm:w-32 mx-auto sm:mx-0">
                                     <div
-                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center p-10">
+                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center sm:p-10 p-6">
                                         <img src="assets/images/html.svg" alt="html wrapper" loading="lazy">
                                     </div>
                                     <p class="text-white text-base uppercase mt-3 text-center">Html</p>
                                 </li>
-                                <li class="w-32">
+                                <li class="w-20 sm:w-32 mx-auto sm:mx-0">
                                     <div
-                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center p-10">
+                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center sm:p-10 p-6">
                                         <img src="assets/images/css.svg" alt="css wrapper" loading="lazy">
                                     </div>
                                     <p class="text-white text-base uppercase mt-3 text-center">css</p>
                                 </li>
-                                <li class="w-32">
+                                <li class="w-20 sm:w-32 mx-auto sm:mx-0">
                                     <div
-                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center p-10">
+                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center sm:p-10 p-6">
                                         <img src="assets/images/js.svg" alt="js wrapper" loading="lazy">
                                     </div>
                                     <p class="text-white text-base uppercase mt-3 text-center">js</p>
                                 </li>
-                                <li class="w-32">
+                                <li class="w-20 sm:w-32 mx-auto sm:mx-0">
                                     <div
-                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center p-10">
+                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center sm:p-10 p-6">
                                         <img src="assets/images/tailwind.svg" alt="tailwind wrapper" loading="lazy">
                                     </div>
                                     <p class="text-white text-base uppercase mt-3 text-center">tailwind</p>
                                 </li>
-                                <li class="w-32">
+                                <li class="w-20 sm:w-32 mx-auto sm:mx-0">
                                     <div
-                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center p-10">
+                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center sm:p-10 p-6">
                                         <img src="assets/images/ts.svg" alt="ts wrapper" loading="lazy">
                                     </div>
                                     <p class="text-white text-base uppercase mt-3 text-center">ts</p>
                                 </li>
-                                <li class="w-32">
+                                <li class="w-20 sm:w-32 mx-auto sm:mx-0">
                                     <div
-                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center p-10">
+                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center sm:p-10 p-6">
                                         <img src="assets/images/reactjs.svg" alt="reactjs wrapper" loading="lazy">
                                     </div>
                                     <p class="text-white text-base uppercase mt-3 text-center">reactjs</p>
                                 </li>
-                                <li class="w-32">
+                                <li class="w-20 sm:w-32 mx-auto sm:mx-0">
                                     <div
-                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center p-10">
+                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center sm:p-10 p-6">
                                         <img src="assets/images/nextjs.svg" alt="nextjs wrapper" loading="lazy">
                                     </div>
                                     <p class="text-white text-base uppercase mt-3 text-center">nextjs</p>
                                 </li>
-                                <li class="w-32">
+                                <li class="w-20 sm:w-32 mx-auto sm:mx-0">
                                     <div
-                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center p-10">
+                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center sm:p-10 p-6">
                                         <img src="assets/images/figma.svg" alt="figma wrapper" loading="lazy">
                                     </div>
                                     <p class="text-white text-base uppercase mt-3 text-center">figma</p>
@@ -595,12 +620,12 @@
                     </div>
 
                     <!-- Experience Counter -->
-                    <div class="px-6 bg-[var(--bg-secondary)] py-24 z-10">
-                        <div class="achievements wrapper grid lg:grid-cols-3 md:grid-cols-1 gap-16">
+                    <div class="sm:px-6 bg-[var(--bg-secondary)] py-12 sm:py-20 lg:py-24 z-10">
+                        <div class="achievements wrapper grid lg:grid-cols-3 md:grid-cols-1 lg:gap-16 sm:gap-12 gap-8">
 
                             <div class="group flex flex-col items-center">
                                 <div class="space-y-4 text-center">
-                                    <h1 class="counter lg:text-8xl text-7xl font-medium" data-count="5">
+                                    <h1 class="counter lg:text-8xl sm:text-7xl text-5xl font-medium" data-count="5">
                                         0+
                                     </h1>
                                     <h1 class="lg:text-4xl text-3xl uppercase max-w-sm mx-auto">Years of Professional
@@ -611,7 +636,7 @@
 
                             <div class="group flex flex-col items-center">
                                 <div class="space-y-4 text-center">
-                                    <h1 class="counter lg:text-8xl text-7xl font-medium" data-count="20">
+                                    <h1 class="counter lg:text-8xl sm:text-7xl text-5xl font-medium" data-count="20">
                                         0+
                                     </h1>
                                     <h1 class="lg:text-4xl text-3xl uppercase max-w-sm mx-auto">Projects Delivered</h1>
@@ -620,7 +645,7 @@
 
                             <div class="group flex flex-col items-center">
                                 <div class="space-y-4 text-center">
-                                    <h1 class="counter lg:text-8xl text-7xl font-medium" data-count="1">
+                                    <h1 class="counter lg:text-8xl sm:text-7xl text-5xl font-medium" data-count="1">
                                         0
                                     </h1>
                                     <h1 class="lg:text-4xl text-3xl uppercase max-w-sm mx-auto">Product Company
@@ -632,13 +657,15 @@
                     </div>
 
                     <!-- My Experience -->
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start pt-24 pb-12">
-                        <div class="sticky top-48">
+                    <div
+                        class="grid grid-cols-1 lg:grid-cols-2 sm:gap-20 gap-10 items-start sm:pt-24 pt-12 lg:pb-12 sm:pb-8 pb-0">
+                        <div class="lg:sticky lg:top-48">
                             <div class="text-reveal">
-                                <h2 class="text-8xl font-semibold mb-6 uppercase ">My <br> Experience</h2>
+                                <h2 class="text-5xl sm:text-6xl lg:text-8xl font-semibold mb-6 uppercase ">My <br>
+                                    Experience</h2>
                             </div>
                             <a href="assets/resume/Jaspreet_Singh_Web_Designer.pdf" target="_blank" rel="noopener"
-                                class="group flex uppercase items-center gap-1 px-6 py-3 w-max border-2 border-[#232323] text-2xl rounded-full relative transition-transform duration-300 ease-out hover:border-2 hover:border-[#e7e7e7]">
+                                class="group flex uppercase items-center gap-1 sm:px-6 px-5 sm:py-3 py-2 w-max border-2 border-[#232323] sm:text-2xl text-xl rounded-full relative transition-transform duration-300 ease-out hover:border-2 hover:border-[#e7e7e7]">
                                 <span class="relative">
                                     View My Cv
                                 </span>
@@ -657,10 +684,11 @@
                         <!-- Content -->
 
                         <div>
-                            <h2 class="text-5xl font-semibold mb-6">Web Designer</h2>
-                            <p class="text-2xl bg-white/10 backdrop-blur-lg px-4 py-2 inline-block">Tech Prastish
+                            <h2 class="sm:text-5xl text-4xl font-semibold mb-6">Web Designer</h2>
+                            <p class="sm:text-2xl text-xl bg-white/10 backdrop-blur-lg px-4 py-2 inline-block">Tech
+                                Prastish
                                 Software Solutions | 2020 – Present</p>
-                            <ul class="list-disc list-outside mt-4 space-y-2 text-lg pl-4">
+                            <ul class="list-disc list-outside mt-4 space-y-2 sm:text-lg text-base pl-4">
                                 <li>Designing responsive web interfaces for product and client-facing websites</li>
                                 <li>Creating UI systems, layout structures, and reusable components in Figma</li>
                                 <li>Collaborating with frontend developers to ensure design accuracy and usability</li>
@@ -668,7 +696,7 @@
                                 <li>Working on real business requirements, user flows, and performance-focused layouts
                                 </li>
                             </ul>
-                            <p class="text-lg mt-8">Focus areas: Web UI, UX clarity, visual consistency, and
+                            <p class="text-lg sm:mt-8 mt-6">Focus areas: Web UI, UX clarity, visual consistency, and
                                 performance-aware design
                             </p>
                         </div>
@@ -677,7 +705,7 @@
             </section>
 
             <!-- Experience Counter -->
-            <section class="hidden px-6 bg-[var(--bg-secondary)] py-16 z-10">
+            <section class="hidden px-6 bg-[var(--bg-secondary)] sm:py-16 py-12 z-10">
                 <div class="achievements wrapper grid lg:grid-cols-3 md:grid-cols-1 gap-16">
 
                     <div class="group flex flex-col items-center">
@@ -713,16 +741,17 @@
             </section>
 
             <!-- Services -->
-            <section class="px-6 py-16">
+            <section class="px-6 sm:py-16 py-12">
                 <div class="mx-auto w-full max-w-[var(--max-w)]">
-                    <div class="mx-auto w-full mb-24">
+                    <div class="mx-auto w-full lg:mb-24 sm:mb-18 mb-10">
                         <div class="text-reveal">
                             <span class="text-2xl justify-center uppercase mb-6 flex items-center gap-5">
                                 <!-- square shape -->
                                 <div class="block w-4 h-4 rotate-45 bg-white angleRotate"></div>
                                 Services
                             </span>
-                            <h2 class="text-[200px] text-center font-semibold mb mb-2-6 leading-[.8] uppercase ">My
+                            <h2 class="text-[16.5vw] text-center font-semibold mb mb-2-6 leading-[.8] uppercase ">
+                                My
                                 <br> Services
                             </h2>
                         </div>
@@ -730,58 +759,64 @@
                     <div class="max-w-screen-xl mx-auto">
                         <!-- Image -->
                         <div class="w-full">
-                            <ul class="grid grid-cols-3 gap-4">
+                            <ul class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
                                 <li
                                     class="relative group mx-auto flex justify-center items-center border border-[#232323] rounded-3xl">
                                     <div
-                                        class=" grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col p-16">
-                                        <img src="assets/images/services1.png" alt="services1" loading="lazy">
-                                        <h1 class="text-4xl uppercase mb-2">Website Design</h1>
+                                        class=" grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col sm:p-16 p-10">
+                                        <img src="assets/images/services1.png" alt="services1" loading="lazy"
+                                            class="px-14 sm:p-0">
+                                        <h1 class="text-4xl uppercase mb-2 text-center">Website Design</h1>
                                         <p class="text-base">Modern, responsive layouts</p>
                                     </div>
                                 </li>
                                 <li
                                     class="relative group mx-auto flex justify-center items-center border border-[#232323] rounded-3xl">
                                     <div
-                                        class=" grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col p-16">
-                                        <img src="assets/images/services2.png" alt="services2" loading="lazy">
-                                        <h1 class="text-4xl uppercase mb-2">Landing Pages</h1>
+                                        class=" grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col sm:p-16 p-10">
+                                        <img src="assets/images/services2.png" alt="services2" loading="lazy"
+                                            class="px-14 sm:p-0">
+                                        <h1 class="text-4xl uppercase mb-2 text-center">Landing Pages</h1>
                                         <p class="text-base">Conversion-focused pages</p>
                                     </div>
                                 </li>
                                 <li
                                     class="relative group mx-auto flex justify-center items-center border border-[#232323] rounded-3xl">
                                     <div
-                                        class=" grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col p-16">
-                                        <img src="assets/images/services3.png" alt="services3" loading="lazy">
-                                        <h1 class="text-4xl uppercase mb-2">UI/UX Design</h1>
+                                        class=" grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col sm:p-16 p-10">
+                                        <img src="assets/images/services3.png" alt="services3" loading="lazy"
+                                            class="px-14 sm:p-0">
+                                        <h1 class="text-4xl uppercase mb-2 text-center">UI/UX Design</h1>
                                         <p class="text-base">User-centered interfaces</p>
                                     </div>
                                 </li>
                                 <li
                                     class="relative group mx-auto flex justify-center items-center border border-[#232323] rounded-3xl">
                                     <div
-                                        class=" grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col p-16">
-                                        <img src="assets/images/services4.png" alt="services4" loading="lazy">
-                                        <h1 class="text-4xl uppercase mb-2">Design Systems</h1>
+                                        class=" grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col sm:p-16 p-10">
+                                        <img src="assets/images/services4.png" alt="services4" loading="lazy"
+                                            class="px-14 sm:p-0">
+                                        <h1 class="text-4xl uppercase mb-2 text-center">Design Systems</h1>
                                         <p class="text-base">Scalable UI foundations</p>
                                     </div>
                                 </li>
                                 <li
                                     class="relative group mx-auto flex justify-center items-center border border-[#232323] rounded-3xl">
                                     <div
-                                        class=" grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col p-16">
-                                        <img src="assets/images/services5.png" alt="services5" loading="lazy">
-                                        <h1 class="text-4xl uppercase mb-2">Redesigns</h1>
+                                        class=" grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col sm:p-16 p-10">
+                                        <img src="assets/images/services5.png" alt="services5" loading="lazy"
+                                            class="px-14 sm:p-0">
+                                        <h1 class="text-4xl uppercase mb-2 text-center">Redesigns</h1>
                                         <p class="text-base">Usability & visual upgrades</p>
                                     </div>
                                 </li>
                                 <li
                                     class="relative group mx-auto flex justify-center items-center border border-[#232323] rounded-3xl">
                                     <div
-                                        class=" grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col p-16">
-                                        <img src="assets/images/services6.png" alt="services6" loading="lazy">
-                                        <h1 class="text-4xl uppercase mb-2">Design Consulting</h1>
+                                        class=" grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col sm:p-16 p-10">
+                                        <img src="assets/images/services6.png" alt="services6" loading="lazy"
+                                            class="px-14 sm:p-0">
+                                        <h1 class="text-4xl uppercase mb-2 text-center">Design Consulting</h1>
                                         <p class="text-base">Clarity & direction</p>
                                     </div>
                                 </li>
@@ -796,7 +831,7 @@
                 <div class="flex items-center will-change-transform whitespace-nowrap animate-scroll-x"
                     style="animation-duration: 12s">
                     <h1
-                        class="uppercase scale-y-150 overflow-hidden text-[clamp(100px,13vw,13vw)] leading-[clamp(100px,13vw,13vw)] px-8">
+                        class="uppercase scale-y-150 overflow-hidden text-[clamp(60px,13vw,13vw)] sm:text-[clamp(100px,13vw,13vw)] sm:leading-[clamp(100px,13vw,13vw)] leading-[clamp(60px,13vw,13vw)] px-8">
                         Let's Talk
                     </h1>
 
@@ -806,7 +841,7 @@
                     </h1>
 
                     <h1
-                        class="uppercase dark:text-[var(--color-landing)]! text-[var(--bg-secondary)]! outlinedText scale-y-150 text-[clamp(100px,13vw,13vw)] leading-[clamp(100px,13vw,13vw)] px-8">
+                        class="uppercase dark:text-[var(--color-landing)]! text-[var(--bg-secondary)]! outlinedText scale-y-150 text-[clamp(60px,13vw,13vw)] sm:text-[clamp(100px,13vw,13vw)] sm:leading-[clamp(100px,13vw,13vw)] leading-[clamp(60px,13vw,13vw)] px-8">
                         Let's Work
                     </h1>
 
@@ -814,7 +849,7 @@
                         ✺
                     </h1>
                     <h1
-                        class="uppercase scale-y-150 overflow-hidden text-[clamp(100px,13vw,13vw)] leading-[clamp(100px,13vw,13vw)] px-8">
+                        class="uppercase scale-y-150 overflow-hidden text-[clamp(60px,13vw,13vw)] sm:text-[clamp(100px,13vw,13vw)] sm:leading-[clamp(100px,13vw,13vw)] leading-[clamp(60px,13vw,13vw)] px-8">
                         Let's Talk
                     </h1>
 
@@ -824,7 +859,7 @@
                     </h1>
 
                     <h1
-                        class="uppercase dark:text-[var(--color-landing)]! text-[var(--bg-secondary)]! outlinedText scale-y-150 text-[clamp(100px,13vw,13vw)] leading-[clamp(100px,13vw,13vw)] px-8">
+                        class="uppercase dark:text-[var(--color-landing)]! text-[var(--bg-secondary)]! outlinedText scale-y-150 text-[clamp(60px,13vw,13vw)] sm:text-[clamp(100px,13vw,13vw)] sm:leading-[clamp(100px,13vw,13vw)] leading-[clamp(60px,13vw,13vw)] px-8">
                         Let's Work
                     </h1>
 
@@ -835,28 +870,31 @@
             </div>
 
             <!-- Contact / Footer -->
-            <section id="contact" class="px-6 py-24">
+            <section id="contact" class="px-6 py-12 sm:py-20 lg:py-24">
                 <div
                     class="mx-auto w-full max-w-[var(--max-w)] flex lg:flex-row flex-col gap-8 justify-between pb-10 items-center">
-                    <h1 class="text-5xl text-query">
+                    <h1 class="sm:text-5xl text-2xl text-query">
                         Open to full-time and remote <br>web designer opportunities worldwide.
                     </h1>
                     <div class="flex gap-4 flex-wrap justify-query contact-info-container">
-                        <div class="relative border border-[var(--bg-primary-inverse)] rounded-full px-8 py-6 group">
+                        <div
+                            class="relative border border-[var(--bg-primary-inverse)] rounded-full sm:px-8 px-6 sm:py-6 py-3 group">
                             <a href="mailto:pxfixerjd@gmail.com" target="_blank">
-                                <h1 class="text-3xl">example@gmail.com</h1>
+                                <h1 class="sm:text-3xl text-xl">example@gmail.com</h1>
                             </a>
                         </div>
 
-                        <div class="relative border border-[var(--bg-primary-inverse)] rounded-full px-8 py-6 group">
+                        <div
+                            class="relative border border-[var(--bg-primary-inverse)] rounded-full sm:px-8 px-6 sm:py-6 py-3 group">
                             <a href="assets/resume/Jaspreet_Singh_Web_Designer.pdf" target="_blank" rel="noopener">
-                                <h1 class="text-3xl">Resume</h1>
+                                <h1 class="sm:text-3xl text-xl">Resume</h1>
                             </a>
                         </div>
 
-                        <div class="relative border border-[var(--bg-primary-inverse)] rounded-full px-8 py-6 group">
+                        <div
+                            class="relative border border-[var(--bg-primary-inverse)] rounded-full sm:px-8 px-6 sm:py-6 py-3 group">
                             <a href="https://www.linkedin.com/in/yourusername/" target="_blank" rel="noopener">
-                                <h1 class="text-3xl capitalize">linkedin
+                                <h1 class="sm:text-3xl text-xl capitalize">linkedin
                                 </h1>
                             </a>
                         </div>
@@ -871,16 +909,16 @@
                         <input type="hidden" name="_subject" value="New Portfolio Contact">
                         <input type="hidden" name="_replyto">
                         <div class="wrapper">
-                            <div class="grid md:grid-cols-2 grid-cols-1 gap-8">
-                                <label class="py-8 block duration">
-                                    <h1 class="text-3xl">Name *</h1>
+                            <div class="grid md:grid-cols-2 grid-cols-1 sm:gap-8">
+                                <label class="py-8 pb-0 sm:pb-8 block duration">
+                                    <h1 class="text-2xl sm:text-3xl">Name *</h1>
                                     <input placeholder="Name" type="text" name="name" required
                                         class="text-lg placeholder:text-[var(--light-text-fixed)] outline-none p-0! flex text-[var(--text-primary)] w-full py-4 ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:cursor-not-allowed disabled:opacity-50 mb-0! bg-white/5 px-4 backdrop-blur-sm mt-2">
                                     <p class="text-red-500 font-light name-error absolute mt-2"></p>
                                 </label>
 
-                                <label class="py-8 block duration">
-                                    <h1 class="text-3xl">Your Email *</h1>
+                                <label class="sm:py-8 py-7 block duration">
+                                    <h1 class="text-2xl sm:text-3xl">Your Email *</h1>
                                     <input placeholder="example@gmail.com" name="email" type="email"
                                         oninput="this.form._replyto.value=this.value" required
                                         class="text-lg placeholder:text-[var(--light-text-fixed)] outline-none p-0! flex text-[var(--text-primary)] w-full py-4 ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:cursor-not-allowed disabled:opacity-50 mb-0! bg-white/5 px-4 backdrop-blur-sm mt-2">
@@ -890,7 +928,7 @@
                         </div>
 
                         <div class="md:pr-0!">
-                            <h1 class="text-3xl mb-3">Your Message *</h1>
+                            <h1 class="text-2xl sm:text-3xl mb-3">Your Message *</h1>
                             <div class="grid md:grid-cols-[2fr_1fr] grid-cols-1 items-end">
                                 <label class="block duration ">
                                     <textarea type="text" name="message" placeholder="Hi, I'm Looking for..." required
@@ -927,51 +965,11 @@
 
             <!-- Copyright -->
             <footer
-                class="w-full bg-[url('assets/images/footerBg.webp')] bg-contain bg-top bg-fixed h-screen flex flex-col items-center justify-center relative bg-black">
+                class="w-full bg-[url('assets/images/footerBgg.webp')] bg-contain bg-top bg-fixed lg:h-screen sm:h-[50vh] h-[30vh] flex flex-col items-center justify-center relative bg-black">
                 <div
                     class="w-full h-full absolute left-0 top-0 backdrop-blur-[3px] bg-[radial-gradient(circle,rgba(255,255,255,0)_0%,rgba(0,0,0,1)_95%)]">
                 </div>
                 <div class="z-10 w-full">
-                    <!-- <div class="mt-12 flex items-center justify-center flex-wrap gap-2">
-
-                        <a href="#featured-work" class="group inline-flex items-center gap-2 uppercase lg:text-5xl text-3xl font-normal
-                                     relative transition-transform duration-300 ease-out hover:translate-x-1">
-                            <span class="relative">
-                                View my work
-                                <span class="absolute left-0 -bottom-1 h-[2px] w-full bg-current scale-x-0 origin-left
-                                              transition-transform duration-300 ease-out group-hover:scale-x-100">
-                                </span>
-                            </span>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-10 transition-all duration-300 ease-out
-                                      group-hover:rotate-180 group-hover:scale-125" stroke="currentColor"
-                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-
-                                <line x1="7" y1="17" x2="17" y2="7" />
-                                <polyline points="7 7 17 7 17 17" />
-
-                            </svg>
-                        </a>
-
-                        <a href="#contact" class="ml-12 group inline-flex items-center gap-2 uppercase lg:text-5xl text-3xl font-normal
-                                     relative transition-transform duration-300 ease-out hover:translate-x-1">
-                            <span class="relative">
-                                Contact Me
-                                <span class="absolute left-0 -bottom-1 h-[2px] w-full bg-current scale-x-0 origin-left
-                                              transition-transform duration-300 ease-out group-hover:scale-x-100">
-                                </span>
-                            </span>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-10 transition-all duration-300 ease-out
-                                      group-hover:rotate-180 group-hover:scale-125" stroke="currentColor"
-                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-
-                                <line x1="7" y1="17" x2="17" y2="7" />
-                                <polyline points="7 7 17 7 17 17" />
-
-                            </svg>
-                        </a>
-                    </div> -->
                     <!-- Name -->
                     <div class="block h-min">
                         <a href="#top">
@@ -981,7 +979,7 @@
                             </h2>
                         </a>
                     </div>
-                    <div class="text-2xl text-center">
+                    <div class="sm:text-2xl text-base text-center">
                         © <span id="year"></span> YourCompany — All rights reserved.
                     </div>
                 </div>
@@ -991,8 +989,7 @@
 
     <!-- Custom Cursor -->
     <div class="custom-cursor"></div>
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- scrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
