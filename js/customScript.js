@@ -100,9 +100,9 @@ function initHeroAnimation() {
   const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
   tl.to(title, { y: 0, opacity: 1, duration: 1.2 })
+    .to(image, { scale: 1, y: 0, opacity: 1, duration: 1 }, "<")
     .to(ctas, { y: 0, opacity: 1, duration: 1, stagger: 0.1 }, "-=0.5")
-    .to(location, { y: 0, opacity: 1, duration: 0.8 }, "-=0.6")
-    .to(image, { scale: 1, y: 0, opacity: 1, duration: 1 }, "-=0.7");
+    .to(location, { y: 0, opacity: 1, duration: 0.8 }, "-=0.6");
 }
 
 // ======================
