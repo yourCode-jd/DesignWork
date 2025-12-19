@@ -185,3 +185,11 @@ object-fit: contain; */
         display: none;
     }
 }
+
+/* ======= Footer ========= */
+
+footer {
+    background-image: url('/assets/images/NewProject.webp');
+    background-size: contain;
+    background-attachment: fixed;
+}
