@@ -9,12 +9,22 @@ html {
     scroll-behavior: smooth;
 }
 
-
 body {
     font-family: var(--font-body);
     color: #e7e7e7;
     cursor: none;
 }
+
+::selection {
+    background: rgba(255, 255, 255, 0.80);
+    color: #000000;
+}
+
+::-moz-selection {
+    background: rgba(255, 255, 255, 0.80);
+    color: #000000;
+}
+
 
 h1,
 h2,
