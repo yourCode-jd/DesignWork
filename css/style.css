@@ -199,7 +199,13 @@ object-fit: contain; */
 /* ======= Footer ========= */
 
 footer {
-    background-image: url('../assets/images/NewProject.webp');
+    background-image: url('../assets/images/self.webp');
     background-size: contain;
     background-attachment: fixed;
+}
+
+@media (max-width: 575px) {
+    footer {
+        background-position: 0 -20%;
+    }
 }
