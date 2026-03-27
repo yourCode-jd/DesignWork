@@ -7,29 +7,31 @@
     <meta name="description" content="Minimal Tailwind CSS landing page template" />
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-    <link rel="manifest" href="assets/images/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="manifest" href="assets/images/site.webmanifest" />
 
     <!-- Preconnect for faster font loading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <!-- Preload Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Saira+Condensed:wght@400;600;700;800&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
 
     <title>PxFixer JD</title>
 </head>
-
 
 <body class="antialiased bg-[var(--bg)]">
     <!-- Loader -->
@@ -42,10 +44,8 @@
         </svg>
     </div>
 
-
     <!-- Page wrapper -->
     <div class="min-h-screen flex flex-col">
-
         <!-- Nav -->
         <header
             class="hidden sticky top-0 z-40 bg-[#e7e7e7]/60 dark:bg-slate-900/60 backdrop-blur-md border-b border-slate-200 dark:border-slate-700">
@@ -53,11 +53,12 @@
                 <a href="#" class="flex items-center gap-3">
                     <div
                         class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center text-[#e7e7e7] font-bold">
-                        YP</div>
+                        YP
+                    </div>
                     <span class="font-semibold text-lg">YourProduct</span>
                 </a>
 
-                <nav class="hidden md:flex items-center sm:gap-6 gap-4 text-sm">
+                <nav class="hidden md:text-reveal md:flex items-center sm:gap-6 gap-4 text-sm">
                     <a href="#features" class="hover:underline">Features</a>
                     <a href="#pricing" class="hover:underline">Pricing</a>
                     <a href="#contact" class="hover:underline">Contact</a>
@@ -90,80 +91,74 @@
 
         <!-- HERO -->
         <main id="top" class="flex-1 hero-preloader">
-
             <!-- Hero -->
-            <section class="px-6 relative ">
+            <section class="px-6 relative">
                 <!-- <div
                     class="bg-[url('assets/images/bg.jpeg')] bg-cover bg-center absolute top-0 left-0 w-full h-full -z-10 grayscale opacity-10">
                 </div> -->
-                <div class="mx-auto w-full max-w-[var(--max-w)] ">
+                <div class="mx-auto w-full max-w-[var(--max-w)]">
                     <div
                         class="grid grid-cols-1 lg:grid-cols-2 sm:gap-20 gap-10 items-center lg:h-screen py-12 lg:py-0">
-
                         <div class="order-1 lg:-order-1">
                             <div
                                 class="2xl:text-2xl text-xl uppercase font-normal bg-white/10 backdrop-blur-lg px-4 py-2 inline-block mb-2">
                                 WEB UI DEVELOPER FOR MODERN BRANDS & STARTUPS
                             </div>
                             <h1 class="text-5xl md:text-6xl xl:text-7xl 2xl:text-8xl uppercase font-normal my-4">
-                                High-Performance Websites That <lg:br>Convert & Scale
+                                High-Performance Websites That <br />Convert & Scale
                             </h1>
-                            <p class="sm:text-xl text-base max-w-lg leading-relaxed tracking-wider">UI/UX-focused web
-                                design for
-                                modern brands and
-                                startups,
-                                built for clarity, performance, and growth.
+                            <p class="sm:text-xl text-base max-w-lg leading-relaxed tracking-wider">
+                                UI/UX-focused web design for modern brands and startups, built
+                                for clarity, performance, and growth.
                             </p>
 
                             <div class="sm:my-12 my-8 flex items-center flex-wrap gap-2">
                                 <!-- my work -->
-                                <a href="#featured-work" class="group inline-flex items-center gap-2 uppercase 2xl:text-5xl sm:text-3xl text-xl font-normal
-                                     relative transition-transform duration-300 ease-out hover:translate-x-1">
+                                <a href="#featured-work"
+                                    class="group inline-flex items-center gap-2 uppercase 2xl:text-5xl sm:text-3xl text-xl font-normal relative transition-transform duration-300 ease-out hover:translate-x-1">
                                     <span class="relative">
                                         View my work
-                                        <span class="absolute left-0 -bottom-1 h-[4px] w-full bg-current scale-x-100 origin-left
-                                              transition-transform duration-300 ease-out group-hover:scale-x-0">
+                                        <span
+                                            class="absolute left-0 -bottom-1 h-[4px] w-full bg-current scale-x-100 origin-left transition-transform duration-300 ease-out group-hover:scale-x-0">
                                         </span>
                                     </span>
 
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-6 sm:size-10 transition-all duration-300 ease-out
-                                      group-hover:rotate-180 group-hover:scale-125" stroke="currentColor"
-                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                        class="size-6 sm:size-10 transition-all duration-300 ease-out group-hover:rotate-180 group-hover:scale-125"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round">
                                         <line x1="7" y1="17" x2="17" y2="7" />
                                         <polyline points="7 7 17 7 17 17" />
-
                                     </svg>
                                 </a>
 
-                                <a href="#contact" class="2xl:ml-12 sm:ml-6 ml-2 group inline-flex items-center gap-2 uppercase 2xl:text-5xl sm:text-3xl text-xl font-normal
-                                     relative transition-transform duration-300 ease-out hover:translate-x-1">
+                                <a href="#contact"
+                                    class="2xl:ml-12 sm:ml-6 ml-2 group inline-flex items-center gap-2 uppercase 2xl:text-5xl sm:text-3xl text-xl font-normal relative transition-transform duration-300 ease-out hover:translate-x-1">
                                     <span class="relative">
                                         Contact Me
-                                        <span class="absolute left-0 -bottom-1 h-[4px] w-full bg-current scale-x-100 origin-left
-                                              transition-transform duration-300 ease-out group-hover:scale-x-0">
+                                        <span
+                                            class="absolute left-0 -bottom-1 h-[4px] w-full bg-current scale-x-100 origin-left transition-transform duration-300 ease-out group-hover:scale-x-0">
                                         </span>
                                     </span>
 
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-6 sm:size-10 transition-all duration-300 ease-out
-                                      group-hover:rotate-180 group-hover:scale-125" stroke="currentColor"
-                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                        class="size-6 sm:size-10 transition-all duration-300 ease-out group-hover:rotate-180 group-hover:scale-125"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round">
                                         <line x1="7" y1="17" x2="17" y2="7" />
                                         <polyline points="7 7 17 7 17 17" />
-
                                     </svg>
                                 </a>
-
                             </div>
-                            <h2 class="text-xl font-medium hover:tracking-wider transition-all">Based in Mohali, India
+                            <h2 class="text-xl font-medium hover:tracking-wider transition-all">
+                                Based in Mohali, India
                             </h2>
                         </div>
                         <div class="flex items-center justify-center relative max-w-full">
                             <div class="h-80 sm:h-auto overflow-hidden mx-auto">
                                 <img src="assets/images/self.webp" alt="Illustration" loading="eager"
                                     fetchpriority="high"
-                                    class="mx-auto h-full w-full sm:w-auto sm:h-auto rounded-lg shadow-lg object-top sm:object-none">
+                                    class="mx-auto h-full w-full sm:w-auto sm:h-auto rounded-lg shadow-lg object-top sm:object-none" />
                             </div>
                             <div
                                 class="lg:size-48 sm:size-32 size-20 group circular-text absolute left-6 sm:left-8 bottom-0">
@@ -173,11 +168,10 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                             stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
                                             stroke="white"
-                                            class="hover:scale-150 transition-all absolute left-0 top-0 sm:size-[34px] size-[24px] ">
+                                            class="hover:scale-150 transition-all absolute left-0 top-0 sm:size-[34px] size-[24px]">
                                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-                                                stroke-linejoin="round">
-                                            </g>
+                                                stroke-linejoin="round"></g>
                                             <g id="SVGRepo_iconCarrier">
                                                 <line x1="12" y1="5" x2="12" y2="19"></line>
                                                 <polyline points="19 12 12 19 5 12"></polyline>
@@ -194,7 +188,7 @@
                                         <path id="textcircle" d="M250,400
                     a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z" transform="rotate(12,250,250)"></path>
                                     </defs>
-                                    <g class="textcircle ">
+                                    <g class="textcircle">
                                         <text textLength="940" class="fill-[var(--text-primary)] text-5xl uppercase">
                                             <textPath xlink:href="#textcircle" aria-label="CSS &amp; SVG are awesome"
                                                 textLength="940">
@@ -213,18 +207,17 @@
             <section id="name" class="Name px-6 bg-black z-10 overflow-hidden sm:mb-12">
                 <div class="w-full">
                     <h2
-                        class=" text-[16.5vw] tracking-tight leading-[1] flex justify-center items-center flex-nowrap font-bold uppercase text-center">
-                        Jaspreet Singh</h2>
-                    <p class="2xl:text-7xl xl:text-6xl lg:text-5xl sm:text-4xl text-2xl text-center !leading-[1.2]">Web
-                        Designer ·
-                        UI/UX
-                        ·
-                        Product-Focused</p>
+                        class="text-[16.5vw] tracking-tight leading-[1] flex justify-center items-center flex-nowrap font-bold uppercase text-center">
+                        Jaspreet Singh
+                    </h2>
+                    <p class="2xl:text-7xl xl:text-6xl lg:text-5xl sm:text-4xl text-2xl text-center !leading-[1.2]">
+                        Web Designer · UI/UX · Product-Focused
+                    </p>
                 </div>
             </section>
 
             <!-- Featured Work -->
-            <section id="featured-work" class=" px-6 sm:py-16 py-12">
+            <section id="featured-work" class="px-6 sm:py-16 py-12">
                 <div class="mx-auto w-full max-w-[var(--max-w)]">
                     <div class="grid grid-cols-1 sm:gap-20 gap-10 items-center">
                         <div class="text-reveal text-center">
@@ -238,54 +231,47 @@
                             </h2>
                         </div>
                         <div
-                            class="portfolio-items grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20 items-center overflow-hidden">
-
+                            class="portfolio-items grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-20 lg:gap-12 items-center overflow-hidden">
                             <!-- Project 01-->
                             <div
                                 class="text-reveal featureWrapper w-full h-full relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-lg border border-[#232323] mx-auto sm:p-10 p-5">
-
                                 <div class="flex flex-col h-full">
-                                    <h2 class="text-3xl lg:text-5xl capitalize font-semibold">JessaKae – Fashion
-                                        E-com Experience
+                                    <h2 class="text-3xl lg:text-5xl capitalize font-semibold">
+                                        JessaKae – Fashion E-com Experience
                                     </h2>
-                                    <p class="text-base opacity-50 mt-2">Frontend Development · UI Implementation ·
-                                        Responsive Experience
+                                    <p class="text-base opacity-50 mt-2">
+                                        Frontend Development · UI Implementation · Responsive
+                                        Experience
                                     </p>
-                                    <p class="md:text-base text-sm mt-4">Worked on a modern e-commerce experience for a
-                                        fashion brand focused on inclusive sizing and visual storytelling. The goal was
-                                        to create a smooth browsing journey while maintaining a strong emotional and
-                                        aesthetic appeal.</p>
+                                    <p class="md:text-base text-sm mt-4">
+                                        Worked on a modern e-commerce experience for a fashion
+                                        brand focused on inclusive sizing and visual storytelling.
+                                        The goal was to create a smooth browsing journey while
+                                        maintaining a strong emotional and aesthetic appeal.
+                                    </p>
                                     <div class="flex gap-4 mt-auto">
                                         <a href="https://jessakae.com"
                                             class="group flex capitalize items-center md:text-2xl text-lg rounded-full relative transition-transform duration-300 ease-out mt-4">
-                                            <span class="relative">
-                                                Live Website
-                                            </span>
+                                            <span class="relative"> Live Website </span>
 
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                                class="size-7 transition-all duration-300 ease-out
-                                      group-hover:rotate-180 group-hover:scale-125" stroke="currentColor"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-
+                                                class="size-7 transition-all duration-300 ease-out group-hover:rotate-180 group-hover:scale-125"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round">
                                                 <line x1="7" y1="17" x2="17" y2="7" />
                                                 <polyline points="7 7 17 7 17 17" />
-
                                             </svg>
                                         </a>
                                         <a href="caseStudy2.html"
-                                            class="group flex capitalize items-center md:text-2xl text-lg  rounded-full relative transition-transform duration-300 ease-out mt-4">
-                                            <span class="relative">
-                                                View Breakdown
-                                            </span>
+                                            class="group flex capitalize items-center md:text-2xl text-lg rounded-full relative transition-transform duration-300 ease-out mt-4">
+                                            <span class="relative"> View Breakdown </span>
 
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                                class="size-7 transition-all duration-300 ease-out
-                                      group-hover:rotate-180 group-hover:scale-125" stroke="currentColor"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-
+                                                class="size-7 transition-all duration-300 ease-out group-hover:rotate-180 group-hover:scale-125"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round">
                                                 <line x1="7" y1="17" x2="17" y2="7" />
                                                 <polyline points="7 7 17 7 17 17" />
-
                                             </svg>
                                         </a>
                                     </div>
@@ -295,324 +281,355 @@
                             <!-- Project 02 -->
                             <div
                                 class="text-reveal featureWrapper w-full h-full relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-lg border border-[#232323] mx-auto sm:p-10 p-5">
-
                                 <div class="flex flex-col h-full">
-                                    <h2 class="text-3xl lg:text-5xl capitalize font-semibold">SaaS Product Landing Page
+                                    <h2 class="text-3xl lg:text-5xl capitalize font-semibold">
+                                        SaaS Product Landing Page
                                     </h2>
-                                    <p class="text-base opacity-50 mt-2">Product Strategy · UI/UX Design ·
-                                        Conversion-Focused</p>
-                                    <p class="md:text-base text-sm mt-4">Designed a high-performance SaaS landing page
-                                        focused on clear messaging, user trust, and conversion-driven layout decisions.
+                                    <p class="text-base opacity-50 mt-2">
+                                        Product Strategy · UI/UX Design · Conversion-Focused
+                                    </p>
+                                    <p class="md:text-base text-sm mt-4">
+                                        Designed a high-performance SaaS landing page focused on
+                                        clear messaging, user trust, and conversion-driven layout
+                                        decisions.
                                     </p>
                                     <div class="flex gap-4 mt-auto">
                                         <a href="caseStudy.html"
-                                            class="group flex capitalize items-center md:text-2xl text-lg  rounded-full relative transition-transform duration-300 ease-out mt-4">
-                                            <span class="relative">
-                                                View Case Study
-                                            </span>
+                                            class="group flex capitalize items-center md:text-2xl text-lg rounded-full relative transition-transform duration-300 ease-out mt-4">
+                                            <span class="relative"> View Case Study </span>
 
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                                class="size-7 transition-all duration-300 ease-out
-                                      group-hover:rotate-180 group-hover:scale-125" stroke="currentColor"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-
+                                                class="size-7 transition-all duration-300 ease-out group-hover:rotate-180 group-hover:scale-125"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round">
                                                 <line x1="7" y1="17" x2="17" y2="7" />
                                                 <polyline points="7 7 17 7 17 17" />
-
                                             </svg>
                                         </a>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-
                 </div>
             </section>
 
             <!-- More Projects -->
             <section id="more-projects" class="px-6 sm:py-16 py-12">
                 <div class="mx-auto w-full max-w-[var(--max-w)]">
-
                     <!-- Section Heading -->
                     <div class="text-reveal text-center mb-10 sm:mb-16">
                         <span class="text-2xl uppercase mb-6 flex items-center gap-5 justify-center">
                             <div class="block w-4 h-4 rotate-45 bg-white angleRotate"></div>
-                            Selected Work
+                            PROJECT SHOWCASE
                         </span>
 
                         <h2 class="text-5xl sm:text-[10.5vw] font-semibold sm:leading-[.8] uppercase">
-                            More<br> Projects
+                            More<br />
+                            Projects
                         </h2>
                     </div>
 
                     <!-- Grid -->
-                    <div
-                        class="flex live-project overflow-x-auto lg:overflow-x-hidden overflow-y-hidden scroll-smooth lg:grid lg:grid-cols-3 gap-6 xl:gap-10 pb-2 md:pb-0">
-
-                        <!-- Project 1 -->
-                        <div
-                            class="featureWrapper group whitespace-nowrap lg:whitespace-normal w-full  relative  rounded-xl bg-white/5 backdrop-blur-lg border border-[#232323] sm:p-6 p-5 transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.05)] h-auto">
-
-                            <!-- Thumbnail -->
-                            <div
-                                class="w-full h-[180px] sm:h-[200px] mb-5 overflow-hidden rounded-lg bg-[#111] relative">
-                                <img src="assets/images/projects/Taskflow-01.png" alt="project"
-                                    class="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-110 group-hover:brightness-110 object-top" />
-
-                                <!-- subtle overlay -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <!-- Project 1 -->
+                            <div class="swiper-slide">
                                 <div
-                                    class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-500">
+                                    class="featureWrapper group w-full relative rounded-xl bg-white/5 backdrop-blur-lg border border-[#232323] sm:p-6 p-5 transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.05)] h-auto">
+                                    <!-- Thumbnail -->
+                                    <div
+                                        class="w-full h-[180px] sm:h-[200px] mb-5 overflow-hidden rounded-lg bg-[#111] relative">
+                                        <img src="assets/images/projects/Taskflow-01.png" alt="project"
+                                            class="w-full h-full object-cover object-[left,top] transition-all duration-700 ease-out group-hover:scale-110 group-hover:brightness-110" />
+
+                                        <!-- subtle overlay -->
+                                        <div
+                                            class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-500">
+                                        </div>
+                                        <!-- tag -->
+                                        <div
+                                            class="absolute bottom-3 left-3 text-xs px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
+                                            React
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col">
+                                        <div>
+                                            <h3 class="text-2xl lg:text-3xl font-semibold">
+                                                React Dashboard
+                                            </h3>
+                                            <p class="text-sm opacity-50 mt-2">
+                                                React · UI System · Data Visualization
+                                            </p>
+                                            <p class="text-sm mt-4 opacity-80 whitespace-normal">
+                                                Designed a scalable dashboard UI focused on clarity,
+                                                hierarchy, and real-time data usability.
+                                            </p>
+                                        </div>
+
+                                        <a href="projects/react-dashboard.html"
+                                            class="group flex items-center text-lg mt-6">
+                                            <span>View Case Study</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                                fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                                stroke-width="1.5">
+                                                <line x1="7" y1="17" x2="17" y2="7" />
+                                                <polyline points="7 7 17 7 17 17" />
+                                            </svg>
+                                        </a>
+                                    </div>
                                 </div>
-                                <!-- tag -->
+                            </div>
+                            <!-- Project 2 -->
+                            <div class="swiper-slide">
                                 <div
-                                    class="absolute bottom-3 left-3 text-xs px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
-                                    React
+                                    class="featureWrapper group w-full relative rounded-xl bg-white/5 backdrop-blur-lg border border-[#232323] sm:p-6 p-5 transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.05)] h-auto">
+                                    <!-- Thumbnail -->
+                                    <div
+                                        class="w-full h-[180px] sm:h-[200px] mb-5 overflow-hidden rounded-lg bg-[#111] relative">
+                                        <img src="assets/images/projects/Netflix-02.png" alt="project"
+                                            class="w-full h-full object-cover object-[left,top] transition-all duration-700 ease-out group-hover:scale-110 group-hover:brightness-110" />
+
+                                        <!-- subtle overlay -->
+                                        <div
+                                            class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-500">
+                                        </div>
+                                        <!-- tag -->
+                                        <div
+                                            class="absolute bottom-3 left-3 text-xs px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
+                                            React
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col">
+                                        <div>
+                                            <h3 class="text-2xl lg:text-3xl font-semibold">
+                                                Netflix UI Clone
+                                            </h3>
+                                            <p class="text-sm opacity-50 mt-2">
+                                                React · UI Engineering · Interaction
+                                            </p>
+                                            <p class="text-sm mt-4 opacity-80 whitespace-normal">
+                                                Recreated a high-fidelity streaming UI with focus on
+                                                layout precision and smooth interactions.
+                                            </p>
+                                        </div>
+
+                                        <a href="projects/netflix-ui.html" class="flex items-center text-lg mt-6">
+                                            <span>View Case Study</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                                fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                                stroke-width="1.5">
+                                                <line x1="7" y1="17" x2="17" y2="7" />
+                                                <polyline points="7 7 17 7 17 17" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Project 3 -->
+                            <div class="swiper-slide">
+                                <div
+                                    class="featureWrapper group w-full relative rounded-xl bg-white/5 backdrop-blur-lg border border-[#232323] sm:p-6 p-5 transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.05)] h-auto">
+                                    <!-- Thumbnail -->
+                                    <div
+                                        class="w-full h-[180px] sm:h-[200px] mb-5 overflow-hidden rounded-lg bg-[#111] relative">
+                                        <img src="assets/images/projects/Gym-Coach-02.png" alt="project"
+                                            class="w-full h-full object-cover object-[left,top] transition-all duration-700 ease-out group-hover:scale-110 group-hover:brightness-110" />
+
+                                        <!-- subtle overlay -->
+                                        <div
+                                            class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-500">
+                                        </div>
+                                        <!-- tag -->
+                                        <div
+                                            class="absolute bottom-3 left-3 text-xs px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
+                                            HTML/CSS
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col">
+                                        <div>
+                                            <h3 class="text-2xl lg:text-3xl font-semibold">
+                                                HTML/CSS Landing Page
+                                            </h3>
+                                            <p class="text-sm opacity-50 mt-2">
+                                                HTML · CSS · GSAP · Responsive
+                                            </p>
+                                            <p class="text-sm mt-4 opacity-80 whitespace-normal">
+                                                Designed and developed multiple responsive landing
+                                                pages with strong visual hierarchy and smooth
+                                                animations.
+                                            </p>
+                                        </div>
+
+                                        <a href="projects/landing-page.html" class="flex items-center text-lg mt-6">
+                                            <span>View Case Study</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                                fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                                stroke-width="1.5">
+                                                <line x1="7" y1="17" x2="17" y2="7" />
+                                                <polyline points="7 7 17 7 17 17" />
+                                            </svg>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
 
+                            <!-- Project 4 -->
+                            <div class="swiper-slide">
+                                <div
+                                    class="featureWrapper group w-full relative rounded-xl bg-white/5 backdrop-blur-lg border border-[#232323] sm:p-6 p-5 transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.05)] h-auto">
+                                    <!-- Thumbnail -->
+                                    <div
+                                        class="w-full h-[180px] sm:h-[200px] mb-5 overflow-hidden rounded-lg bg-[#111] relative">
+                                        <img src="assets/images/projects/Serum-03.png" alt="project"
+                                            class="w-full h-full object-cover object-[left,top] transition-all duration-700 ease-out group-hover:scale-110 group-hover:brightness-110" />
 
-                            <div class="flex flex-col text-reveal">
-                                <div>
-                                    <h3 class="text-2xl lg:text-3xl font-semibold">React Dashboard</h3>
-                                    <p class="text-sm opacity-50 mt-2">React · UI System · Data Visualization</p>
-                                    <p class="text-sm mt-4 opacity-80 whitespace-normal">
-                                        Designed a scalable dashboard UI focused on clarity, hierarchy, and real-time
-                                        data usability.
-                                    </p>
+                                        <!-- subtle overlay -->
+                                        <div
+                                            class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-500">
+                                        </div>
+                                        <!-- tag -->
+                                        <div
+                                            class="absolute bottom-3 left-3 text-xs px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
+                                            GSAP
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col">
+                                        <div>
+                                            <h3 class="text-2xl lg:text-3xl font-semibold">
+                                                GSAP Landing Page
+                                            </h3>
+                                            <p class="text-sm opacity-50 mt-2">
+                                                GSAP · ScrollTrigger · Motion
+                                            </p>
+                                            <p class="text-sm mt-4 opacity-80 whitespace-normal">
+                                                Created interactive landing pages with scroll-based
+                                                animations and premium motion design.
+                                            </p>
+                                        </div>
+
+                                        <a href="projects/gsap-landing-page.html"
+                                            class="flex items-center text-lg mt-6">
+                                            <span>View Case Study</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                                fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                                stroke-width="1.5">
+                                                <line x1="7" y1="17" x2="17" y2="7" />
+                                                <polyline points="7 7 17 7 17 17" />
+                                            </svg>
+                                        </a>
+                                    </div>
                                 </div>
+                            </div>
+                            <!-- Project 5 -->
+                            <div class="swiper-slide">
+                                <div
+                                    class="featureWrapper group w-full relative rounded-xl bg-white/5 backdrop-blur-lg border border-[#232323] sm:p-6 p-5 transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.05)] h-auto">
+                                    <!-- Thumbnail -->
+                                    <div
+                                        class="w-full h-[180px] sm:h-[200px] mb-5 overflow-hidden rounded-lg bg-[#111] relative">
+                                        <img src="assets/images/projects/LumaFrames-01.png" alt="project"
+                                            class="w-full h-full object-cover object-[left,top] transition-all duration-700 ease-out group-hover:scale-110 group-hover:brightness-110" />
 
-                                <a href="projects/react-dashboard.html" class="group flex items-center text-lg mt-6">
-                                    <span>View Case Study</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
-                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                                        <line x1="7" y1="17" x2="17" y2="7" />
-                                        <polyline points="7 7 17 7 17 17" />
-                                    </svg>
-                                </a>
+                                        <!-- subtle overlay -->
+                                        <div
+                                            class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-500">
+                                        </div>
+                                        <!-- tag -->
+                                        <div
+                                            class="absolute bottom-3 left-3 text-xs px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
+                                            React
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col">
+                                        <div>
+                                            <h3 class="text-2xl lg:text-3xl font-semibold">
+                                                React Landing Page
+                                            </h3>
+                                            <p class="text-sm opacity-50 mt-2">
+                                                React · Component-Based UI · Performance
+                                            </p>
+                                            <p class="text-sm mt-4 opacity-80 whitespace-normal">
+                                                Built a modern landing page using reusable components
+                                                with focus on performance, scalability, and clean UI
+                                                structure.
+                                            </p>
+                                        </div>
+
+                                        <a href="projects/react-landing-page.html"
+                                            class="flex items-center text-lg mt-6">
+                                            <span>View Case Study</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                                fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                                stroke-width="1.5">
+                                                <line x1="7" y1="17" x2="17" y2="7" />
+                                                <polyline points="7 7 17 7 17 17" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Project 6 -->
+                            <div class="swiper-slide">
+                                <div
+                                    class="featureWrapper group w-full relative rounded-xl bg-white/5 backdrop-blur-lg border border-[#232323] sm:p-6 p-5 transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.05)] h-auto">
+                                    <!-- Thumbnail -->
+                                    <div
+                                        class="w-full h-[180px] sm:h-[200px] mb-5 overflow-hidden rounded-lg bg-[#111] relative">
+                                        <img src="assets/images/projects/Weather-02.png" alt="project"
+                                            class="w-full h-full object-cover object-[left,top] transition-all duration-700 ease-out group-hover:scale-110 group-hover:brightness-110" />
+
+                                        <!-- subtle overlay -->
+                                        <div
+                                            class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-500">
+                                        </div>
+                                        <!-- tag -->
+                                        <div
+                                            class="absolute bottom-3 left-3 text-xs px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
+                                            VANILLA JS
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col">
+                                        <div>
+                                            <h3 class="text-2xl lg:text-3xl font-semibold">
+                                                Weather App
+                                            </h3>
+                                            <p class="text-sm opacity-50 mt-2">
+                                                Vanilla JS · API · UX
+                                            </p>
+                                            <p class="text-sm mt-4 opacity-80 whitespace-normal">
+                                                Built a real-time weather experience with clean UI,
+                                                API integration, and micro-interactions.
+                                            </p>
+                                        </div>
+
+                                        <a href="/projects/weather-app.html" class="flex items-center text-lg mt-6">
+                                            <span>View Case Study</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                                fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                                stroke-width="1.5">
+                                                <line x1="7" y1="17" x2="17" y2="7" />
+                                                <polyline points="7 7 17 7 17 17" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
-                        <!-- Project 2 -->
-                        <div
-                            class="featureWrapper group whitespace-nowrap lg:whitespace-normal w-full  relative  rounded-xl bg-white/5 backdrop-blur-lg border border-[#232323] sm:p-6 p-5 transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.05)] h-auto">
-
-                            <!-- Thumbnail -->
-                            <div
-                                class="w-full h-[180px] sm:h-[200px] mb-5 overflow-hidden rounded-lg bg-[#111] relative">
-                                <img src="assets/images/projects/Netflix-01.png" alt="project"
-                                    class="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-110 group-hover:brightness-110 object-top" />
-
-                                <!-- subtle overlay -->
-                                <div
-                                    class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-500">
-                                </div>
-                                <!-- tag -->
-                                <div
-                                    class="absolute bottom-3 left-3 text-xs px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
-                                    React
-                                </div>
-                            </div>
-
-
-                            <div class="flex flex-col text-reveal">
-                                <div>
-                                    <h3 class="text-2xl lg:text-3xl font-semibold">Netflix UI Clone</h3>
-                                    <p class="text-sm opacity-50 mt-2">React · UI Engineering · Interaction</p>
-                                    <p class="text-sm mt-4 opacity-80 whitespace-normal">
-                                        Recreated a high-fidelity streaming UI with focus on layout precision and smooth
-                                        interactions.
-                                    </p>
-                                </div>
-
-                                <a href="projects/netflix-ui.html" class="flex items-center text-lg mt-6">
-                                    <span>View Case Study</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
-                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                                        <line x1="7" y1="17" x2="17" y2="7" />
-                                        <polyline points="7 7 17 7 17 17" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Project 3 -->
-                        <div
-                            class="featureWrapper group whitespace-nowrap lg:whitespace-normal w-full  relative  rounded-xl bg-white/5 backdrop-blur-lg border border-[#232323] sm:p-6 p-5 transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.05)] h-auto">
-
-                            <!-- Thumbnail -->
-                            <div
-                                class="w-full h-[180px] sm:h-[200px] mb-5 overflow-hidden rounded-lg bg-[#111] relative">
-                                <img src="assets/images/projects/Gym-Coach-01.png" alt="project"
-                                    class="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-110 group-hover:brightness-110 object-top" />
-
-                                <!-- subtle overlay -->
-                                <div
-                                    class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-500">
-                                </div>
-                                <!-- tag -->
-                                <div
-                                    class="absolute bottom-3 left-3 text-xs px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
-                                    HTML/CSS
-                                </div>
-                            </div>
-
-
-                            <div class="flex flex-col text-reveal">
-                                <div>
-                                    <h3 class="text-2xl lg:text-3xl font-semibold">HTML/CSS Landing Page</h3>
-                                    <p class="text-sm opacity-50 mt-2">HTML · CSS · GSAP · Responsive</p>
-                                    <p class="text-sm mt-4 opacity-80 whitespace-normal">
-                                        Designed and developed multiple responsive landing pages with strong visual
-                                        hierarchy and smooth animations.
-                                    </p>
-                                </div>
-
-                                <a href="projects/landing-page.html" class="flex items-center text-lg mt-6">
-                                    <span>View Case Study</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
-                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                                        <line x1="7" y1="17" x2="17" y2="7" />
-                                        <polyline points="7 7 17 7 17 17" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Project 4 -->
-                        <div
-                            class="featureWrapper group whitespace-nowrap lg:whitespace-normal w-full  relative  rounded-xl bg-white/5 backdrop-blur-lg border border-[#232323] sm:p-6 p-5 transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.05)] h-auto">
-
-                            <!-- Thumbnail -->
-                            <div
-                                class="w-full h-[180px] sm:h-[200px] mb-5 overflow-hidden rounded-lg bg-[#111] relative">
-                                <img src="assets/images/projects/Serum-01.png" alt="project"
-                                    class="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-110 group-hover:brightness-110 object-top" />
-
-                                <!-- subtle overlay -->
-                                <div
-                                    class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-500">
-                                </div>
-                                <!-- tag -->
-                                <div
-                                    class="absolute bottom-3 left-3 text-xs px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
-                                    GSAP
-                                </div>
-                            </div>
-
-
-                            <div class="flex flex-col text-reveal">
-                                <div>
-                                    <h3 class="text-2xl lg:text-3xl font-semibold">GSAP Landing Page</h3>
-                                    <p class="text-sm opacity-50 mt-2">GSAP · ScrollTrigger · Motion</p>
-                                    <p class="text-sm mt-4 opacity-80 whitespace-normal">
-                                        Created interactive landing pages with scroll-based animations and premium
-                                        motion design.
-                                </div>
-
-                                <a href="projects/gsap-landing-page.html" class="flex items-center text-lg mt-6">
-                                    <span>View Case Study</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
-                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                                        <line x1="7" y1="17" x2="17" y2="7" />
-                                        <polyline points="7 7 17 7 17 17" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Project 5 -->
-                        <div
-                            class="featureWrapper group whitespace-nowrap lg:whitespace-normal w-full  relative  rounded-xl bg-white/5 backdrop-blur-lg border border-[#232323] sm:p-6 p-5 transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.05)] h-auto">
-
-                            <!-- Thumbnail -->
-                            <div
-                                class="w-full h-[180px] sm:h-[200px] mb-5 overflow-hidden rounded-lg bg-[#111] relative">
-                                <img src="assets/images/projects/LumaFrames-01.png" alt="project"
-                                    class="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-110 group-hover:brightness-110 object-top" />
-
-                                <!-- subtle overlay -->
-                                <div
-                                    class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-500">
-                                </div>
-                                <!-- tag -->
-                                <div
-                                    class="absolute bottom-3 left-3 text-xs px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
-                                    React
-                                </div>
-                            </div>
-
-
-                            <div class="flex flex-col text-reveal">
-                                <div>
-                                    <h3 class="text-2xl lg:text-3xl font-semibold">React Landing Page</h3>
-                                    <p class="text-sm opacity-50 mt-2">React · Component-Based UI · Performance</p>
-                                    <p class="text-sm mt-4 opacity-80 whitespace-normal">
-                                        Built a modern landing page using reusable components with focus on performance,
-                                        scalability, and clean UI structure.
-                                    </p>
-                                </div>
-
-                                <a href="projects/react-landing-page.html" class="flex items-center text-lg mt-6">
-                                    <span>View Case Study</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
-                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                                        <line x1="7" y1="17" x2="17" y2="7" />
-                                        <polyline points="7 7 17 7 17 17" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Project 6 -->
-                        <div
-                            class="featureWrapper group whitespace-nowrap lg:whitespace-normal w-full  relative  rounded-xl bg-white/5 backdrop-blur-lg border border-[#232323] sm:p-6 p-5 transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.05)] h-auto">
-
-                            <!-- Thumbnail -->
-                            <div
-                                class="w-full h-[180px] sm:h-[200px] mb-5 overflow-hidden rounded-lg bg-[#111] relative">
-                                <img src="assets/images/projects/Weather-01.png" alt="project"
-                                    class="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-110 group-hover:brightness-110 object-top" />
-
-                                <!-- subtle overlay -->
-                                <div
-                                    class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-500">
-                                </div>
-                                <!-- tag -->
-                                <div
-                                    class="absolute bottom-3 left-3 text-xs px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
-                                    VANILLA JS
-                                </div>
-                            </div>
-
-
-                            <div class="flex flex-col text-reveal">
-                                <div>
-                                    <h3 class="text-2xl lg:text-3xl font-semibold">Weather App</h3>
-                                    <p class="text-sm opacity-50 mt-2">Vanilla JS · API · UX</p>
-                                    <p class="text-sm mt-4 opacity-80 whitespace-normal">
-                                        Built a real-time weather experience with clean UI, API integration, and
-                                        micro-interactions.
-                                    </p>
-                                </div>
-
-                                <a href="/projects/weather-app.html" class="flex items-center text-lg mt-6">
-                                    <span>View Case Study</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
-                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                                        <line x1="7" y1="17" x2="17" y2="7" />
-                                        <polyline points="7 7 17 7 17 17" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
+                        <div class="swiper-button-next glass-nav"></div>
+                        <div class="swiper-button-prev glass-nav"></div>
                     </div>
                 </div>
             </section>
@@ -623,375 +640,740 @@
                 <div class="text-reveal text-center mb-10 sm:mb-16">
                     <span class="text-2xl uppercase mb-6 flex items-center gap-5 justify-center">
                         <div class="block w-4 h-4 rotate-45 bg-white angleRotate"></div>
-                        SELECTED WORK
+                        PRODUCTION READY
                     </span>
 
                     <h2 class="text-5xl sm:text-[10.5vw] font-semibold sm:leading-[.8] uppercase">
-                        LIVE<br> PROJECTS
+                        LIVE<br />
+                        PROJECTS
                     </h2>
                 </div>
-
-                <div class="live-project space-y-4 overflow-x-auto overflow-y-hidden scroll-smooth pb-2">
-
-                    <div class="flex md:gap-6 gap-4">
+                <div class="swiper liveSwiper">
+                    <div class="swiper-wrapper">
                         <!-- 01 -->
-                        <div
-                            class="featureWrapper whitespace-nowrap p-5 border border-[#232323] rounded-xl text-reveal">
-                            <h3 class="text-2xl font-semibold">JessaKae</h3>
-                            <p class="text-base opacity-60 mt-2">
-                                Frontend Development · Shopify
-                            </p>
+                        <div class="swiper-slide">
+                            <div class="featureWrapper md:py-10 py-8 px-7 border border-[#232323] rounded-xl">
+                                <!-- icon 01-->
+                                <span
+                                    class="absolute -right-2 md:-bottom-4 -bottom-2 md:text-8xl text-7xl font-black italic select-none pointer-events-none z-0 transition-all duration-500 text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:[-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:-translate-y-2">
+                                    01
+                                </span>
+                                <h3 class="md:text-3xl text-2xl font-semibold">JessaKae</h3>
+                                <p class="text-base opacity-60 mt-2">
+                                    Frontend Development · Shopify
+                                </p>
 
-                            <a href="https://jessakae.com" target="_blank"
-                                class="text-base mt-3 inline-block opacity-70 hover:opacity-100">
-                                Visit Website →
-                            </a>
+                                <a href="https://jessakae.com" target="_blank"
+                                    class="group flex items-center text-lg md:mt-6 mt-4">
+                                    <span>Visit Website</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                        <line x1="7" y1="17" x2="17" y2="7" />
+                                        <polyline points="7 7 17 7 17 17" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                         <!-- 02 -->
-                        <div
-                            class="featureWrapper whitespace-nowrap p-5 border border-[#232323] rounded-xl text-reveal">
-                            <h3 class="text-2xl font-semibold">Prya</h3>
-                            <p class="text-base opacity-60 mt-2">
-                                Frontend Development · Shopify
-                            </p>
+                        <div class="swiper-slide">
+                            <div class="featureWrapper md:py-10 py-8 px-7 border border-[#232323] rounded-xl">
+                                <!-- icon 02-->
+                                <span
+                                    class="absolute -right-2 md:-bottom-4 -bottom-2 md:text-8xl text-7xl font-black italic select-none pointer-events-none z-0 transition-all duration-500 text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:[-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:-translate-y-2">
+                                    02
+                                </span>
+                                <h3 class="md:text-3xl text-2xl font-semibold">Prya</h3>
+                                <p class="text-base opacity-60 mt-2">
+                                    Frontend Development · Shopify
+                                </p>
 
-                            <a href="https://prya.co.uk" target="_blank"
-                                class="text-base mt-3 inline-block opacity-70 hover:opacity-100">
-                                Visit Website →
-                            </a>
+                                <a href="https://prya.co.uk" target="_blank"
+                                    class="group flex items-center text-lg md:mt-6 mt-4">
+                                    <span>Visit Website</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                        <line x1="7" y1="17" x2="17" y2="7" />
+                                        <polyline points="7 7 17 7 17 17" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                         <!-- 03 -->
-                        <div
-                            class="featureWrapper whitespace-nowrap p-5 border border-[#232323] rounded-xl text-reveal">
-                            <h3 class="text-2xl font-semibold">Wipstitch</h3>
-                            <p class="text-base opacity-60 mt-2">
-                                Frontend Development · Shopify
-                            </p>
+                        <div class="swiper-slide">
+                            <div class="featureWrapper md:py-10 py-8 px-7 border border-[#232323] rounded-xl">
+                                <!-- icon 03-->
+                                <span
+                                    class="absolute -right-2 md:-bottom-4 -bottom-2 md:text-8xl text-7xl font-black italic select-none pointer-events-none z-0 transition-all duration-500 text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:[-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:-translate-y-2">
+                                    03
+                                </span>
+                                <h3 class="md:text-3xl text-2xl font-semibold">Wipstitch</h3>
+                                <p class="text-base opacity-60 mt-2">
+                                    Frontend Development · Shopify
+                                </p>
 
-                            <a href="https://wipstitch.com" target="_blank"
-                                class="text-base mt-3 inline-block opacity-70 hover:opacity-100">
-                                Visit Website →
-                            </a>
+                                <a href="https://wipstitch.com" target="_blank"
+                                    class="group flex items-center text-lg md:mt-6 mt-4">
+                                    <span>Visit Website</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                        <line x1="7" y1="17" x2="17" y2="7" />
+                                        <polyline points="7 7 17 7 17 17" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                         <!-- 04 -->
-                        <div
-                            class="featureWrapper whitespace-nowrap p-5 border border-[#232323] rounded-xl text-reveal">
-                            <h3 class="text-2xl font-semibold">Petpads</h3>
-                            <p class="text-base opacity-60 mt-2">
-                                Frontend Development · Shopify
-                            </p>
+                        <div class="swiper-slide">
+                            <div class="featureWrapper md:py-10 py-8 px-7 border border-[#232323] rounded-xl">
+                                <!-- icon 04-->
+                                <span
+                                    class="absolute -right-2 md:-bottom-4 -bottom-2 md:text-8xl text-7xl font-black italic select-none pointer-events-none z-0 transition-all duration-500 text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:[-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:-translate-y-2">
+                                    04
+                                </span>
+                                <h3 class="md:text-3xl text-2xl font-semibold">Petpads</h3>
+                                <p class="text-base opacity-60 mt-2">
+                                    Frontend Development · Shopify
+                                </p>
 
-                            <a href="https://petpads.net" target="_blank"
-                                class="text-base mt-3 inline-block opacity-70 hover:opacity-100">
-                                Visit Website →
-                            </a>
+                                <a href="https://petpads.net" target="_blank"
+                                    class="group flex items-center text-lg md:mt-6 mt-4">
+                                    <span>Visit Website</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                        <line x1="7" y1="17" x2="17" y2="7" />
+                                        <polyline points="7 7 17 7 17 17" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                         <!-- 05 -->
-                        <div
-                            class="featureWrapper whitespace-nowrap p-5 border border-[#232323] rounded-xl text-reveal">
-                            <h3 class="text-2xl font-semibold">Eccotemp</h3>
-                            <p class="text-base opacity-60 mt-2">
-                                Frontend Development · BigCommerce
-                            </p>
+                        <div class="swiper-slide">
+                            <div class="featureWrapper md:py-10 py-8 px-7 border border-[#232323] rounded-xl">
+                                <!-- icon 05-->
+                                <span
+                                    class="absolute -right-2 md:-bottom-4 -bottom-2 md:text-8xl text-7xl font-black italic select-none pointer-events-none z-0 transition-all duration-500 text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:[-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:-translate-y-2">
+                                    05
+                                </span>
+                                <h3 class="md:text-3xl text-2xl font-semibold">Eccotemp</h3>
+                                <p class="text-base opacity-60 mt-2">
+                                    Frontend Development · BigCommerce
+                                </p>
 
-                            <a href="https://eccotemp.com" target="_blank"
-                                class="text-base mt-3 inline-block opacity-70 hover:opacity-100">
-                                Visit Website →
-                            </a>
+                                <a href="https://eccotemp.com" target="_blank"
+                                    class="group flex items-center text-lg md:mt-6 mt-4">
+                                    <span>Visit Website</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                        <line x1="7" y1="17" x2="17" y2="7" />
+                                        <polyline points="7 7 17 7 17 17" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                         <!-- 06 -->
-                        <div
-                            class="featureWrapper whitespace-nowrap p-5 border border-[#232323] rounded-xl text-reveal">
-                            <h3 class="text-2xl font-semibold">Ten Performance</h3>
-                            <p class="text-base opacity-60 mt-2">
-                                Frontend Development · Shopify
-                            </p>
+                        <div class="swiper-slide">
+                            <div class="featureWrapper md:py-10 py-8 px-7 border border-[#232323] rounded-xl">
+                                <!-- icon 06-->
+                                <span
+                                    class="absolute -right-2 md:-bottom-4 -bottom-2 md:text-8xl text-7xl font-black italic select-none pointer-events-none z-0 transition-all duration-500 text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:[-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:-translate-y-2">
+                                    06
+                                </span>
+                                <h3 class="md:text-3xl text-2xl font-semibold">
+                                    Ten Performance
+                                </h3>
+                                <p class="text-base opacity-60 mt-2">
+                                    Frontend Development · Shopify
+                                </p>
 
-                            <a href="https://tenperformance.com" target="_blank"
-                                class="text-base mt-3 inline-block opacity-70 hover:opacity-100">
-                                Visit Website →
-                            </a>
+                                <a href="https://tenperformance.com" target="_blank"
+                                    class="group flex items-center text-lg md:mt-6 mt-4">
+                                    <span>Visit Website</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                        <line x1="7" y1="17" x2="17" y2="7" />
+                                        <polyline points="7 7 17 7 17 17" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                         <!-- 07 -->
-                        <div
-                            class="featureWrapper whitespace-nowrap p-5 border border-[#232323] rounded-xl text-reveal">
-                            <h3 class="text-2xl font-semibold">JM Wholesale</h3>
-                            <p class="text-base opacity-60 mt-2">
-                                Frontend Development · Shopify
-                            </p>
+                        <div class="swiper-slide">
+                            <div class="featureWrapper md:py-10 py-8 px-7 border border-[#232323] rounded-xl">
+                                <!-- icon 07-->
+                                <span
+                                    class="absolute -right-2 md:-bottom-4 -bottom-2 md:text-8xl text-7xl font-black italic select-none pointer-events-none z-0 transition-all duration-500 text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:[-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:-translate-y-2">
+                                    07
+                                </span>
+                                <h3 class="md:text-3xl text-2xl font-semibold">
+                                    JM Wholesale
+                                </h3>
+                                <p class="text-base opacity-60 mt-2">
+                                    Frontend Development · Shopify
+                                </p>
 
-                            <a href="https://jm-wholesale.co.uk" target="_blank"
-                                class="text-base mt-3 inline-block opacity-70 hover:opacity-100">
-                                Visit Website →
-                            </a>
+                                <a href="https://jm-wholesale.co.uk" target="_blank"
+                                    class="group flex items-center text-lg md:mt-6 mt-4">
+                                    <span>Visit Website</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                        <line x1="7" y1="17" x2="17" y2="7" />
+                                        <polyline points="7 7 17 7 17 17" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                         <!-- 08 -->
-                        <div
-                            class="featureWrapper whitespace-nowrap p-5 border border-[#232323] rounded-xl text-reveal">
-                            <h3 class="text-2xl font-semibold">Kaval</h3>
-                            <p class="text-base opacity-60 mt-2">
-                                Frontend Development · Shopify
-                            </p>
+                        <div class="swiper-slide">
+                            <div class="featureWrapper md:py-10 py-8 px-7 border border-[#232323] rounded-xl">
+                                <!-- icon 08-->
+                                <span
+                                    class="absolute -right-2 md:-bottom-4 -bottom-2 md:text-8xl text-7xl font-black italic select-none pointer-events-none z-0 transition-all duration-500 text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:[-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:-translate-y-2">
+                                    08
+                                </span>
+                                <h3 class="md:text-3xl text-2xl font-semibold">Kaval</h3>
+                                <p class="text-base opacity-60 mt-2">
+                                    Frontend Development · Shopify
+                                </p>
 
-                            <a href="https://kaval.com" target="_blank"
-                                class="text-base mt-3 inline-block opacity-70 hover:opacity-100">
-                                Visit Website →
-                            </a>
+                                <a href="https://kaval.com" target="_blank"
+                                    class="group flex items-center text-lg md:mt-6 mt-4">
+                                    <span>Visit Website</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                        <line x1="7" y1="17" x2="17" y2="7" />
+                                        <polyline points="7 7 17 7 17 17" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
-
                         <!-- 09 -->
-                        <div
-                            class="featureWrapper whitespace-nowrap p-5 border border-[#232323] rounded-xl text-reveal">
-                            <h3 class="text-2xl font-semibold">WildWood Guitars</h3>
-                            <p class="text-base opacity-60 mt-2">
-                                Frontend Development · Shopify
-                            </p>
 
-                            <a href="https://wildwoodguitars.com" target="_blank"
-                                class="text-base mt-3 inline-block opacity-70 hover:opacity-100">
-                                Visit Website →
-                            </a>
+                        <div class="swiper-slide">
+                            <div class="featureWrapper md:py-10 py-8 px-7 border border-[#232323] rounded-xl">
+                                <!-- icon 9-->
+                                <span
+                                    class="absolute -right-2 md:-bottom-4 -bottom-2 md:text-8xl text-7xl font-black italic select-none pointer-events-none z-0 transition-all duration-500 text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:[-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:-translate-y-2">
+                                    9
+                                </span>
+                                <h3 class="md:text-3xl text-2xl font-semibold">
+                                    WildWood Guitars
+                                </h3>
+                                <p class="text-base opacity-60 mt-2">
+                                    Frontend Development · Shopify
+                                </p>
+
+                                <a href="https://wildwoodguitars.com" target="_blank"
+                                    class="group flex items-center text-lg md:mt-6 mt-4">
+                                    <span>Visit Website</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                        <line x1="7" y1="17" x2="17" y2="7" />
+                                        <polyline points="7 7 17 7 17 17" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                         <!-- 10 -->
-                        <div
-                            class="featureWrapper whitespace-nowrap p-5 border border-[#232323] rounded-xl text-reveal">
-                            <h3 class="text-2xl font-semibold">Recce</h3>
-                            <p class="text-base opacity-60 mt-2">
-                                Frontend Development · WordPress
-                            </p>
 
-                            <a href="https://recce.com.au" target="_blank"
-                                class="text-base mt-3 inline-block opacity-70 hover:opacity-100">
-                                Visit Website →
-                            </a>
+                        <div class="swiper-slide">
+                            <div class="featureWrapper md:py-10 py-8 px-7 border border-[#232323] rounded-xl">
+                                <!-- icon 10-->
+                                <span
+                                    class="absolute -right-2 md:-bottom-4 -bottom-2 md:text-8xl text-7xl font-black italic select-none pointer-events-none z-0 transition-all duration-500 text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:[-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:-translate-y-2">
+                                    10
+                                </span>
+                                <h3 class="md:text-3xl text-2xl font-semibold">Recce</h3>
+                                <p class="text-base opacity-60 mt-2">
+                                    Frontend Development · WordPress
+                                </p>
+
+                                <a href="https://recce.com.au" target="_blank"
+                                    class="group flex items-center text-lg md:mt-6 mt-4">
+                                    <span>Visit Website</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                        <line x1="7" y1="17" x2="17" y2="7" />
+                                        <polyline points="7 7 17 7 17 17" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                         <!-- 11 -->
-                        <div
-                            class="featureWrapper whitespace-nowrap p-5 border border-[#232323] rounded-xl text-reveal">
-                            <h3 class="text-2xl font-semibold">Pglegexperts</h3>
-                            <p class="text-base opacity-60 mt-2">
-                                Frontend Development · Shopify
-                            </p>
 
-                            <a href="https://pglegexperts.de" target="_blank"
-                                class="text-base mt-3 inline-block opacity-70 hover:opacity-100">
-                                Visit Website →
-                            </a>
+                        <div class="swiper-slide">
+                            <div class="featureWrapper md:py-10 py-8 px-7 border border-[#232323] rounded-xl">
+                                <!-- icon 11-->
+                                <span
+                                    class="absolute -right-2 md:-bottom-4 -bottom-2 md:text-8xl text-7xl font-black italic select-none pointer-events-none z-0 transition-all duration-500 text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:[-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:-translate-y-2">
+                                    11
+                                </span>
+                                <h3 class="md:text-3xl text-2xl font-semibold">
+                                    Pglegexperts
+                                </h3>
+                                <p class="text-base opacity-60 mt-2">
+                                    Frontend Development · Shopify
+                                </p>
+
+                                <a href="https://pglegexperts.de" target="_blank"
+                                    class="group flex items-center text-lg md:mt-6 mt-4">
+                                    <span>Visit Website</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                        <line x1="7" y1="17" x2="17" y2="7" />
+                                        <polyline points="7 7 17 7 17 17" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                         <!-- 12 -->
-                        <div
-                            class="featureWrapper whitespace-nowrap p-5 border border-[#232323] rounded-xl text-reveal">
-                            <h3 class="text-2xl font-semibold">Hair Flair</h3>
-                            <p class="text-base opacity-60 mt-2">
-                                Frontend Development · BigCommerce
-                            </p>
 
-                            <a href="https://shop.hairflair.ca" target="_blank"
-                                class="text-base mt-3 inline-block opacity-70 hover:opacity-100">
-                                Visit Website →
-                            </a>
+                        <div class="swiper-slide">
+                            <div class="featureWrapper md:py-10 py-8 px-7 border border-[#232323] rounded-xl">
+                                <!-- icon 12-->
+                                <span
+                                    class="absolute -right-2 md:-bottom-4 -bottom-2 md:text-8xl text-7xl font-black italic select-none pointer-events-none z-0 transition-all duration-500 text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:[-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:-translate-y-2">
+                                    12
+                                </span>
+                                <h3 class="md:text-3xl text-2xl font-semibold">Hair Flair</h3>
+                                <p class="text-base opacity-60 mt-2">
+                                    Frontend Development · BigCommerce
+                                </p>
+
+                                <a href="https://shop.hairflair.ca" target="_blank"
+                                    class="group flex items-center text-lg md:mt-6 mt-4">
+                                    <span>Visit Website</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                        <line x1="7" y1="17" x2="17" y2="7" />
+                                        <polyline points="7 7 17 7 17 17" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                         <!-- 13 -->
-                        <div
-                            class="featureWrapper whitespace-nowrap p-5 border border-[#232323] rounded-xl text-reveal">
-                            <h3 class="text-2xl font-semibold">Good Wynns</h3>
-                            <p class="text-base opacity-60 mt-2">
-                                Frontend Development · Shopify
-                            </p>
 
-                            <a href="https://Goodwynns.com" target="_blank"
-                                class="text-base mt-3 inline-block opacity-70 hover:opacity-100">
-                                Visit Website →
-                            </a>
+                        <div class="swiper-slide">
+                            <div class="featureWrapper md:py-10 py-8 px-7 border border-[#232323] rounded-xl">
+                                <!-- icon 13-->
+                                <span
+                                    class="absolute -right-2 md:-bottom-4 -bottom-2 md:text-8xl text-7xl font-black italic select-none pointer-events-none z-0 transition-all duration-500 text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:[-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:-translate-y-2">
+                                    13
+                                </span>
+                                <h3 class="md:text-3xl text-2xl font-semibold">Good Wynns</h3>
+                                <p class="text-base opacity-60 mt-2">
+                                    Frontend Development · Shopify
+                                </p>
+
+                                <a href="https://Goodwynns.com" target="_blank"
+                                    class="group flex items-center text-lg md:mt-6 mt-4">
+                                    <span>Visit Website</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                        <line x1="7" y1="17" x2="17" y2="7" />
+                                        <polyline points="7 7 17 7 17 17" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="flex md:gap-6 gap-4">
                         <!-- 14 -->
-                        <div
-                            class="featureWrapper whitespace-nowrap p-5 border border-[#232323] rounded-xl text-reveal">
-                            <h3 class="text-2xl font-semibold">The Rafit Shoe</h3>
-                            <p class="text-base opacity-60 mt-2">
-                                Frontend Development · Shopify
-                            </p>
 
-                            <a href="https://therafitshoe.com" target="_blank"
-                                class="text-base mt-3 inline-block opacity-70 hover:opacity-100">
-                                Visit Website →
-                            </a>
+                        <div class="swiper-slide">
+                            <div class="featureWrapper md:py-10 py-8 px-7 border border-[#232323] rounded-xl">
+                                <!-- icon 14-->
+                                <span
+                                    class="absolute -right-2 md:-bottom-4 -bottom-2 md:text-8xl text-7xl font-black italic select-none pointer-events-none z-0 transition-all duration-500 text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:[-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:-translate-y-2">
+                                    14
+                                </span>
+                                <h3 class="md:text-3xl text-2xl font-semibold">
+                                    The Rafit Shoe
+                                </h3>
+                                <p class="text-base opacity-60 mt-2">
+                                    Frontend Development · Shopify
+                                </p>
+
+                                <a href="https://therafitshoe.com" target="_blank"
+                                    class="group flex items-center text-lg md:mt-6 mt-4">
+                                    <span>Visit Website</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                        <line x1="7" y1="17" x2="17" y2="7" />
+                                        <polyline points="7 7 17 7 17 17" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                         <!-- 15 -->
-                        <div
-                            class="featureWrapper whitespace-nowrap p-5 border border-[#232323] rounded-xl text-reveal">
-                            <h3 class="text-2xl font-semibold">Volta Industries</h3>
-                            <p class="text-base opacity-60 mt-2">
-                                Frontend Development · Shopify
-                            </p>
 
-                            <a href="https://voltaindustries.ca" target="_blank"
-                                class="text-base mt-3 inline-block opacity-70 hover:opacity-100">
-                                Visit Website →
-                            </a>
+                        <div class="swiper-slide">
+                            <div class="featureWrapper md:py-10 py-8 px-7 border border-[#232323] rounded-xl">
+                                <!-- icon 15-->
+                                <span
+                                    class="absolute -right-2 md:-bottom-4 -bottom-2 md:text-8xl text-7xl font-black italic select-none pointer-events-none z-0 transition-all duration-500 text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:[-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:-translate-y-2">
+                                    15
+                                </span>
+                                <h3 class="md:text-3xl text-2xl font-semibold">
+                                    Volta Industries
+                                </h3>
+                                <p class="text-base opacity-60 mt-2">
+                                    Frontend Development · Shopify
+                                </p>
+
+                                <a href="https://voltaindustries.ca" target="_blank"
+                                    class="group flex items-center text-lg md:mt-6 mt-4">
+                                    <span>Visit Website</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                        <line x1="7" y1="17" x2="17" y2="7" />
+                                        <polyline points="7 7 17 7 17 17" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                         <!-- 16 -->
-                        <div
-                            class="featureWrapper whitespace-nowrap p-5 border border-[#232323] rounded-xl text-reveal">
-                            <h3 class="text-2xl font-semibold">Amarte Skincare</h3>
-                            <p class="text-base opacity-60 mt-2">
-                                Frontend Development · Shopify
-                            </p>
 
-                            <a href="https://amarteskincare.com" target="_blank"
-                                class="text-base mt-3 inline-block opacity-70 hover:opacity-100">
-                                Visit Website →
-                            </a>
+                        <div class="swiper-slide">
+                            <div class="featureWrapper md:py-10 py-8 px-7 border border-[#232323] rounded-xl">
+                                <!-- icon 16-->
+                                <span
+                                    class="absolute -right-2 md:-bottom-4 -bottom-2 md:text-8xl text-7xl font-black italic select-none pointer-events-none z-0 transition-all duration-500 text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:[-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:-translate-y-2">
+                                    16
+                                </span>
+                                <h3 class="md:text-3xl text-2xl font-semibold">
+                                    Amarte Skincare
+                                </h3>
+                                <p class="text-base opacity-60 mt-2">
+                                    Frontend Development · Shopify
+                                </p>
+
+                                <a href="https://amarteskincare.com" target="_blank"
+                                    class="group flex items-center text-lg md:mt-6 mt-4">
+                                    <span>Visit Website</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                        <line x1="7" y1="17" x2="17" y2="7" />
+                                        <polyline points="7 7 17 7 17 17" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                         <!-- 17 -->
-                        <div
-                            class="featureWrapper whitespace-nowrap p-5 border border-[#232323] rounded-xl text-reveal">
-                            <h3 class="text-2xl font-semibold">Dr Sebis</h3>
-                            <p class="text-base opacity-60 mt-2">
-                                Frontend Development · Shopify
-                            </p>
 
-                            <a href="https://drsebis.com" target="_blank"
-                                class="text-base mt-3 inline-block opacity-70 hover:opacity-100">
-                                Visit Website →
-                            </a>
+                        <div class="swiper-slide">
+                            <div class="featureWrapper md:py-10 py-8 px-7 border border-[#232323] rounded-xl">
+                                <!-- icon 17-->
+                                <span
+                                    class="absolute -right-2 md:-bottom-4 -bottom-2 md:text-8xl text-7xl font-black italic select-none pointer-events-none z-0 transition-all duration-500 text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:[-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:-translate-y-2">
+                                    17
+                                </span>
+                                <h3 class="md:text-3xl text-2xl font-semibold">Dr Sebis</h3>
+                                <p class="text-base opacity-60 mt-2">
+                                    Frontend Development · Shopify
+                                </p>
+
+                                <a href="https://drsebis.com" target="_blank"
+                                    class="group flex items-center text-lg md:mt-6 mt-4">
+                                    <span>Visit Website</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                        <line x1="7" y1="17" x2="17" y2="7" />
+                                        <polyline points="7 7 17 7 17 17" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                         <!-- 18 -->
-                        <div
-                            class="featureWrapper whitespace-nowrap p-5 border border-[#232323] rounded-xl text-reveal">
-                            <h3 class="text-2xl font-semibold">Stairs</h3>
-                            <p class="text-base opacity-60 mt-2">
-                                Frontend Development · Shopify
-                            </p>
 
-                            <a href="https://stairs.com" target="_blank"
-                                class="text-base mt-3 inline-block opacity-70 hover:opacity-100">
-                                Visit Website →
-                            </a>
+                        <div class="swiper-slide">
+                            <div class="featureWrapper md:py-10 py-8 px-7 border border-[#232323] rounded-xl">
+                                <!-- icon 18-->
+                                <span
+                                    class="absolute -right-2 md:-bottom-4 -bottom-2 md:text-8xl text-7xl font-black italic select-none pointer-events-none z-0 transition-all duration-500 text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:[-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:-translate-y-2">
+                                    18
+                                </span>
+                                <h3 class="md:text-3xl text-2xl font-semibold">Stairs</h3>
+                                <p class="text-base opacity-60 mt-2">
+                                    Frontend Development · Shopify
+                                </p>
+
+                                <a href="https://stairs.com" target="_blank"
+                                    class="group flex items-center text-lg md:mt-6 mt-4">
+                                    <span>Visit Website</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                        <line x1="7" y1="17" x2="17" y2="7" />
+                                        <polyline points="7 7 17 7 17 17" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                         <!-- 19 -->
-                        <div
-                            class="featureWrapper whitespace-nowrap p-5 border border-[#232323] rounded-xl text-reveal">
-                            <h3 class="text-2xl font-semibold">Hg Garage</h3>
-                            <p class="text-base opacity-60 mt-2">
-                                Frontend Development · Shopify
-                            </p>
 
-                            <a href="https://hggarage.com" target="_blank"
-                                class="text-base mt-3 inline-block opacity-70 hover:opacity-100">
-                                Visit Website →
-                            </a>
+                        <div class="swiper-slide">
+                            <div class="featureWrapper md:py-10 py-8 px-7 border border-[#232323] rounded-xl">
+                                <!-- icon 19-->
+                                <span
+                                    class="absolute -right-2 md:-bottom-4 -bottom-2 md:text-8xl text-7xl font-black italic select-none pointer-events-none z-0 transition-all duration-500 text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:[-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:-translate-y-2">
+                                    19
+                                </span>
+                                <h3 class="md:text-3xl text-2xl font-semibold">Hg Garage</h3>
+                                <p class="text-base opacity-60 mt-2">
+                                    Frontend Development · Shopify
+                                </p>
+
+                                <a href="https://hggarage.com" target="_blank"
+                                    class="group flex items-center text-lg md:mt-6 mt-4">
+                                    <span>Visit Website</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                        <line x1="7" y1="17" x2="17" y2="7" />
+                                        <polyline points="7 7 17 7 17 17" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                         <!-- 20 -->
-                        <div
-                            class="featureWrapper whitespace-nowrap p-5 border border-[#232323] rounded-xl text-reveal">
-                            <h3 class="text-2xl font-semibold">Gior Bello</h3>
-                            <p class="text-base opacity-60 mt-2">
-                                Frontend Development · Shopify
-                            </p>
 
-                            <a href="https://giorbello.com" target="_blank"
-                                class="text-base mt-3 inline-block opacity-70 hover:opacity-100">
-                                Visit Website →
-                            </a>
+                        <div class="swiper-slide">
+                            <div class="featureWrapper md:py-10 py-8 px-7 border border-[#232323] rounded-xl">
+                                <!-- icon 20-->
+                                <span
+                                    class="absolute -right-2 md:-bottom-4 -bottom-2 md:text-8xl text-7xl font-black italic select-none pointer-events-none z-0 transition-all duration-500 text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:[-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:-translate-y-2">
+                                    20
+                                </span>
+                                <h3 class="md:text-3xl text-2xl font-semibold">Gior Bello</h3>
+                                <p class="text-base opacity-60 mt-2">
+                                    Frontend Development · Shopify
+                                </p>
+
+                                <a href="https://giorbello.com" target="_blank"
+                                    class="group flex items-center text-lg md:mt-6 mt-4">
+                                    <span>Visit Website</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                        <line x1="7" y1="17" x2="17" y2="7" />
+                                        <polyline points="7 7 17 7 17 17" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                         <!-- 21 -->
-                        <div
-                            class="featureWrapper whitespace-nowrap p-5 border border-[#232323] rounded-xl text-reveal">
-                            <h3 class="text-2xl font-semibold">Rapid Deployment Shelter</h3>
-                            <p class="text-base opacity-60 mt-2">
-                                Frontend Development · BigCommerce
-                            </p>
 
-                            <a href="https://rapiddeploymentshelter.com" target="_blank"
-                                class="text-base mt-3 inline-block opacity-70 hover:opacity-100">
-                                Visit Website →
-                            </a>
+                        <div class="swiper-slide">
+                            <div class="featureWrapper md:py-10 py-8 px-7 border border-[#232323] rounded-xl">
+                                <!-- icon 21-->
+                                <span
+                                    class="absolute -right-2 md:-bottom-4 -bottom-2 md:text-8xl text-7xl font-black italic select-none pointer-events-none z-0 transition-all duration-500 text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:[-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:-translate-y-2">
+                                    21
+                                </span>
+                                <h3 class="md:text-3xl text-2xl font-semibold">
+                                    Rapid Deployment Shelter
+                                </h3>
+                                <p class="text-base opacity-60 mt-2">
+                                    Frontend Development · BigCommerce
+                                </p>
+
+                                <a href="https://rapiddeploymentshelter.com" target="_blank"
+                                    class="group flex items-center text-lg md:mt-6 mt-4">
+                                    <span>Visit Website</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                        <line x1="7" y1="17" x2="17" y2="7" />
+                                        <polyline points="7 7 17 7 17 17" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                         <!-- 22 -->
-                        <div
-                            class="featureWrapper whitespace-nowrap p-5 border border-[#232323] rounded-xl text-reveal">
-                            <h3 class="text-2xl font-semibold">Industrial Scale Inc</h3>
-                            <p class="text-base opacity-60 mt-2">
-                                Frontend Development · WordPress
-                            </p>
 
-                            <a href="https://Industrialscaleinc.com" target="_blank"
-                                class="text-base mt-3 inline-block opacity-70 hover:opacity-100">
-                                Visit Website →
-                            </a>
+                        <div class="swiper-slide">
+                            <div class="featureWrapper md:py-10 py-8 px-7 border border-[#232323] rounded-xl">
+                                <!-- icon 22-->
+                                <span
+                                    class="absolute -right-2 md:-bottom-4 -bottom-2 md:text-8xl text-7xl font-black italic select-none pointer-events-none z-0 transition-all duration-500 text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:[-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:-translate-y-2">
+                                    22
+                                </span>
+                                <h3 class="md:text-3xl text-2xl font-semibold">
+                                    Industrial Scale Inc
+                                </h3>
+                                <p class="text-base opacity-60 mt-2">
+                                    Frontend Development · WordPress
+                                </p>
+
+                                <a href="https://Industrialscaleinc.com" target="_blank"
+                                    class="group flex items-center text-lg md:mt-6 mt-4">
+                                    <span>Visit Website</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                        <line x1="7" y1="17" x2="17" y2="7" />
+                                        <polyline points="7 7 17 7 17 17" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                         <!-- 23 -->
-                        <div
-                            class="featureWrapper whitespace-nowrap p-5 border border-[#232323] rounded-xl text-reveal">
-                            <h3 class="text-2xl font-semibold">Monty And Sons</h3>
-                            <p class="text-base opacity-60 mt-2">
-                                Frontend Development · Shopify
-                            </p>
 
-                            <a href="https://montyandsons.co.nz" target="_blank"
-                                class="text-base mt-3 inline-block opacity-70 hover:opacity-100">
-                                Visit Website →
-                            </a>
+                        <div class="swiper-slide">
+                            <div class="featureWrapper md:py-10 py-8 px-7 border border-[#232323] rounded-xl">
+                                <!-- icon 23-->
+                                <span
+                                    class="absolute -right-2 md:-bottom-4 -bottom-2 md:text-8xl text-7xl font-black italic select-none pointer-events-none z-0 transition-all duration-500 text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:[-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:-translate-y-2">
+                                    23
+                                </span>
+                                <h3 class="md:text-3xl text-2xl font-semibold">
+                                    Monty And Sons
+                                </h3>
+                                <p class="text-base opacity-60 mt-2">
+                                    Frontend Development · Shopify
+                                </p>
+
+                                <a href="https://montyandsons.co.nz" target="_blank"
+                                    class="group flex items-center text-lg md:mt-6 mt-4">
+                                    <span>Visit Website</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                        <line x1="7" y1="17" x2="17" y2="7" />
+                                        <polyline points="7 7 17 7 17 17" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                         <!-- 24 -->
-                        <div
-                            class="featureWrapper whitespace-nowrap p-5 border border-[#232323] rounded-xl text-reveal">
-                            <h3 class="text-2xl font-semibold">Global Ultrasound Institute</h3>
-                            <p class="text-base opacity-60 mt-2">
-                                Frontend Development · WordPress
-                            </p>
 
-                            <a href="https://globalultrasoundinstitute.com" target="_blank"
-                                class="text-base mt-3 inline-block opacity-70 hover:opacity-100">
-                                Visit Website →
-                            </a>
+                        <div class="swiper-slide">
+                            <div class="featureWrapper md:py-10 py-8 px-7 border border-[#232323] rounded-xl">
+                                <!-- icon 24-->
+                                <span
+                                    class="absolute -right-2 md:-bottom-4 -bottom-2 md:text-8xl text-7xl font-black italic select-none pointer-events-none z-0 transition-all duration-500 text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:[-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:-translate-y-2">
+                                    24
+                                </span>
+                                <h3 class="md:text-3xl text-2xl font-semibold">
+                                    Global Ultrasound Institute
+                                </h3>
+                                <p class="text-base opacity-60 mt-2">
+                                    Frontend Development · WordPress
+                                </p>
+
+                                <a href="https://globalultrasoundinstitute.com" target="_blank"
+                                    class="group flex items-center text-lg md:mt-6 mt-4">
+                                    <span>Visit Website</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                        <line x1="7" y1="17" x2="17" y2="7" />
+                                        <polyline points="7 7 17 7 17 17" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                         <!-- 25 -->
-                        <div
-                            class="featureWrapper whitespace-nowrap p-5 border border-[#232323] rounded-xl text-reveal">
-                            <h3 class="text-2xl font-semibold">Vita Stars</h3>
-                            <p class="text-base opacity-60 mt-2">
-                                Frontend Development · Shopify
-                            </p>
 
-                            <a href="https://vitastars.com" target="_blank"
-                                class="text-base mt-3 inline-block opacity-70 hover:opacity-100">
-                                Visit Website →
-                            </a>
+                        <div class="swiper-slide">
+                            <div class="featureWrapper md:py-10 py-8 px-7 border border-[#232323] rounded-xl">
+                                <!-- icon 25-->
+                                <span
+                                    class="absolute -right-2 md:-bottom-4 -bottom-2 md:text-8xl text-7xl font-black italic select-none pointer-events-none z-0 transition-all duration-500 text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:[-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:-translate-y-2">
+                                    25
+                                </span>
+                                <h3 class="md:text-3xl text-2xl font-semibold">Vita Stars</h3>
+                                <p class="text-base opacity-60 mt-2">
+                                    Frontend Development · Shopify
+                                </p>
+
+                                <a href="https://vitastars.com" target="_blank"
+                                    class="group flex items-center text-lg md:mt-6 mt-4">
+                                    <span>Visit Website</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                        <line x1="7" y1="17" x2="17" y2="7" />
+                                        <polyline points="7 7 17 7 17 17" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                         <!-- 26 -->
-                        <div
-                            class="featureWrapper whitespace-nowrap p-5 border border-[#232323] rounded-xl text-reveal">
-                            <h3 class="text-2xl font-semibold">Ram Prod Inc</h3>
-                            <p class="text-base opacity-60 mt-2">
-                                Frontend Development · BigCommerce
-                            </p>
 
-                            <a href="https://ramprodinc.com" target="_blank"
-                                class="text-base mt-3 inline-block opacity-70 hover:opacity-100">
-                                Visit Website →
-                            </a>
+                        <div class="swiper-slide">
+                            <div class="featureWrapper md:py-10 py-8 px-7 border border-[#232323] rounded-xl">
+                                <!-- icon 26-->
+                                <span
+                                    class="absolute -right-2 md:-bottom-4 -bottom-2 md:text-8xl text-7xl font-black italic select-none pointer-events-none z-0 transition-all duration-500 text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:[-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:-translate-y-2">
+                                    26
+                                </span>
+                                <h3 class="md:text-3xl text-2xl font-semibold">
+                                    Ram Prod Inc
+                                </h3>
+                                <p class="text-base opacity-60 mt-2">
+                                    Frontend Development · BigCommerce
+                                </p>
+
+                                <a href="https://ramprodinc.com" target="_blank"
+                                    class="group flex items-center text-lg md:mt-6 mt-4">
+                                    <span>Visit Website</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                        <line x1="7" y1="17" x2="17" y2="7" />
+                                        <polyline points="7 7 17 7 17 17" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                         <!-- 27 -->
-                        <div
-                            class="featureWrapper whitespace-nowrap p-5 border border-[#232323] rounded-xl text-reveal">
-                            <h3 class="text-2xl font-semibold">The recruiter squad</h3>
-                            <p class="text-base opacity-60 mt-2">
-                                Frontend Development · WordPress
-                            </p>
 
-                            <a href="https://therecruitingsquad.com" target="_blank"
-                                class="text-base mt-3 inline-block opacity-70 hover:opacity-100">
-                                Visit Website →
-                            </a>
+                        <div class="swiper-slide">
+                            <div class="featureWrapper md:py-10 py-8 px-7 border border-[#232323] rounded-xl">
+                                <!-- icon 27-->
+                                <span
+                                    class="absolute -right-2 md:-bottom-4 -bottom-2 md:text-8xl text-7xl font-black italic select-none pointer-events-none z-0 transition-all duration-500 text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:[-webkit-text-stroke:1px_rgba(255,255,255,0.15)] group-hover/card:-translate-y-2">
+                                    27
+                                </span>
+                                <h3 class="md:text-3xl text-2xl font-semibold">
+                                    The recruiter squad
+                                </h3>
+                                <p class="text-base opacity-60 mt-2">
+                                    Frontend Development · WordPress
+                                </p>
+
+                                <a href="https://therecruitingsquad.com" target="_blank"
+                                    class="group flex items-center text-lg md:mt-6 mt-4">
+                                    <span>Visit Website</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="size-5 ml-2 transition-all duration-300 group-hover:rotate-180 group-hover:scale-125"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                        <line x1="7" y1="17" x2="17" y2="7" />
+                                        <polyline points="7 7 17 7 17 17" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
-
+                    <div class="swiper-button-next glass-nav"></div>
+                    <div class="swiper-button-prev glass-nav"></div>
                 </div>
-
             </section>
 
             <!-- About us -->
@@ -1009,17 +1391,14 @@
                             </h2>
                         </div>
 
-
                         <!-- Image -->
                         <div class="flex justify-start">
                             <div class="text-reveal">
-                                <h2 class="sm:text-3xl text-xl max-w-xl !leading-relaxed font-[poppins]">Web UI
-                                    Developer
-                                    with
-                                    experience
-                                    working on real-world product and client-facing websites. I focus on clarity,
-                                    usability,
-                                    and performance-driven design that supports business goals.
+                                <h2 class="sm:text-3xl text-xl max-w-xl !leading-relaxed font-[poppins]">
+                                    Web UI Developer with experience working on real-world
+                                    product and client-facing websites. I focus on clarity,
+                                    usability, and performance-driven design that supports
+                                    business goals.
                                 </h2>
                             </div>
                         </div>
@@ -1029,10 +1408,12 @@
                     <div class="grid grid-cols-1 lg:grid-cols-2 sm:gap-20 gap-10 items-start py-12 sm:py-20 lg:py-24">
                         <div class="lg:sticky lg:top-48">
                             <div class="text-reveal">
-                                <h2 class="text-5xl sm:text-6xl lg:text-8xl font-semibold sm:mb-6 uppercase ">How <br> I
-                                    Work</h2>
+                                <h2 class="text-5xl sm:text-6xl lg:text-8xl font-semibold sm:mb-6 uppercase">
+                                    How
+                                    <br />
+                                    I Work
+                                </h2>
                             </div>
-
                         </div>
                         <!-- Content -->
                         <div class="flex justify-start">
@@ -1040,53 +1421,58 @@
                                 <li>
                                     <div
                                         class="text-xl mb-4 text-black bg-white p-2 w-10 h-10 rounded-lg flex justify-center items-center">
-                                        01</div>
+                                        01
+                                    </div>
                                     <div class="text-reveal">
                                         <p class="sm:text-2xl text-xl max-w-xl leading-normal font-[poppins]">
                                             <span
                                                 class="block font-semibold uppercase sm:text-4xl text-3xl mb-2">Research
-                                                &
-                                                Strategy</span>
-                                            Understanding user goals, business needs, and product direction before
-                                            design.
+                                                & Strategy</span>
+                                            Understanding user goals, business needs, and product
+                                            direction before design.
                                         </p>
                                     </div>
                                 </li>
                                 <li>
                                     <div
                                         class="text-xl mb-4 text-black bg-white p-2 w-10 h-10 rounded-lg flex justify-center items-center">
-                                        02</div>
+                                        02
+                                    </div>
                                     <div class="text-reveal">
                                         <p class="sm:text-2xl text-xl max-w-xl leading-normal font-[poppins]">
                                             <span class="block font-semibold uppercase sm:text-4xl text-3xl mb-2">UX
                                                 Structure</span>
-                                            Creating clear layouts and flows to guide users effectively.
+                                            Creating clear layouts and flows to guide users
+                                            effectively.
                                         </p>
                                     </div>
                                 </li>
                                 <li>
                                     <div
                                         class="text-xl mb-4 text-black bg-white p-2 w-10 h-10 rounded-lg flex justify-center items-center">
-                                        03</div>
+                                        03
+                                    </div>
                                     <div class="text-reveal">
                                         <p class="sm:text-2xl text-xl max-w-xl leading-normal font-[poppins]">
                                             <span class="block font-semibold uppercase sm:text-4xl text-3xl mb-2">Visual
                                                 Design</span>
-                                            Crafting clean, modern interfaces with strong hierarchy and consistency.
+                                            Crafting clean, modern interfaces with strong hierarchy
+                                            and consistency.
                                         </p>
                                     </div>
                                 </li>
                                 <li>
                                     <div
                                         class="text-xl mb-4 text-black bg-white p-2 w-10 h-10 rounded-lg flex justify-center items-center">
-                                        04</div>
+                                        04
+                                    </div>
                                     <div class="text-reveal">
                                         <p class="sm:text-2xl text-xl max-w-xl leading-normal font-[poppins]">
                                             <span
                                                 class="block font-semibold uppercase sm:text-4xl text-3xl mb-2">Handoff
-                                                &
-                                                Collaboration</span>
-                                            Preparing developer-ready designs and collaborating closely with teams.
+                                                & Collaboration</span>
+                                            Preparing developer-ready designs and collaborating
+                                            closely with teams.
                                         </p>
                                     </div>
                                 </li>
@@ -1098,32 +1484,31 @@
                     <div class="grid grid-cols-1 lg:grid-cols-2 sm:gap-20 gap-10 items-start py-12 sm:py-20 lg:py-24">
                         <div class="lg:sticky lg:top-48">
                             <div class="text-reveal">
-                                <h2 class="text-5xl sm:text-6xl lg:text-8xl font-semibold sm:mb-6 uppercase ">My <br>
-                                    Skills</h2>
+                                <h2 class="text-5xl sm:text-6xl lg:text-8xl font-semibold sm:mb-6 uppercase">
+                                    My
+                                    <br />
+                                    Skills
+                                </h2>
                             </div>
                         </div>
                         <!-- Skill content -->
                         <div class="w-full max-w-2xl space-y-4 gap-6">
-
-
                             <div class="space-y-4">
-                                <h2 class="sm:text-4xl text-3xl font-semibold mb-6 uppercase ">Core Skills</h2>
+                                <h2 class="sm:text-4xl text-3xl font-semibold mb-6 uppercase">
+                                    Core Skills
+                                </h2>
                                 <!-- Skill item -->
                                 <div class="group">
-                                    <div class="relative flex items-center bg-neutral-900 border border-neutral-800
-                                    rounded-full sm:h-20 h-16 overflow-hidden
-                                    transition-all duration-300
-                                    ">
-
+                                    <div
+                                        class="relative flex items-center bg-neutral-900 border border-neutral-800 rounded-full sm:h-20 h-16 overflow-hidden transition-all duration-300">
                                         <!-- Fill -->
-                                        <div class="w-0 absolute left-0 top-0 h-full group-hover:w-[100%] bg-white rounded-full
-                                        transition-all duration-1000
-                                        ">
+                                        <div
+                                            class="w-0 absolute left-0 top-0 h-full group-hover:w-[100%] bg-white rounded-full transition-all duration-1000">
                                         </div>
 
                                         <!-- Content -->
                                         <div class="relative flex items-center justify-between w-full px-8">
-                                            <div class="flex items-center sm:gap-6 gap-4">
+                                            <div class="text-reveal flex items-center sm:gap-6 gap-4">
                                                 <span
                                                     class="text-neutral-400 text-3xl group-hover:text-neutral-400">01</span>
                                                 <h1
@@ -1138,22 +1523,18 @@
 
                                 <!-- Skill item -->
                                 <div class="group">
-                                    <div class="relative flex items-center bg-neutral-900 border border-neutral-800
-                                rounded-full sm:h-20 h-16 overflow-hidden
-                                transition-all duration-300
-                                ">
-
-                                        <div class="w-0 absolute left-0 top-0 h-full group-hover:w-[100%] bg-white rounded-full
-                                        transition-all duration-1000
-                                        ">
+                                    <div
+                                        class="relative flex items-center bg-neutral-900 border border-neutral-800 rounded-full sm:h-20 h-16 overflow-hidden transition-all duration-300">
+                                        <div
+                                            class="w-0 absolute left-0 top-0 h-full group-hover:w-[100%] bg-white rounded-full transition-all duration-1000">
                                         </div>
 
                                         <div class="relative flex items-center justify-between w-full px-8">
-                                            <div class="flex items-center sm:gap-6 gap-4">
+                                            <div class="text-reveal flex items-center sm:gap-6 gap-4">
                                                 <span
                                                     class="text-neutral-400 text-3xl group-hover:text-neutral-400">02</span>
                                                 <h1
-                                                    class="text-white text-3xl sm:text-4xl uppercase  group-hover:text-black">
+                                                    class="text-white text-3xl sm:text-4xl uppercase group-hover:text-black">
                                                     UX Design
                                                 </h1>
                                             </div>
@@ -1164,18 +1545,14 @@
 
                                 <!-- Skill item -->
                                 <div class="group">
-                                    <div class="relative flex items-center bg-neutral-900 border border-neutral-800
-                                    rounded-full sm:h-20 h-16 overflow-hidden
-                                    transition-all duration-300
-                                    ">
-
-                                        <div class="w-0 absolute left-0 top-0 h-full group-hover:w-[100%] bg-white rounded-full
-                                    transition-all duration-1000
-                                    ">
+                                    <div
+                                        class="relative flex items-center bg-neutral-900 border border-neutral-800 rounded-full sm:h-20 h-16 overflow-hidden transition-all duration-300">
+                                        <div
+                                            class="w-0 absolute left-0 top-0 h-full group-hover:w-[100%] bg-white rounded-full transition-all duration-1000">
                                         </div>
 
                                         <div class="relative flex items-center justify-between w-full px-8">
-                                            <div class="flex items-center sm:gap-6 gap-4">
+                                            <div class="text-reveal flex items-center sm:gap-6 gap-4">
                                                 <span
                                                     class="text-neutral-400 text-3xl group-hover:text-neutral-400">03</span>
                                                 <h1
@@ -1190,18 +1567,14 @@
 
                                 <!-- Skill item -->
                                 <div class="group">
-                                    <div class="relative flex items-center bg-neutral-900 border border-neutral-800
-                                    rounded-full sm:h-20 h-16 overflow-hidden
-                                    transition-all duration-300
-                                    ">
-
-                                        <div class="w-0 absolute left-0 top-0 h-full group-hover:w-[100%] bg-white rounded-full
-                                    transition-all duration-1000
-                                    ">
+                                    <div
+                                        class="relative flex items-center bg-neutral-900 border border-neutral-800 rounded-full sm:h-20 h-16 overflow-hidden transition-all duration-300">
+                                        <div
+                                            class="w-0 absolute left-0 top-0 h-full group-hover:w-[100%] bg-white rounded-full transition-all duration-1000">
                                         </div>
 
                                         <div class="relative flex items-center justify-between w-full px-8">
-                                            <div class="flex items-center sm:gap-6 gap-4">
+                                            <div class="text-reveal flex items-center sm:gap-6 gap-4">
                                                 <span
                                                     class="text-neutral-400 text-3xl group-hover:text-neutral-400">04</span>
                                                 <h1
@@ -1216,18 +1589,14 @@
 
                                 <!-- Skill item -->
                                 <div class="group">
-                                    <div class="relative flex items-center bg-neutral-900 border border-neutral-800
-                                    rounded-full sm:h-20 h-16 overflow-hidden
-                                    transition-all duration-300
-                                    ">
-
-                                        <div class="w-0 absolute left-0 top-0 h-full group-hover:w-[100%] bg-white rounded-full
-                                    transition-all duration-1000
-                                    ">
+                                    <div
+                                        class="relative flex items-center bg-neutral-900 border border-neutral-800 rounded-full sm:h-20 h-16 overflow-hidden transition-all duration-300">
+                                        <div
+                                            class="w-0 absolute left-0 top-0 h-full group-hover:w-[100%] bg-white rounded-full transition-all duration-1000">
                                         </div>
 
                                         <div class="relative flex items-center justify-between w-full px-8">
-                                            <div class="flex items-center sm:gap-6 gap-4">
+                                            <div class="text-reveal flex items-center sm:gap-6 gap-4">
                                                 <span
                                                     class="text-neutral-400 text-3xl group-hover:text-neutral-400">05</span>
                                                 <h1
@@ -1239,9 +1608,7 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
-
                         </div>
                     </div>
 
@@ -1249,72 +1616,91 @@
                     <div class="grid grid-cols-1 lg:grid-cols-2 sm:gap-20 gap-10 items-start py-12 sm:py-20 lg:py-24">
                         <div class="lg:sticky lg:top-48">
                             <div class="text-reveal">
-                                <h2 class="text-5xl sm:text-6xl lg:text-8xl font-semibold sm:mb-6 uppercase ">My <br>
-                                    Tech
-                                    Stack</h2>
+                                <h2 class="text-5xl sm:text-6xl lg:text-8xl font-semibold sm:mb-6 uppercase">
+                                    My
+                                    <br />
+                                    Tech Stack
+                                </h2>
                             </div>
                         </div>
                         <!-- Image -->
-                        <div class="max-w-xl ">
-                            <h2 class="sm:text-4xl text-3xl font-semibold mb-6 uppercase">Tools / Awareness</h2>
+                        <div class="max-w-xl">
+                            <h2 class="sm:text-4xl text-3xl font-semibold mb-6 uppercase">
+                                Tools / Awareness
+                            </h2>
                             <ul class="grid md:grid-cols-4 grid-cols-3 gap-7">
-                                <li class="w-20 sm:w-32 mx-auto sm:mx-0">
+                                <li class="w-20 xl:w-32 mx-auto sm:mx-0">
                                     <div
-                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center sm:p-10 p-6">
-                                        <img src="assets/images/html.webp" alt="html wrapper" loading="lazy">
+                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center xl:p-10 p-6">
+                                        <img src="assets/images/html.webp" alt="html wrapper" loading="lazy" />
                                     </div>
-                                    <p class="text-white text-base uppercase mt-3 text-center">Html</p>
+                                    <p class="text-white text-base uppercase mt-3 text-center">
+                                        Html
+                                    </p>
                                 </li>
-                                <li class="w-20 sm:w-32 mx-auto sm:mx-0">
+                                <li class="w-20 xl:w-32 mx-auto sm:mx-0">
                                     <div
-                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center sm:p-10 p-6">
-                                        <img src="assets/images/css.webp" alt="css wrapper" loading="lazy">
+                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center xl:p-10 p-6">
+                                        <img src="assets/images/css.webp" alt="css wrapper" loading="lazy" />
                                     </div>
-                                    <p class="text-white text-base uppercase mt-3 text-center">css</p>
+                                    <p class="text-white text-base uppercase mt-3 text-center">
+                                        css
+                                    </p>
                                 </li>
-                                <li class="w-20 sm:w-32 mx-auto sm:mx-0">
+                                <li class="w-20 xl:w-32 mx-auto sm:mx-0">
                                     <div
-                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center sm:p-10 p-6">
-                                        <img src="assets/images/js.webp" alt="js wrapper" loading="lazy">
+                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center xl:p-10 p-6">
+                                        <img src="assets/images/js.webp" alt="js wrapper" loading="lazy" />
                                     </div>
-                                    <p class="text-white text-base uppercase mt-3 text-center">js</p>
+                                    <p class="text-white text-base uppercase mt-3 text-center">
+                                        js
+                                    </p>
                                 </li>
-                                <li class="w-20 sm:w-32 mx-auto sm:mx-0">
+                                <li class="w-20 xl:w-32 mx-auto sm:mx-0">
                                     <div
-                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center sm:p-10 p-6">
-                                        <img src="assets/images/tailwind.webp" alt="tailwind wrapper" loading="lazy">
+                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center xl:p-10 p-6">
+                                        <img src="assets/images/tailwind.webp" alt="tailwind wrapper" loading="lazy" />
                                     </div>
-                                    <p class="text-white text-base uppercase mt-3 text-center">tailwind</p>
+                                    <p class="text-white text-base uppercase mt-3 text-center">
+                                        tailwind
+                                    </p>
                                 </li>
-                                <li class="w-20 sm:w-32 mx-auto sm:mx-0">
+                                <li class="w-20 xl:w-32 mx-auto sm:mx-0">
                                     <div
-                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center sm:p-10 p-6">
-                                        <img src="assets/images/ts.webp" alt="ts wrapper" loading="lazy">
+                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center xl:p-10 p-6">
+                                        <img src="assets/images/ts.webp" alt="ts wrapper" loading="lazy" />
                                     </div>
-                                    <p class="text-white text-base uppercase mt-3 text-center">ts</p>
+                                    <p class="text-white text-base uppercase mt-3 text-center">
+                                        ts
+                                    </p>
                                 </li>
-                                <li class="w-20 sm:w-32 mx-auto sm:mx-0">
+                                <li class="w-20 xl:w-32 mx-auto sm:mx-0">
                                     <div
-                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center sm:p-10 p-6">
-                                        <img src="assets/images/reactjs.webp" alt="reactjs wrapper" loading="lazy">
+                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center xl:p-10 p-6">
+                                        <img src="assets/images/reactjs.webp" alt="reactjs wrapper" loading="lazy" />
                                     </div>
-                                    <p class="text-white text-base uppercase mt-3 text-center">reactjs</p>
+                                    <p class="text-white text-base uppercase mt-3 text-center">
+                                        reactjs
+                                    </p>
                                 </li>
-                                <li class="w-20 sm:w-32 mx-auto sm:mx-0">
+                                <li class="w-20 xl:w-32 mx-auto sm:mx-0">
                                     <div
-                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center sm:p-10 p-6">
-                                        <img src="assets/images/nextjs.webp" alt="nextjs wrapper" loading="lazy">
+                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center xl:p-10 p-6">
+                                        <img src="assets/images/nextjs.webp" alt="nextjs wrapper" loading="lazy" />
                                     </div>
-                                    <p class="text-white text-base uppercase mt-3 text-center">nextjs</p>
+                                    <p class="text-white text-base uppercase mt-3 text-center">
+                                        nextjs
+                                    </p>
                                 </li>
-                                <li class="w-20 sm:w-32 mx-auto sm:mx-0">
+                                <li class="w-20 xl:w-32 mx-auto sm:mx-0">
                                     <div
-                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center sm:p-10 p-6">
-                                        <img src="assets/images/figma.webp" alt="figma wrapper" loading="lazy">
+                                        class="border border-[#232323] hover:border-8 grayscale hover:grayscale-0 transition-all cursor-pointer rounded-full flex items-center justify-center xl:p-10 p-6">
+                                        <img src="assets/images/figma.webp" alt="figma wrapper" loading="lazy" />
                                     </div>
-                                    <p class="text-white text-base uppercase mt-3 text-center">figma</p>
+                                    <p class="text-white text-base uppercase mt-3 text-center">
+                                        figma
+                                    </p>
                                 </li>
-
                             </ul>
                         </div>
                     </div>
@@ -1322,14 +1708,13 @@
                     <!-- Experience Counter -->
                     <div class="sm:px-6 bg-[var(--bg-secondary)] py-12 sm:py-20 lg:py-24 z-10">
                         <div class="achievements wrapper grid lg:grid-cols-3 md:grid-cols-1 lg:gap-16 sm:gap-12 gap-8">
-
                             <div class="group flex flex-col items-center">
                                 <div class="text-reveal space-y-4 text-center">
                                     <h1 class="counter lg:text-8xl sm:text-7xl text-5xl font-medium" data-count="5">
                                         0+
                                     </h1>
-                                    <h1 class="lg:text-4xl text-3xl uppercase max-w-sm mx-auto">Years of Professional
-                                        Experience
+                                    <h1 class="lg:text-4xl text-3xl uppercase max-w-sm mx-auto">
+                                        Years of Professional Experience
                                     </h1>
                                 </div>
                             </div>
@@ -1339,7 +1724,9 @@
                                     <h1 class="counter lg:text-8xl sm:text-7xl text-5xl font-medium" data-count="20">
                                         0+
                                     </h1>
-                                    <h1 class="lg:text-4xl text-3xl uppercase max-w-sm mx-auto">Projects Delivered</h1>
+                                    <h1 class="lg:text-4xl text-3xl uppercase max-w-sm mx-auto">
+                                        Projects Delivered
+                                    </h1>
                                 </div>
                             </div>
 
@@ -1348,11 +1735,11 @@
                                     <h1 class="counter lg:text-8xl sm:text-7xl text-5xl font-medium" data-count="1">
                                         0
                                     </h1>
-                                    <h1 class="lg:text-4xl text-3xl uppercase max-w-sm mx-auto">Product Company
-                                        Experience</h1>
+                                    <h1 class="lg:text-4xl text-3xl uppercase max-w-sm mx-auto">
+                                        Product Company Experience
+                                    </h1>
                                 </div>
                             </div>
-
                         </div>
                     </div>
 
@@ -1361,22 +1748,22 @@
                         class="grid grid-cols-1 lg:grid-cols-2 sm:gap-20 gap-10 items-start sm:pt-24 pt-12 lg:pb-12 sm:pb-8 pb-0">
                         <div class="lg:sticky lg:top-48">
                             <div class="text-reveal">
-                                <h2 class="text-5xl sm:text-6xl lg:text-8xl font-semibold mb-6 uppercase ">My <br>
-                                    Experience</h2>
+                                <h2 class="text-5xl sm:text-6xl lg:text-8xl font-semibold mb-6 uppercase">
+                                    My
+                                    <br />
+                                    Experience
+                                </h2>
                             </div>
                             <a href="assets/resume/Jaspreet_Singh_Web_Designer.pdf" target="_blank" rel="noopener"
                                 class="group flex uppercase items-center gap-1 sm:px-6 px-5 sm:py-3 py-2 w-max border-2 border-[#232323] sm:text-2xl text-xl rounded-full relative transition-transform duration-300 ease-out hover:border-2 hover:border-[#e7e7e7]">
-                                <span class="relative">
-                                    View My Cv
-                                </span>
+                                <span class="relative"> View My Cv </span>
 
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-7 transition-all duration-300 ease-out
-                                      group-hover:rotate-180 group-hover:scale-125" stroke="currentColor"
-                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    class="size-7 transition-all duration-300 ease-out group-hover:rotate-180 group-hover:scale-125"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
                                     <line x1="7" y1="17" x2="17" y2="7" />
                                     <polyline points="7 7 17 7 17 17" />
-
                                 </svg>
                             </a>
                         </div>
@@ -1384,19 +1771,36 @@
                         <!-- Content -->
 
                         <div class="text-reveal">
-                            <h2 class="sm:text-5xl text-4xl font-semibold mb-6">Web UI Developer</h2>
-                            <p class="sm:text-2xl text-xl bg-white/10 backdrop-blur-lg px-4 py-2 inline-block">Tech
-                                Prastish
-                                Software Solutions | 2020 – Present</p>
+                            <h2 class="sm:text-5xl text-4xl font-semibold mb-6">
+                                Web UI Developer
+                            </h2>
+                            <p class="sm:text-2xl text-xl bg-white/10 backdrop-blur-lg px-4 py-2 inline-block">
+                                Tech Prastish Software Solutions | 2020 – Present
+                            </p>
                             <ul class="text-reveal list-disc list-outside mt-4 space-y-2 sm:text-lg text-base pl-4">
-                                <li>Designing responsive web interfaces for product and client-facing websites</li>
-                                <li>Creating UI systems, layout structures, and reusable components in Figma</li>
-                                <li>Collaborating with frontend developers to ensure design accuracy and usability</li>
-                                <li>Implementing responsive design and ensuring cross-browser compatibility</li>
-                                <li>Working on real business requirements, user flows, and performance-focused layouts
+                                <li>
+                                    Designing responsive web interfaces for product and
+                                    client-facing websites
+                                </li>
+                                <li>
+                                    Creating UI systems, layout structures, and reusable
+                                    components in Figma
+                                </li>
+                                <li>
+                                    Collaborating with frontend developers to ensure design
+                                    accuracy and usability
+                                </li>
+                                <li>
+                                    Implementing responsive design and ensuring cross-browser
+                                    compatibility
+                                </li>
+                                <li>
+                                    Working on real business requirements, user flows, and
+                                    performance-focused layouts
                                 </li>
                             </ul>
-                            <p class="text-lg sm:mt-8 mt-6">Focus areas: Web UI, UX clarity, visual consistency, and
+                            <p class="text-lg sm:mt-8 mt-6">
+                                Focus areas: Web UI, UX clarity, visual consistency, and
                                 performance-aware design
                             </p>
                         </div>
@@ -1407,13 +1811,13 @@
             <!-- Experience Counter -->
             <section class="hidden px-6 bg-[var(--bg-secondary)] sm:py-16 py-12 z-10">
                 <div class="achievements wrapper grid lg:grid-cols-3 md:grid-cols-1 gap-16">
-
                     <div class="group flex flex-col items-center">
                         <div class="text-reveal space-y-4 text-center">
                             <h1 class="counter lg:text-8xl text-7xl font-medium" data-count="5">
                                 0+
                             </h1>
-                            <h1 class="lg:text-4xl text-3xl uppercase max-w-sm mx-auto">Years of Professional Experience
+                            <h1 class="lg:text-4xl text-3xl uppercase max-w-sm mx-auto">
+                                Years of Professional Experience
                             </h1>
                         </div>
                     </div>
@@ -1423,7 +1827,9 @@
                             <h1 class="counter lg:text-8xl text-7xl font-medium" data-count="20">
                                 0+
                             </h1>
-                            <h1 class="lg:text-4xl text-3xl uppercase max-w-sm mx-auto">Projects Delivered</h1>
+                            <h1 class="lg:text-4xl text-3xl uppercase max-w-sm mx-auto">
+                                Projects Delivered
+                            </h1>
                         </div>
                     </div>
 
@@ -1432,11 +1838,11 @@
                             <h1 class="counter lg:text-8xl text-7xl font-medium" data-count="1">
                                 0
                             </h1>
-                            <h1 class="lg:text-4xl text-3xl uppercase max-w-sm mx-auto">Product Company
-                                Experience</h1>
+                            <h1 class="lg:text-4xl text-3xl uppercase max-w-sm mx-auto">
+                                Product Company Experience
+                            </h1>
                         </div>
                     </div>
-
                 </div>
             </section>
 
@@ -1451,74 +1857,87 @@
                                 Services
                             </span>
                             <h2
-                                class="text-5xl sm:text-[10.5vw] text-center font-semibold mb mb-2-6 sm:leading-[.8] uppercase ">
+                                class="text-5xl sm:text-[10.5vw] text-center font-semibold mb mb-2-6 sm:leading-[.8] uppercase">
                                 My
-                                <br> Services
+                                <br />
+                                Services
                             </h2>
                         </div>
                     </div>
                     <div class="max-w-screen-xl mx-auto">
                         <!-- Image -->
                         <div class="w-full">
-                            <ul class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+                            <ul class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
                                 <li
-                                    class="relative group mx-auto flex justify-center items-center border border-[#232323] rounded-3xl">
+                                    class="relative group mx-auto flex justify-center items-center border border-[#232323] rounded-3xl w-full">
                                     <div
-                                        class=" text-reveal grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col sm:p-16 p-10">
+                                        class="text-reveal grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col sm:p-16 p-10 w-full">
                                         <img src="assets/images/services1.webp" alt="services1" loading="lazy"
-                                            class="px-14 sm:p-0">
-                                        <h1 class="text-4xl uppercase mb-2 text-center">Website Design</h1>
-                                        <p class="text-base">Modern, responsive layouts</p>
+                                            class="p-0 w-32 md:w-auto" />
+                                        <h1 class="text-4xl uppercase mb-2 text-center">
+                                            Website Design
+                                        </h1>
+                                        <p class="text-base text-center">Modern, responsive layouts</p>
                                     </div>
                                 </li>
                                 <li
-                                    class="relative group mx-auto flex justify-center items-center border border-[#232323] rounded-3xl">
+                                    class="relative group mx-auto flex justify-center items-center border border-[#232323] rounded-3xl w-full">
                                     <div
-                                        class=" text-reveal grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col sm:p-16 p-10">
+                                        class="text-reveal grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col sm:p-16 p-10 w-full">
                                         <img src="assets/images/services2.webp" alt="services2" loading="lazy"
-                                            class="px-14 sm:p-0">
-                                        <h1 class="text-4xl uppercase mb-2 text-center">Landing Pages</h1>
-                                        <p class="text-base">Conversion-focused pages</p>
+                                            class="p-0 w-32 md:w-auto" />
+                                        <h1 class="text-4xl uppercase mb-2 text-center">
+                                            Landing Pages
+                                        </h1>
+                                        <p class="text-base text-center">Conversion-focused pages</p>
                                     </div>
                                 </li>
                                 <li
-                                    class="relative group mx-auto flex justify-center items-center border border-[#232323] rounded-3xl">
+                                    class="relative group mx-auto flex justify-center items-center border border-[#232323] rounded-3xl w-full">
                                     <div
-                                        class=" text-reveal grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col sm:p-16 p-10">
+                                        class="text-reveal grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col sm:p-16 p-10 w-full">
                                         <img src="assets/images/services3.webp" alt="services3" loading="lazy"
-                                            class="px-14 sm:p-0">
-                                        <h1 class="text-4xl uppercase mb-2 text-center">UI/UX Design</h1>
-                                        <p class="text-base">User-centered interfaces</p>
+                                            class="p-0 w-32 md:w-auto" />
+                                        <h1 class="text-4xl uppercase mb-2 text-center">
+                                            UI/UX Design
+                                        </h1>
+                                        <p class="text-base text-center">User-centered interfaces</p>
                                     </div>
                                 </li>
                                 <li
-                                    class="relative group mx-auto flex justify-center items-center border border-[#232323] rounded-3xl">
+                                    class="relative group mx-auto flex justify-center items-center border border-[#232323] rounded-3xl w-full">
                                     <div
-                                        class=" text-reveal grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col sm:p-16 p-10">
+                                        class="text-reveal grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col sm:p-16 p-10 w-full">
                                         <img src="assets/images/services4.webp" alt="services4" loading="lazy"
-                                            class="px-14 sm:p-0">
-                                        <h1 class="text-4xl uppercase mb-2 text-center">Design Systems</h1>
-                                        <p class="text-base">Scalable UI foundations</p>
+                                            class="p-0 w-32 md:w-auto" />
+                                        <h1 class="text-4xl uppercase mb-2 text-center">
+                                            Design Systems
+                                        </h1>
+                                        <p class="text-base text-center">Scalable UI foundations</p>
                                     </div>
                                 </li>
                                 <li
-                                    class="relative group mx-auto flex justify-center items-center border border-[#232323] rounded-3xl">
+                                    class="relative group mx-auto flex justify-center items-center border border-[#232323] rounded-3xl w-full">
                                     <div
-                                        class=" text-reveal grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col sm:p-16 p-10">
+                                        class="text-reveal grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col sm:p-16 p-10 w-full">
                                         <img src="assets/images/services5.webp" alt="services5" loading="lazy"
-                                            class="px-14 sm:p-0">
-                                        <h1 class="text-4xl uppercase mb-2 text-center">Redesigns</h1>
-                                        <p class="text-base">Usability & visual upgrades</p>
+                                            class="p-0 w-32 md:w-auto" />
+                                        <h1 class="text-4xl uppercase mb-2 text-center">
+                                            Redesigns
+                                        </h1>
+                                        <p class="text-base text-center">Usability & visual upgrades</p>
                                     </div>
                                 </li>
                                 <li
-                                    class="relative group mx-auto flex justify-center items-center border border-[#232323] rounded-3xl">
+                                    class="relative group mx-auto flex justify-center items-center border border-[#232323] rounded-3xl w-full">
                                     <div
-                                        class=" text-reveal grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col sm:p-16 p-10">
+                                        class="text-reveal grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer rounded-full flex items-center justify-center flex-col sm:p-16 p-10 w-full">
                                         <img src="assets/images/services6.webp" alt="services6" loading="lazy"
-                                            class="px-14 sm:p-0">
-                                        <h1 class="text-4xl uppercase mb-2 text-center">Design Consulting</h1>
-                                        <p class="text-base">Clarity & direction</p>
+                                            class="p-0 w-32 md:w-auto" />
+                                        <h1 class="text-4xl uppercase mb-2 text-center">
+                                            Design Consulting
+                                        </h1>
+                                        <p class="text-base text-center">Clarity & direction</p>
                                     </div>
                                 </li>
                             </ul>
@@ -1528,7 +1947,7 @@
             </section>
 
             <!-- Lets Talk -->
-            <div class="font-black py-2 w-full relative overflow-hidden flex ticker-wrapper mask-x">
+            <section class="font-black py-2 w-full relative overflow-hidden flex ticker-wrapper mask-x">
                 <div class="flex items-center will-change-transform whitespace-nowrap animate-scroll-x"
                     style="animation-duration: 12s">
                     <h1
@@ -1568,15 +1987,16 @@
                         ✺
                     </h1>
                 </div>
-            </div>
+            </section>
 
             <!-- Contact / Footer -->
             <section id="contact" class="px-6 py-12 sm:py-20 lg:py-24">
                 <div
                     class="mx-auto w-full max-w-[var(--max-w)] flex lg:flex-row flex-col gap-8 justify-between pb-10 md:items-center items-start">
                     <div class="text-reveal">
-                        <h1 class=" sm:text-5xl text-2xl text-query">
-                            Open to full-time and remote <br>web designer opportunities worldwide.
+                        <h1 class="sm:text-5xl text-2xl text-query">
+                            Open to full-time and remote
+                            <br />web designer opportunities worldwide.
                         </h1>
                     </div>
                     <div class="flex gap-4 flex-wrap justify-query contact-info-container">
@@ -1598,34 +2018,32 @@
                             class="relative border border-[var(--bg-primary-inverse)] rounded-full sm:px-8 px-6 sm:py-6 py-3 group">
                             <a href="https://www.linkedin.com/in/jaspreet-singh-html-cssyourusername/" target="_blank"
                                 rel="noopener">
-                                <h1 class="sm:text-3xl text-xl capitalize">linkedin
-                                </h1>
+                                <h1 class="sm:text-3xl text-xl capitalize">linkedin</h1>
                             </a>
                         </div>
                     </div>
-
                 </div>
 
                 <!-- Contact form -->
                 <div class="mx-auto w-full max-w-[var(--max-w)] border-t border-[#e7e7e7]">
                     <form id="contact-form" action="https://formspree.io/f/xjgbbzra" method="POST">
                         <!-- Optional but recommended -->
-                        <input type="hidden" name="_subject" value="New Portfolio Contact">
-                        <input type="hidden" name="_replyto">
+                        <input type="hidden" name="_subject" value="New Portfolio Contact" />
+                        <input type="hidden" name="_replyto" />
                         <div class="wrapper">
                             <div class="grid md:grid-cols-2 grid-cols-1 sm:gap-8">
                                 <label class="py-8 pb-0 sm:pb-8 block duration">
                                     <h1 class="text-2xl sm:text-3xl">Name *</h1>
                                     <input placeholder="Name" type="text" name="name" required
-                                        class="text-lg placeholder:text-[var(--light-text-fixed)] outline-none p-0! flex text-[var(--text-primary)] w-full py-4 ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:cursor-not-allowed disabled:opacity-50 mb-0! bg-white/5 px-4 backdrop-blur-sm mt-2">
+                                        class="text-lg placeholder:text-[var(--light-text-fixed)] outline-none p-0! flex text-[var(--text-primary)] w-full py-4 ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:cursor-not-allowed disabled:opacity-50 mb-0! bg-white/5 px-4 backdrop-blur-sm mt-2" />
                                     <p class="text-red-500 font-light name-error absolute mt-2"></p>
                                 </label>
 
                                 <label class="sm:py-8 py-7 block duration">
                                     <h1 class="text-2xl sm:text-3xl">Your Email *</h1>
                                     <input placeholder="example@gmail.com" name="email" type="email"
-                                        oninput="this.form._replyto.value=this.value" required
-                                        class="text-lg placeholder:text-[var(--light-text-fixed)] outline-none p-0! flex text-[var(--text-primary)] w-full py-4 ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:cursor-not-allowed disabled:opacity-50 mb-0! bg-white/5 px-4 backdrop-blur-sm mt-2">
+                                        oninput="this.form._replyto.value = this.value" required
+                                        class="text-lg placeholder:text-[var(--light-text-fixed)] outline-none p-0! flex text-[var(--text-primary)] w-full py-4 ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:cursor-not-allowed disabled:opacity-50 mb-0! bg-white/5 px-4 backdrop-blur-sm mt-2" />
                                     <p class="text-red-500 font-light email-error absolute mt-2"></p>
                                 </label>
                             </div>
@@ -1634,7 +2052,7 @@
                         <div class="md:pr-0!">
                             <h1 class="text-2xl sm:text-3xl mb-3">Your Message *</h1>
                             <div class="grid md:grid-cols-[2fr_1fr] grid-cols-1 items-end">
-                                <label class="block duration ">
+                                <label class="block duration">
                                     <textarea type="text" name="message" placeholder="Hi, I'm Looking for..." required
                                         rows="4"
                                         class="resize-none placeholder:text-[var(--light-text-fixed)] outline-none flex text-[var(--text-primary)] w-full ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 mb-0! bg-white/5 p-4 backdrop-blur-sm"></textarea>
@@ -1642,23 +2060,22 @@
                                 </label>
 
                                 <button
-                                    class=" group flex justify-center items-center w-full bg-[#e7e7e7] text-[#333333] sm:text-4xl text-3xl p-4 min-h-full uppercase"
+                                    class="group flex justify-center items-center w-full bg-[#e7e7e7] text-[#333333] sm:text-4xl text-3xl p-4 min-h-full uppercase"
                                     type="submit">
                                     <span class="flex items-center gap-x-2">Send To Me
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-9 transition-all duration-300 ease-out
-                                      group-hover:rotate-180 group-hover:scale-125" stroke="currentColor"
-                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                            class="size-9 transition-all duration-300 ease-out group-hover:rotate-180 group-hover:scale-125"
+                                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round">
                                             <line x1="7" y1="17" x2="17" y2="7"></line>
                                             <polyline points="7 7 17 7 17 17"></polyline>
-
                                         </svg>
                                     </span>
                                 </button>
                             </div>
                         </div>
 
-                        <div class=" mt-16 hidden">
+                        <div class="mt-16 hidden">
                             <div class="p-8 flex-center border gap-x-4 rad">
                                 <p class="text-center text-lg"></p>
                             </div>
@@ -1678,13 +2095,14 @@
                     <div class="block h-min">
                         <a href="#top">
                             <h2
-                                class=" text-[18vw] tracking-tight flex justify-center items-center flex-nowrap font-bold uppercase ">
+                                class="text-[18vw] tracking-tight flex justify-center items-center flex-nowrap font-bold uppercase">
                                 pxfixer
                             </h2>
                         </a>
                     </div>
                     <div class="sm:text-2xl text-base text-center">
-                        © <span id="year"></span> YourCompany — All rights reserved.
+                        © <span id="year"></span>
+                        YourCompany — All rights reserved.
                     </div>
                 </div>
             </footer>
@@ -1694,6 +2112,8 @@
     <!-- Custom Cursor -->
     <div class="custom-cursor"></div>
 
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- scrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>

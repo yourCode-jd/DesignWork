@@ -1,8 +1,9 @@
 :root {
     --max-w: 1600px;
     --bg: #000000;
-    --font-body: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-heading: 'Saira Condensed', system-ui, sans-serif;
+    --font-body:
+        "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-heading: "Saira Condensed", system-ui, sans-serif;
 }
 
 html {
@@ -16,15 +17,14 @@ body {
 }
 
 ::selection {
-    background: rgba(255, 255, 255, 0.80);
+    background: rgba(255, 255, 255, 0.8);
     color: #000000;
 }
 
 ::-moz-selection {
-    background: rgba(255, 255, 255, 0.80);
+    background: rgba(255, 255, 255, 0.8);
     color: #000000;
 }
-
 
 h1,
 h2,
@@ -76,8 +76,6 @@ text {
     pointer-events: none;
 }
 
-
-
 /* make sure images can animate inside container */
 .relative img {
     transform-origin: center center;
@@ -128,12 +126,20 @@ object-fit: contain; */
 /* ========== Lets Talk ============= */
 
 .mask-x {
-    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0) 0%,
+            rgb(0, 0, 0) 10%,
+            rgb(0, 0, 0) 90%,
+            rgba(0, 0, 0, 0) 100%);
 }
 
 .outlinedText {
     color: #000000;
-    text-shadow: 1px 1px 0 #e7e7e7, -1px 1px 0 #e7e7e7, 1px -1px 0 #e7e7e7, -1px -1px 0 #e7e7e7;
+    text-shadow:
+        1px 1px 0 #e7e7e7,
+        -1px 1px 0 #e7e7e7,
+        1px -1px 0 #e7e7e7,
+        -1px -1px 0 #e7e7e7;
 }
 
 .animate-scroll-x {
@@ -145,7 +151,6 @@ object-fit: contain; */
 }
 
 @keyframes rotation {
-
     0% {
         transform: rotate(0deg);
     }
@@ -178,7 +183,10 @@ object-fit: contain; */
     pointer-events: none;
     z-index: 9999;
     transform: translate(-50%, -50%);
-    transition: transform 0.15s ease-out, width 0.15s ease-out, height 0.15s ease-out;
+    transition:
+        transform 0.15s ease-out,
+        width 0.15s ease-out,
+        height 0.15s ease-out;
     mix-blend-mode: difference;
 }
 
@@ -241,15 +249,105 @@ object-fit: contain; */
     background-color: #a8bbbf;
 }
 
+/* ======= Swiper ========= */
 
+.swiper-slide {
+    height: auto;
+    display: flex;
+}
 
+.swiper-slide .featureWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
 
+.mySwiper,
+.liveSwiper {
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
+/* Glassmorphism Arrow Styling */
+.swiper-button-next.glass-nav,
+.swiper-button-prev.glass-nav {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    transition: all 0.3s ease;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+}
+
+.swiper-button-prev.glass-nav {
+    left: 20px;
+}
+
+.swiper-button-next.glass-nav {
+    right: 20px;
+}
+
+.swiper-button-next.glass-nav:hover,
+.swiper-button-prev.glass-nav:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    /* Change icon color on hover to match brand */
+}
+
+/* Adjusting the arrow icon size inside the button */
+.swiper-button-next.glass-nav:after,
+.swiper-button-prev.glass-nav:after {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+
+    .swiper-button-next.glass-nav,
+    .swiper-button-prev.glass-nav {
+        width: 40px;
+        height: 40px;
+        top: 94%;
+    }
+
+    .liveSwiper .swiper-button-next.glass-nav,
+    .liveSwiper .swiper-button-prev.glass-nav {
+        top: 90%;
+    }
+
+    .swiper-button-next.glass-nav:after,
+    .swiper-button-prev.glass-nav:after {
+        font-size: 16px;
+    }
+
+    .swiper-button-prev.glass-nav {
+        left: 35%;
+    }
+
+    .swiper-button-next.glass-nav {
+        right: 35%;
+    }
+
+    .mySwiper,
+    .liveSwiper {
+        padding: 0 0 60px 0;
+    }
+}
 
 /* ======= Footer ========= */
 
 footer {
-    background-image: url('../assets/images/self.webp');
+    background-image: url("../assets/images/self.webp");
     background-size: contain;
     background-attachment: fixed;
     background-position: top;

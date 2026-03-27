@@ -318,3 +318,67 @@ form &&
         console.log("Network error");
       });
   });
+
+// ======================
+
+const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1.2, // Show a peek of the next card on mobile
+  spaceBetween: 20,
+  loop: false,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    // when window width is >= 768px (Tablet)
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 24,
+    },
+    // when window width is >= 1024px (Desktop)
+    1024: {
+      slidesPerView: 3, // Your requirement of 6 items
+      spaceBetween: 24,
+    },
+    // when window width is >= 1024px (Desktop)
+    1367: {
+      slidesPerView: 4, // Your requirement of 6 items
+      spaceBetween: 24,
+    },
+  },
+});
+
+const liveswiper = new Swiper(".liveSwiper", {
+  slidesPerView: 1.2, // Show a peek of the next card on mobile
+  spaceBetween: 20,
+  loop: false,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    // when window width is >= 768px (Tablet)
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 24,
+    },
+    // when window width is >= 1024px (Desktop)
+    1024: {
+      slidesPerView: 3, // Your requirement of 6 items
+      spaceBetween: 24,
+    },
+    // when window width is >= 1024px (Desktop)
+    1367: {
+      slidesPerView: 3, // Your requirement of 6 items
+      spaceBetween: 24,
+    },
+  },
+});
