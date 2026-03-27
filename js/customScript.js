@@ -36,10 +36,10 @@ if (cursor && window.innerWidth > 1024) {
 
   document.querySelectorAll("a, button").forEach((el) => {
     el.addEventListener("mouseenter", () =>
-      cursor.classList.add("cursor-hover")
+      cursor.classList.add("cursor-hover"),
     );
     el.addEventListener("mouseleave", () =>
-      cursor.classList.remove("cursor-hover")
+      cursor.classList.remove("cursor-hover"),
     );
   });
 }
@@ -120,7 +120,7 @@ gsap.fromTo(
       end: "bottom 30%",
       scrub: true,
     },
-  }
+  },
 );
 
 // ======================
@@ -145,7 +145,7 @@ gsap.utils.toArray(".counter").forEach((counter) => {
       onUpdate() {
         counter.innerText = Math.floor(counter.innerText) + "+";
       },
-    }
+    },
   );
 });
 
