@@ -211,7 +211,7 @@ gsap.utils.toArray(".gridImg").forEach((img) => {
 // About text reveal
 // ======================
 gsap.utils.toArray(".text-reveal").forEach((section) => {
-  const texts = section.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span");
+  const texts = section.querySelectorAll("h1, h2, h3, h4, h5, h6, p, li, span");
 
   texts.forEach((el) => {
     gsap.set(el, { backgroundSize: "0% 100%" });
