@@ -359,3 +359,44 @@ footer {
         background-size: cover;
     }
 }
+
+/* Base dot */
+.timeline-dot {
+    width: 10px;
+    height: 10px;
+    background: #aaa;
+    border-radius: 50%;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Pulse ring (hidden by default) */
+.timeline-dot::after {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    opacity: 0;
+    transform: scale(0.8);
+    animation: pulseRing 1.8s ease-out infinite;
+
+}
+
+/* Keyframes */
+@keyframes pulseRing {
+    0% {
+        opacity: 0.6;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 0.3;
+        transform: scale(1.4);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.8);
+    }
+}
