@@ -1,6 +1,26 @@
+// Always reveal the content quickly, even if a third-party animation script is delayed.
+document.addEventListener("DOMContentLoaded", () => {
+  const loader = document.getElementById("page-loader");
+  const hero = document.querySelector(".hero-preloader");
+  const revealPage = () => {
+    if (hero) {
+      hero.style.opacity = "1";
+      hero.style.pointerEvents = "auto";
+    }
+    if (loader) loader.remove();
+  };
+
+  if (!hasGsap) window.addEventListener("load", revealPage, { once: true });
+  // Network or third-party failures must never leave a full-page loader in place.
+  window.setTimeout(revealPage, 2500);
+});
+
 // ======================
-// GSAP Plugins (register once)
+// GSAP animations
 // ======================
+const hasGsap = typeof window.gsap !== "undefined" && typeof window.ScrollTrigger !== "undefined";
+
+if (hasGsap) {
 gsap.registerPlugin(ScrollTrigger);
 
 // ======================
@@ -56,28 +76,22 @@ btn &&
   });
 
 // ======================
-// Page loader + Hero animation
+// Hero animation
 // ======================
 document.addEventListener("DOMContentLoaded", () => {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
-  const loader = document.getElementById("page-loader");
-  const hero = document.querySelector(".hero-preloader");
-
-  window.onload = () => {
-    requestIdleCallback(() => {
-      const tl = gsap.timeline({ defaults: { ease: "power3.inOut" } });
-
-      tl.to(loader, {
-        opacity: 0,
-        scale: 0.8,
-        duration: 0.8,
-      })
-        .add(() => loader && loader.remove())
-        .add(() => gsap.set(hero, { opacity: 1, pointerEvents: "auto" }))
-        .add(initHeroAnimation);
-    });
+  const startAnimation = () => {
+    const runWhenIdle = window.requestIdleCallback || ((callback) => window.setTimeout(callback, 0));
+    const loader = document.getElementById("page-loader");
+    const hero = document.querySelector(".hero-preloader");
+    const timeline = gsap.timeline({ defaults: { ease: "power3.inOut" } });
+    if (loader) {
+      timeline.to(loader, { opacity: 0, scale: 0.8, duration: 0.8 }).add(() => loader.remove());
+    }
+    timeline.add(() => gsap.set(hero, { opacity: 1, pointerEvents: "auto" }));
+    timeline.add(() => runWhenIdle(initHeroAnimation));
   };
+  window.addEventListener("load", startAnimation, { once: true });
 });
 
 // ======================
@@ -154,43 +168,22 @@ gsap.utils.toArray(".counter").forEach((counter) => {
 // ======================
 const section = document.querySelector(".work-section");
 
-// Separator
-gsap.from(".saprator", {
-  scaleX: 0,
-  transformOrigin: "center center",
-  ease: "power2.out",
-  scrollTrigger: {
-    trigger: section,
-    start: "top bottom",
-    end: "bottom top",
-    scrub: true,
-  },
-});
+if (section) {
+  const separator = section.querySelector(".saprator");
+  const gridContent = section.querySelector(".gridContent");
+  const workCtas = section.querySelectorAll(".workCTA");
+  const scrollTrigger = { trigger: section, start: "top bottom", end: "bottom top", scrub: true };
 
-gsap.from(".gridContent", {
-  scaleX: 1.5,
-  transformOrigin: "center center",
-  ease: "power2.out",
-  scrollTrigger: {
-    trigger: section,
-    start: "top bottom",
-    end: "bottom top",
-    scrub: true,
-  },
-});
-
-gsap.from(section?.querySelectorAll(".workCTA"), {
-  y: 60,
-  opacity: 0,
-  stagger: 0.15,
-  ease: "power2.out",
-  scrollTrigger: {
-    trigger: section,
-    start: "top bottom",
-    end: "bottom top",
-    scrub: true,
-  },
-});
+  if (separator) {
+    gsap.from(separator, { scaleX: 0, transformOrigin: "center center", ease: "power2.out", scrollTrigger });
+  }
+  if (gridContent) {
+    gsap.from(gridContent, { scaleX: 1.5, transformOrigin: "center center", ease: "power2.out", scrollTrigger });
+  }
+  if (workCtas.length) {
+    gsap.from(workCtas, { y: 60, opacity: 0, stagger: 0.15, ease: "power2.out", scrollTrigger });
+  }
+}
 
 // Images
 gsap.utils.toArray(".gridImg").forEach((img) => {
@@ -257,6 +250,8 @@ gsap.utils.toArray(".featureWrapper").forEach((card) => {
   });
 });
 
+} // end GSAP-only animations
+
 // ======================
 // Contact form (Formspree)
 // ======================
@@ -321,6 +316,7 @@ form &&
 
 // ======================
 
+if (typeof window.Swiper !== "undefined" && document.querySelector(".mySwiper")) {
 const swiper = new Swiper(".mySwiper", {
   slidesPerView: 1.2, // Show a peek of the next card on mobile
   spaceBetween: 20,
@@ -382,3 +378,4 @@ const liveswiper = new Swiper(".liveSwiper", {
     },
   },
 });
+}
