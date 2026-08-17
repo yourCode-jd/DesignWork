@@ -94,8 +94,9 @@
             </h2>
 
             <p class="mt-4 opacity-70">
-                The goal was to build a simple and intuitive weather interface that provides real-time data
-                with clear visuals and easy interaction.
+                Build a weather app with real error handling and two ways to get a forecast — manual city search
+                or auto-detected location — with a background that visually shifts to match the current
+                conditions.
             </p>
 
         </div>
@@ -106,13 +107,17 @@
         <div class="mx-auto w-full max-w-[var(--max-w)]">
 
             <h2 class="text-2xl sm:text-3xl font-semibold uppercase">
-                Approach
+                Development
             </h2>
 
             <ul class="md:mt-6 mt-3 space-y-3 opacity-70 list-outside list-disc pl-4">
-                <li> Focused on minimal UI for quick readability</li>
-                <li> Integrated real-time weather API for dynamic data</li>
-                <li> Designed clean layout with emphasis on key information</li>
+                <li>Built in vanilla JavaScript using the Fetch API with async/await. Two entry points — manual
+                    search and navigator.geolocation on page load — both feed the same rendering function, so
+                    the UI stays consistent regardless of how the location was determined.</li>
+                <li>Every API call is wrapped in try/catch, with a loading state shown while the request is in
+                    flight and a clear error message on failure (bad city name, denied location permission).</li>
+                <li>The background gradient updates based on the returned weather condition, so the page itself
+                    communicates the forecast at a glance.</li>
             </ul>
 
         </div>
@@ -148,14 +153,45 @@
         <div class="mx-auto w-full max-w-[var(--max-w)]">
 
             <h2 class="text-2xl sm:text-3xl font-semibold uppercase">
-                Learnings
+                Challenges &amp; Solutions
             </h2>
 
             <ul class="md:mt-6 mt-3 space-y-3 opacity-70 list-outside list-disc pl-4">
-                <li> Improved understanding of API integration in UI</li>
-                <li> Learned to structure UI for real-time data display</li>
-                <li> Enhanced focus on usability and clarity in design</li>
+                <li>Handling failure gracefully — a misspelled city or a denied location request needed a clear
+                    failure path instead of a broken, silent UI.</li>
+                <li>The OpenWeatherMap API key was originally hardcoded in the JavaScript file and pushed to a
+                    public repo — moved into a local, gitignored config file, with the real key injected at
+                    deploy time from an environment variable so it never touches the repository.</li>
             </ul>
+
+        </div>
+    </section>
+
+    <!-- TECH STACK / LINKS -->
+    <section class="px-6 md:py-16 py-8 border-t border-[#232323]">
+        <div class="mx-auto w-full max-w-[var(--max-w)]">
+
+            <h2 class="text-2xl sm:text-3xl font-semibold uppercase">
+                Tech Stack &amp; Links
+            </h2>
+
+            <p class="mt-4 opacity-70">
+                HTML5 · CSS3 · Vanilla JavaScript · Tailwind CSS · OpenWeatherMap API
+            </p>
+
+            <div class="flex flex-wrap gap-4 mt-6 text-sm uppercase tracking-wide">
+                <a href="https://weather-app-37o8.vercel.app/" target="_blank" rel="noopener"
+                    class="underline underline-offset-4 opacity-80 hover:opacity-100">
+                    Live Demo
+                </a>
+                <a href="https://github.com/yourCode-jd/WeatherApp" target="_blank" rel="noopener"
+                    class="underline underline-offset-4 opacity-80 hover:opacity-100">
+                    View on GitHub
+                </a>
+            </div>
+
+        </div>
+    </section>
 
         </div>
     </section>

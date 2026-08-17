@@ -94,8 +94,9 @@
             </h2>
 
             <p class="mt-4 opacity-70">
-                The goal was to create engaging landing page experiences using smooth animations
-                and scroll-based interactions.
+                Build a landing page with responsive, scroll-linked animation that behaves correctly across
+                breakpoints and doesn't leak memory or break on window resize — the kind of detail that
+                separates a demo from something production-ready.
             </p>
 
         </div>
@@ -106,13 +107,17 @@
         <div class="mx-auto w-full max-w-[var(--max-w)]">
 
             <h2 class="text-2xl sm:text-3xl font-semibold uppercase">
-                Approach
+                Development
             </h2>
 
             <ul class="md:mt-6 mt-3 space-y-3 opacity-70 list-outside list-disc pl-4">
-                <li> Focused on smooth scroll-based animation using GSAP</li>
-                <li> Designed motion to enhance storytelling and flow</li>
-                <li> Balanced animation with performance and usability</li>
+                <li>Built with vanilla JavaScript and GSAP (core, ScrollTrigger, and Draggable). Uses
+                    gsap.matchMedia() to scope different animation behavior to different breakpoints, so mobile
+                    and desktop get intentionally different treatment rather than the same animation scaled
+                    down.</li>
+                <li>All animations are wrapped in gsap.context(), which scopes GSAP's selectors to a specific
+                    container and provides a single .revert() call to clean up every animation and event
+                    listener it created.</li>
             </ul>
 
         </div>
@@ -148,14 +153,44 @@
         <div class="mx-auto w-full max-w-[var(--max-w)]">
 
             <h2 class="text-2xl sm:text-3xl font-semibold uppercase">
-                Learnings
+                Challenges &amp; Solutions
             </h2>
 
             <ul class="md:mt-6 mt-3 space-y-3 opacity-70 list-outside list-disc pl-4">
-                <li> Improved understanding of animation timing and easing</li>
-                <li> Learned scroll-based interaction design with GSAP</li>
-                <li> Balanced motion design with performance optimization</li>
+                <li>Making scroll and drag animations behave correctly across screen sizes — solved with
+                    matchMedia-scoped breakpoint rules instead of one animation set forced to work everywhere.</li>
+                <li>Avoiding the classic GSAP/ScrollTrigger memory-leak trap where animations and listeners pile
+                    up on resize — solved by scoping everything through gsap.context() for clean teardown.</li>
             </ul>
+
+        </div>
+    </section>
+
+    <!-- TECH STACK / LINKS -->
+    <section class="px-6 md:py-16 py-8 border-t border-[#232323]">
+        <div class="mx-auto w-full max-w-[var(--max-w)]">
+
+            <h2 class="text-2xl sm:text-3xl font-semibold uppercase">
+                Tech Stack &amp; Links
+            </h2>
+
+            <p class="mt-4 opacity-70">
+                HTML5 · CSS3 · Tailwind CSS · JavaScript · GSAP (core, ScrollTrigger, Draggable)
+            </p>
+
+            <div class="flex flex-wrap gap-4 mt-6 text-sm uppercase tracking-wide">
+                <a href="https://serum-self.vercel.app/" target="_blank" rel="noopener"
+                    class="underline underline-offset-4 opacity-80 hover:opacity-100">
+                    Live Demo
+                </a>
+                <a href="https://github.com/yourCode-jd/Serum" target="_blank" rel="noopener"
+                    class="underline underline-offset-4 opacity-80 hover:opacity-100">
+                    View on GitHub
+                </a>
+            </div>
+
+        </div>
+    </section>
 
         </div>
     </section>

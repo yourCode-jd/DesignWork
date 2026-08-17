@@ -27,7 +27,7 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="../css/style.css">
 
-    <title>React Dashboard – Case Study</title>
+    <title>TaskFlow – Case Study</title>
 
 </head>
 
@@ -56,18 +56,19 @@
                 <span class="text-sm uppercase opacity-50">Case Study</span>
 
                 <h1 class="text-4xl sm:text-[6vw] font-semibold uppercase leading-[.9] mt-4">
-                    React Dashboard
+                    TaskFlow
                 </h1>
 
                 <p class="mt-4 text-base opacity-70">
-                    A scalable dashboard UI designed for clear data visualization and usability.
+                    A multi-page task management dashboard with real routing, a working task table, and a live
+                    analytics chart.
                 </p>
 
                 <!-- Meta -->
                 <div class="flex flex-wrap justify-center md:gap-4 gap-2 md:mt-6 mt-3 text-sm opacity-60">
                     <span>Role: UI/UX + Frontend</span>
                     <span> </span>
-                    <span>React · Tailwind · Charts</span>
+                    <span>React · React Router · Recharts</span>
                 </div>
 
             </div>
@@ -96,8 +97,8 @@
             </h2>
 
             <p class="mt-4 opacity-70">
-                The goal was to design a clean and structured dashboard that can handle complex data
-                while keeping the interface simple and easy to scan.
+                Build a working multi-page dashboard with real client-side routing, a fully functional task
+                list — not just a static mockup table — and a genuine chart rather than a placeholder image.
             </p>
 
         </div>
@@ -108,13 +109,18 @@
         <div class="mx-auto w-full max-w-[var(--max-w)]">
 
             <h2 class="text-2xl sm:text-3xl font-semibold uppercase">
-                Approach
+                Development
             </h2>
 
             <ul class="md:mt-6 mt-3 space-y-3 opacity-70 list-outside list-disc pl-4">
-                <li> Focused on clear visual hierarchy for better data scanning</li>
-                <li> Used modular card-based layout for flexibility</li>
-                <li> Kept colors minimal to reduce visual noise</li>
+                <li>Built with React 19, Vite, and React Router DOM. A layout route wraps every inner page
+                    (Dashboard, Tasks, Teams, Analytics, Settings, Profile) with a shared sidebar and header, so
+                    that layout is defined once rather than duplicated per page, plus a dedicated 404 route.</li>
+                <li>The Tasks page has a fully working table: adding a task goes through a validated form with
+                    per-field error messages, deleting removes it immediately, and the search bar filters the
+                    visible list in real time.</li>
+                <li>The Analytics page uses Recharts, composed with ResponsiveContainer so the chart resizes
+                    correctly rather than being a fixed-size embed.</li>
             </ul>
 
         </div>
@@ -150,14 +156,45 @@
         <div class="mx-auto w-full max-w-[var(--max-w)]">
 
             <h2 class="text-2xl sm:text-3xl font-semibold uppercase">
-                Learnings
+                Challenges &amp; What's Next
             </h2>
 
             <ul class="md:mt-6 mt-3 space-y-3 opacity-70 list-outside list-disc pl-4">
-                <li> Improved understanding of data hierarchy in UI</li>
-                <li> Built reusable component-based structure</li>
-                <li> Balanced design aesthetics with usability</li>
+                <li>Structuring routing so every inner page shares one sidebar/header shell — solved with a
+                    React Router layout route rendering an Outlet, instead of duplicating the shell per page.</li>
+                <li>Currently in progress: Dashboard's stats and Recent Activity are static and don't yet
+                    reflect real task data, since there's no shared state between pages yet — and tasks don't
+                    persist across a refresh. Both are the next features going into this project.</li>
             </ul>
+
+        </div>
+    </section>
+
+    <!-- TECH STACK / LINKS -->
+    <section class="px-6 md:py-16 py-8 border-t border-[#232323]">
+        <div class="mx-auto w-full max-w-[var(--max-w)]">
+
+            <h2 class="text-2xl sm:text-3xl font-semibold uppercase">
+                Tech Stack &amp; Links
+            </h2>
+
+            <p class="mt-4 opacity-70">
+                React 19 · React Router DOM · Vite · Tailwind CSS · Recharts · lucide-react
+            </p>
+
+            <div class="flex flex-wrap gap-4 mt-6 text-sm uppercase tracking-wide">
+                <a href="https://task-flow-lovat-xi.vercel.app/" target="_blank" rel="noopener"
+                    class="underline underline-offset-4 opacity-80 hover:opacity-100">
+                    Live Demo
+                </a>
+                <a href="https://github.com/yourCode-jd/TaskFlow" target="_blank" rel="noopener"
+                    class="underline underline-offset-4 opacity-80 hover:opacity-100">
+                    View on GitHub
+                </a>
+            </div>
+
+        </div>
+    </section>
 
         </div>
     </section>

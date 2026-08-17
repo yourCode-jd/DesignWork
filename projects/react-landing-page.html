@@ -27,7 +27,7 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="../css/style.css">
 
-    <title>React Landing Page – Case Study</title>
+    <title>LumaFrames – Case Study</title>
 
 </head>
 
@@ -54,18 +54,19 @@
                 <span class="text-sm uppercase opacity-50">Case Study</span>
 
                 <h1 class="text-4xl sm:text-[6vw] font-semibold uppercase leading-[.9] mt-4">
-                    React Landing Page
+                    LumaFrames
                 </h1>
 
                 <p class="mt-4 text-base opacity-70">
-                    A modern landing page built with reusable components, focused on performance and scalability.
+                    A photo-frame e-commerce UI built with Next.js and TypeScript — collection browsing,
+                    filtering, and a full product detail flow.
                 </p>
 
                 <!-- Meta -->
                 <div class="flex flex-wrap justify-center md:gap-4 gap-2 md:mt-6 mt-3 text-sm opacity-60">
                     <span>Role: UI/UX + Frontend</span>
                     <span> </span>
-                    <span>React · Component UI · Performance</span>
+                    <span>Next.js · TypeScript · Component UI</span>
                 </div>
 
             </div>
@@ -94,8 +95,9 @@
             </h2>
 
             <p class="mt-4 opacity-70">
-                The goal was to build a high-performance landing page using reusable components
-                while maintaining a clean and scalable UI structure.
+                Build a realistic e-commerce front end — collection browsing with filters and pagination, and a
+                product detail page with an image gallery and quantity selection — with clean, typed, reusable
+                components.
             </p>
 
         </div>
@@ -106,13 +108,18 @@
         <div class="mx-auto w-full max-w-[var(--max-w)]">
 
             <h2 class="text-2xl sm:text-3xl font-semibold uppercase">
-                Approach
+                Development
             </h2>
 
             <ul class="md:mt-6 mt-3 space-y-3 opacity-70 list-outside list-disc pl-4">
-                <li> Built modular components for reusability</li>
-                <li> Focused on performance and clean structure</li>
-                <li> Designed scalable layout for future expansion</li>
+                <li>Built with Next.js 15, React 19, and TypeScript. The collection page manages filters,
+                    current page, and sidebar visibility with typed useState, and paginates the product list
+                    with slice/Math.ceil math rather than loading everything at once.</li>
+                <li>Filter options render through a single reusable FilterSection component that accepts a
+                    title and typed children, so each filter group shares one implementation instead of being
+                    hand-rolled per section.</li>
+                <li>The product detail page uses Swiper for the image gallery, with a typed state hook syncing
+                    the active thumbnail with the main image, plus a working quantity stepper.</li>
             </ul>
 
         </div>
@@ -148,14 +155,48 @@
         <div class="mx-auto w-full max-w-[var(--max-w)]">
 
             <h2 class="text-2xl sm:text-3xl font-semibold uppercase">
-                Learnings
+                Challenges &amp; What's Next
             </h2>
 
             <ul class="md:mt-6 mt-3 space-y-3 opacity-70 list-outside list-disc pl-4">
-                <li> Improved understanding of component-based architecture</li>
-                <li> Learned performance optimization in React UI</li>
-                <li> Built scalable and maintainable layout systems</li>
+                <li>Keeping the filter UI and pagination logic readable as the number of filter options grew —
+                    solved with a single reusable, typed FilterSection component instead of hand-rolled markup
+                    per group.</li>
+                <li>Syncing a third-party carousel (Swiper) with component state in a type-safe way, rather than
+                    leaving it untyped.</li>
+                <li>Currently in progress: the filter checkboxes update state correctly but don't yet filter the
+                    displayed grid, and "Add to Cart" isn't wired to any cart state yet — both are the next
+                    features going into this project.</li>
             </ul>
+
+        </div>
+    </section>
+
+    <!-- TECH STACK / LINKS -->
+    <section class="px-6 md:py-16 py-8 border-t border-[#232323]">
+        <div class="mx-auto w-full max-w-[var(--max-w)]">
+
+            <h2 class="text-2xl sm:text-3xl font-semibold uppercase">
+                Tech Stack &amp; Links
+            </h2>
+
+            <p class="mt-4 opacity-70">
+                Next.js · React · TypeScript · Tailwind CSS · Swiper
+            </p>
+
+            <div class="flex flex-wrap gap-4 mt-6 text-sm uppercase tracking-wide">
+                <a href="https://luma-frames.vercel.app/" target="_blank" rel="noopener"
+                    class="underline underline-offset-4 opacity-80 hover:opacity-100">
+                    Live Demo
+                </a>
+                <a href="https://github.com/yourCode-jd/LumaFrames" target="_blank" rel="noopener"
+                    class="underline underline-offset-4 opacity-80 hover:opacity-100">
+                    View on GitHub
+                </a>
+            </div>
+
+        </div>
+    </section>
 
         </div>
     </section>

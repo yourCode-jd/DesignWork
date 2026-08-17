@@ -94,8 +94,9 @@
             </h2>
 
             <p class="mt-4 opacity-70">
-                The goal was to recreate a modern streaming interface with strong visual hierarchy,
-                content focus, and smooth browsing experience.
+                Recreate the core Netflix browsing experience — a featured banner, categorized rows, live search,
+                and a detail view — backed by real, live movie data from the TMDB API, using clean, reusable
+                component patterns rather than one-off code per section.
             </p>
 
         </div>
@@ -106,13 +107,18 @@
         <div class="mx-auto w-full max-w-[var(--max-w)]">
 
             <h2 class="text-2xl sm:text-3xl font-semibold uppercase">
-                Approach
+                Development
             </h2>
 
             <ul class="md:mt-6 mt-3 space-y-3 opacity-70 list-outside list-disc pl-4">
-                <li> Focused on content-first layout similar to real platforms</li>
-                <li> Built reusable row-based components for scalability</li>
-                <li> Added hover states and transitions for better interaction</li>
+                <li>Built with React 19 and Vite. A single reusable Row component takes a fetch function as a
+                    prop and handles its own data loading via useEffect — so "Trending Now," "Top Rated," and
+                    "Action Movies" are each just a Row with a different data source, instead of three
+                    near-duplicate components.</li>
+                <li>Search is debounced in the Navbar — a 500ms timeout/cleanup pattern — so a request only
+                    fires once the user pauses typing, not on every keystroke.</li>
+                <li>Search results and the selected movie for the detail modal are lifted into the page
+                    component and passed down as props, keeping data flow predictable.</li>
             </ul>
 
         </div>
@@ -148,14 +154,46 @@
         <div class="mx-auto w-full max-w-[var(--max-w)]">
 
             <h2 class="text-2xl sm:text-3xl font-semibold uppercase">
-                Learnings
+                Challenges &amp; Solutions
             </h2>
 
             <ul class="md:mt-6 mt-3 space-y-3 opacity-70 list-outside list-disc pl-4">
-                <li> Improved layout precision and spacing consistency</li>
-                <li> Learned component-based UI structuring in React</li>
-                <li> Enhanced understanding of interaction and hover behavior</li>
+                <li>Avoiding duplicated fetch logic across categories — solved by making Row accept a fetch
+                    function as a prop rather than hardcoding a category inside it.</li>
+                <li>Search performance — firing an API call on every keystroke would hammer TMDB's rate limits,
+                    solved with a debounce so the call only fires after the user pauses.</li>
+                <li>The TMDB API key was originally hardcoded in the source and committed to the repo — moved
+                    to an environment variable, with the key itself regenerated after the fact.</li>
             </ul>
+
+        </div>
+    </section>
+
+    <!-- TECH STACK / LINKS -->
+    <section class="px-6 md:py-16 py-8 border-t border-[#232323]">
+        <div class="mx-auto w-full max-w-[var(--max-w)]">
+
+            <h2 class="text-2xl sm:text-3xl font-semibold uppercase">
+                Tech Stack &amp; Links
+            </h2>
+
+            <p class="mt-4 opacity-70">
+                React 19 · Vite · Tailwind CSS · TMDB API · lucide-react
+            </p>
+
+            <div class="flex flex-wrap gap-4 mt-6 text-sm uppercase tracking-wide">
+                <a href="https://netflix-nu-gold.vercel.app/" target="_blank" rel="noopener"
+                    class="underline underline-offset-4 opacity-80 hover:opacity-100">
+                    Live Demo
+                </a>
+                <a href="https://github.com/yourCode-jd/Netflix" target="_blank" rel="noopener"
+                    class="underline underline-offset-4 opacity-80 hover:opacity-100">
+                    View on GitHub
+                </a>
+            </div>
+
+        </div>
+    </section>
 
         </div>
     </section>
