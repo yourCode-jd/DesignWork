@@ -27,7 +27,7 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="../css/style.css">
 
-    <title>Landing Page – Case Study</title>
+    <title>PulseFitCoach – Case Study</title>
 
 </head>
 
@@ -54,18 +54,19 @@
                 <span class="text-sm uppercase opacity-50">Case Study</span>
 
                 <h1 class="text-4xl sm:text-[6vw] font-semibold uppercase leading-[.9] mt-4">
-                    Landing Page
+                    PulseFitCoach
                 </h1>
 
                 <p class="mt-4 text-base opacity-70">
-                    Modern landing page focused on clean design, responsiveness, and conversion-driven layouts.
+                    A personal-coaching landing page with a draggable before/after comparison slider,
+                    animated split-title reveals, and a GSAP-powered mobile navigation drawer.
                 </p>
 
                 <!-- Meta -->
                 <div class="flex flex-wrap justify-center md:gap-4 gap-2 md:mt-6 mt-3 text-sm opacity-60">
                     <span>Role: UI/UX + Frontend</span>
                     <span> </span>
-                    <span>HTML · CSS · GSAP · Responsive</span>
+                    <span>HTML · CSS · JavaScript · GSAP</span>
                 </div>
 
             </div>
@@ -94,8 +95,9 @@
             </h2>
 
             <p class="mt-4 opacity-70">
-                The goal was to design and build high-quality landing page that communicate clearly,
-                engage users, and guide them toward action.
+                Build a coaching landing page with interaction that actually does something —
+                a real before/after comparison the visitor can drag through, not just a static image,
+                plus motion that reinforces the page's structure rather than just decorating it.
             </p>
 
         </div>
@@ -106,13 +108,20 @@
         <div class="mx-auto w-full max-w-[var(--max-w)]">
 
             <h2 class="text-2xl sm:text-3xl font-semibold uppercase">
-                Approach
+                Development
             </h2>
 
             <ul class="md:mt-6 mt-3 space-y-3 opacity-70 list-outside list-disc pl-4">
-                <li> Focused on strong visual hierarchy and content flow</li>
-                <li> Designed responsive layouts for all screen sizes</li>
-                <li> Added subtle animations to enhance user experience</li>
+                <li>Built the before/after comparison slider from scratch with the Pointer Events API —
+                    dragging the handle or clicking anywhere on the image updates a CSS custom property
+                    that controls the reveal width, with pointer capture so dragging stays smooth even if
+                    the cursor moves faster than the handle.</li>
+                <li>The mobile nav drawer uses GSAP to animate in, with each nav link staggered in on a
+                    separate timeline rather than the drawer just appearing instantly.</li>
+                <li>Section titles are split into individual characters at runtime and animated in with a
+                    staggered GSAP reveal, rather than animating the whole heading as one block.</li>
+                <li>Workout and blog sections use Slick carousel with per-breakpoint responsive settings,
+                    so slide count adjusts properly across screen sizes rather than staying fixed.</li>
             </ul>
 
         </div>
@@ -148,14 +157,72 @@
         <div class="mx-auto w-full max-w-[var(--max-w)]">
 
             <h2 class="text-2xl sm:text-3xl font-semibold uppercase">
-                Learnings
+                Challenges &amp; What's Next
             </h2>
 
             <ul class="md:mt-6 mt-3 space-y-3 opacity-70 list-outside list-disc pl-4">
-                <li> Improved understanding of conversion-focused design</li>
-                <li> Learned to structure content for better engagement</li>
-                <li> Enhanced responsive design and layout consistency</li>
+                <li>Making the comparison slider feel smooth on both mouse and touch — solved with the
+                    Pointer Events API instead of separate mouse/touch handlers, since it unifies both
+                    input types into one set of event listeners.</li>
+                <li>Currently in progress: the enquiry form doesn't submit anywhere yet — no action,
+                    method, or JS handler behind it. Next step is wiring it to a real form endpoint
+                    (e.g. Formspree) or a simple backend.</li>
             </ul>
+
+        </div>
+    </section>
+
+    <!-- TECH STACK / LINKS -->
+    <section class="px-6 md:py-16 py-8 border-t border-[#232323]">
+        <div class="mx-auto w-full max-w-[var(--max-w)]">
+
+            <h2 class="text-2xl sm:text-3xl font-semibold uppercase">
+                Tech Stack &amp; Links
+            </h2>
+
+            <p class="mt-4 opacity-70">
+                HTML5 · CSS3 · JavaScript · GSAP · Slick Carousel
+            </p>
+
+            <div class="flex flex-wrap gap-4 mt-6 text-sm uppercase tracking-wide">
+                <a href="https://github.com/yourCode-jd/PulseFitCoach" target="_blank" rel="noopener"
+                    class="underline underline-offset-4 opacity-80 hover:opacity-100">
+                    View on GitHub
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- NEXT PROJECT -->
+    <section class="px-6 md:py-16 py-8 border-t border-[#232323]">
+        <div class="mx-auto w-full max-w-[var(--max-w)]">
+
+            <span class="text-sm uppercase opacity-50">Next Project</span>
+
+            <a href="react-dashboard.html" class="group block md:mt-6 mt-3">
+
+                <h2 class="text-4xl sm:text-[5vw] font-semibold uppercase leading-[.9]">
+                    TaskFlow
+                </h2>
+
+                <div class="flex items-center justify-center md:mt-4 mt-2 text-lg opacity-70">
+                    <span>View Project</span>
+
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="size-6 ml-2 transition-all duration-300 group-hover:translate-x-2" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+
+                        <line x1="7" y1="17" x2="17" y2="7" />
+                        <polyline points="7 7 17 7 17 17" />
+
+                    </svg>
+                </div>
+
+            </a>
+
+        </div>
+    </section>
 
         </div>
     </section>
