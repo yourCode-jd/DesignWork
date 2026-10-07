@@ -257,6 +257,14 @@ gsap.utils.toArray(".featureWrapper").forEach((card) => {
 // ======================
 const form = document.getElementById("contact-form");
 
+function showStatus(text) {
+  const box = form && form.querySelector(".mt-16");
+  if (!box) return;
+  box.classList.remove("hidden");
+  const p = box.querySelector("p");
+  if (p) p.textContent = text;
+}
+
 form &&
   form.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -304,13 +312,13 @@ form &&
       .then((res) => {
         if (res.ok) {
           form.reset();
-          console.log("Message sent successfully");
+          showStatus("Message sent. Thanks for reaching out.");
         } else {
-          console.log("Form submission failed");
+          showStatus("Something went wrong. Please email pxfixerjd@gmail.com directly.");
         }
       })
       .catch(() => {
-        console.log("Network error");
+        showStatus("Network error. Please email pxfixerjd@gmail.com directly.");
       });
   });
 
