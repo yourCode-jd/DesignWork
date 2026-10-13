@@ -1,0 +1,389 @@
+// Always reveal the content quickly, even if a third-party animation script is delayed.
+document.addEventListener("DOMContentLoaded", () => {
+  const loader = document.getElementById("page-loader");
+  const hero = document.querySelector(".hero-preloader");
+  const revealPage = () => {
+    if (hero) {
+      hero.style.opacity = "1";
+      hero.style.pointerEvents = "auto";
+    }
+    if (loader) loader.remove();
+  };
+
+  if (!hasGsap) window.addEventListener("load", revealPage, { once: true });
+  // Network or third-party failures must never leave a full-page loader in place.
+  window.setTimeout(revealPage, 2500);
+});
+
+// ======================
+// GSAP animations
+// ======================
+const hasGsap = typeof window.gsap !== "undefined" && typeof window.ScrollTrigger !== "undefined";
+
+if (hasGsap) {
+gsap.registerPlugin(ScrollTrigger);
+
+// ======================
+// Custom cursor (optimized & relaxed)
+// ======================
+const cursor = document.querySelector(".custom-cursor");
+
+if (cursor && window.innerWidth > 1024) {
+  let mouseX = 0,
+    mouseY = 0,
+    cursorX = 0,
+    cursorY = 0,
+    lastTime = 0;
+
+  document.addEventListener("mousemove", (e) => {
+    const now = performance.now();
+    if (now - lastTime < 16) return; // ~60fps
+    lastTime = now;
+
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  function animateCursor() {
+    cursorX += (mouseX - cursorX) * 0.12;
+    cursorY += (mouseY - cursorY) * 0.12;
+
+    cursor.style.transform = `translate(${cursorX}px, ${cursorY}px) translate(-50%, -50%)`;
+    requestAnimationFrame(animateCursor);
+  }
+
+  animateCursor();
+
+  document.querySelectorAll("a, button").forEach((el) => {
+    el.addEventListener("mouseenter", () =>
+      cursor.classList.add("cursor-hover"),
+    );
+    el.addEventListener("mouseleave", () =>
+      cursor.classList.remove("cursor-hover"),
+    );
+  });
+}
+
+// ======================
+// Mobile nav toggle
+// ======================
+const btn = document.getElementById("mobileNavBtn");
+const menu = document.getElementById("mobileNav");
+
+btn &&
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+
+// ======================
+// Hero animation
+// ======================
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const startAnimation = () => {
+    const runWhenIdle = window.requestIdleCallback || ((callback) => window.setTimeout(callback, 0));
+    const loader = document.getElementById("page-loader");
+    const hero = document.querySelector(".hero-preloader");
+    const timeline = gsap.timeline({ defaults: { ease: "power3.inOut" } });
+    if (loader) {
+      timeline.to(loader, { opacity: 0, scale: 0.8, duration: 0.8 }).add(() => loader.remove());
+    }
+    timeline.add(() => gsap.set(hero, { opacity: 1, pointerEvents: "auto" }));
+    timeline.add(() => runWhenIdle(initHeroAnimation));
+  };
+  window.addEventListener("load", startAnimation, { once: true });
+});
+
+// ======================
+// Hero animation function
+// ======================
+function initHeroAnimation() {
+  const hero =
+    document.querySelector(".hero-preloader") ||
+    document.querySelector("section");
+
+  if (!hero) return;
+
+  const title = hero.querySelector("h1");
+  const ctas = hero.querySelectorAll("a, button");
+  const location = hero.querySelector("h2");
+  const image = hero.querySelector("img");
+
+  gsap.set([title, ctas, location, image], { opacity: 0, y: 20 });
+
+  const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+  tl.to(title, { y: 0, opacity: 1, duration: 1.2 })
+    .to(image, { scale: 1, y: 0, opacity: 1, duration: 1 }, "<")
+    .to(ctas, { y: 0, opacity: 1, duration: 1, stagger: 0.1 }, "-=0.5")
+    .to(location, { y: 0, opacity: 1, duration: 0.8 }, "-=0.6");
+}
+
+// ======================
+// Name animation
+// ======================
+gsap.fromTo(
+  ".Name h2,.Name p",
+  { scale: 2, color: "#000000" },
+  {
+    scale: 1,
+    color: "#ffffff",
+    scrollTrigger: {
+      trigger: "section",
+      start: "top top",
+      end: "bottom 30%",
+      scrub: true,
+    },
+  },
+);
+
+// ======================
+// Counter
+// ======================
+gsap.utils.toArray(".counter").forEach((counter) => {
+  const target = +counter.dataset.count;
+
+  gsap.fromTo(
+    counter,
+    { innerText: 0 },
+    {
+      innerText: target,
+      duration: 1.8,
+      ease: "power1.out",
+      snap: { innerText: 1 },
+      scrollTrigger: {
+        trigger: counter,
+        start: "top 80%",
+        once: true,
+      },
+      onUpdate() {
+        counter.innerText = Math.floor(counter.innerText) + "+";
+      },
+    },
+  );
+});
+
+// ======================
+// Work / Grid Section
+// ======================
+const section = document.querySelector(".work-section");
+
+if (section) {
+  const separator = section.querySelector(".saprator");
+  const gridContent = section.querySelector(".gridContent");
+  const workCtas = section.querySelectorAll(".workCTA");
+  const scrollTrigger = { trigger: section, start: "top bottom", end: "bottom top", scrub: true };
+
+  if (separator) {
+    gsap.from(separator, { scaleX: 0, transformOrigin: "center center", ease: "power2.out", scrollTrigger });
+  }
+  if (gridContent) {
+    gsap.from(gridContent, { scaleX: 1.5, transformOrigin: "center center", ease: "power2.out", scrollTrigger });
+  }
+  if (workCtas.length) {
+    gsap.from(workCtas, { y: 60, opacity: 0, stagger: 0.15, ease: "power2.out", scrollTrigger });
+  }
+}
+
+// Images
+gsap.utils.toArray(".gridImg").forEach((img) => {
+  gsap.from(img, {
+    scale: 1.2,
+    opacity: 0,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: img,
+      start: "top 70%",
+      end: "bottom 50%",
+      scrub: true,
+    },
+  });
+});
+
+// ======================
+// About text reveal
+// ======================
+gsap.utils.toArray(".text-reveal").forEach((section) => {
+  const texts = section.querySelectorAll("h1, h2, h3, h4, h5, h6, p, li, span");
+
+  texts.forEach((el) => {
+    gsap.set(el, { backgroundSize: "0% 100%" });
+
+    gsap.to(el, {
+      backgroundSize: "100% 100%",
+      ease: "none",
+      scrollTrigger: {
+        trigger: section,
+        start: "top center",
+        end: "bottom 50%",
+        scrub: true,
+      },
+    });
+  });
+});
+
+// ======================
+// Portfolio cards
+// ======================
+gsap.utils.toArray(".featureWrapper").forEach((card) => {
+  gsap.set(card, {
+    opacity: 0,
+    y: 40,
+    scale: 1.08,
+    willChange: "transform, opacity",
+  });
+
+  gsap.to(card, {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: card,
+      start: "top 80%",
+      end: "top 55%",
+      scrub: true,
+    },
+    onComplete: () => {
+      gsap.set(card, { willChange: "auto" });
+    },
+  });
+});
+
+} // end GSAP-only animations
+
+// ======================
+// Contact form (Formspree)
+// ======================
+const form = document.getElementById("contact-form");
+
+function showStatus(text) {
+  const box = form && form.querySelector(".mt-16");
+  if (!box) return;
+  box.classList.remove("hidden");
+  const p = box.querySelector("p");
+  if (p) p.textContent = text;
+}
+
+form &&
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = form.querySelector('[name="name"]');
+    const email = form.querySelector('[name="email"]');
+    const message = form.querySelector('[name="message"]');
+
+    const nameError = form.querySelector(".name-error");
+    const emailError = form.querySelector(".email-error");
+    const messageError = form.querySelector(".message-error");
+
+    let isValid = true;
+
+    nameError.textContent = "";
+    emailError.textContent = "";
+    messageError.textContent = "";
+
+    if (!name.value.trim()) {
+      nameError.textContent = "Name is required";
+      isValid = false;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email.value.trim()) {
+      emailError.textContent = "Email is required";
+      isValid = false;
+    } else if (!emailPattern.test(email.value)) {
+      emailError.textContent = "Enter a valid email";
+      isValid = false;
+    }
+
+    if (!message.value.trim()) {
+      messageError.textContent = "Message is required";
+      isValid = false;
+    }
+
+    if (!isValid) return;
+
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { Accept: "application/json" },
+    })
+      .then((res) => {
+        if (res.ok) {
+          form.reset();
+          showStatus("Message sent. Thanks for reaching out.");
+        } else {
+          showStatus("Something went wrong. Please email pxfixerjd@gmail.com directly.");
+        }
+      })
+      .catch(() => {
+        showStatus("Network error. Please email pxfixerjd@gmail.com directly.");
+      });
+  });
+
+// ======================
+
+if (typeof window.Swiper !== "undefined" && document.querySelector(".mySwiper")) {
+const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1.2, // Show a peek of the next card on mobile
+  spaceBetween: 20,
+  loop: false,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    // when window width is >= 768px (Tablet)
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 24,
+    },
+    // when window width is >= 1024px (Desktop)
+    1024: {
+      slidesPerView: 3, // Your requirement of 6 items
+      spaceBetween: 24,
+    },
+    // when window width is >= 1024px (Desktop)
+    1367: {
+      slidesPerView: 4, // Your requirement of 6 items
+      spaceBetween: 24,
+    },
+  },
+});
+
+const liveswiper = new Swiper(".liveSwiper", {
+  slidesPerView: 1.2, // Show a peek of the next card on mobile
+  spaceBetween: 20,
+  loop: false,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    // when window width is >= 768px (Tablet)
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 24,
+    },
+    // when window width is >= 1024px (Desktop)
+    1024: {
+      slidesPerView: 3, // Your requirement of 6 items
+      spaceBetween: 24,
+    },
+    // when window width is >= 1024px (Desktop)
+    1367: {
+      slidesPerView: 3, // Your requirement of 6 items
+      spaceBetween: 24,
+    },
+  },
+});
+}

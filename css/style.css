@@ -400,3 +400,11 @@ footer {
         transform: scale(1.8);
     }
 }
+/* Selected Work: 3 cards per row on large screens (2 on tablet, 1 on mobile) */
+@media (min-width: 1280px) {
+  .portfolio-items.portfolio-items { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; align-items: stretch; }
+  .portfolio-items .featureWrapper { padding: 1.5rem; }
+  .portfolio-items .featureWrapper h2 { font-size: 1.75rem; line-height: 2.1rem; }
+  .portfolio-items .featureWrapper .flex.gap-4 { flex-wrap: wrap; column-gap: 1.25rem; }
+  .portfolio-items .featureWrapper .flex.gap-4 a { font-size: 1.125rem; white-space: nowrap; }
+}

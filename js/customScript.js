@@ -157,7 +157,7 @@ gsap.utils.toArray(".counter").forEach((counter) => {
         once: true,
       },
       onUpdate() {
-        counter.innerText = Math.floor(counter.innerText) + "+";
+        counter.innerText = Math.floor(counter.innerText) + (counter.dataset.suffix ?? "+");
       },
     },
   );
