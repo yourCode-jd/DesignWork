@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!hasGsap) window.addEventListener("load", revealPage, { once: true });
   // Network or third-party failures must never leave a full-page loader in place.
-  window.setTimeout(revealPage, 2500);
+  window.setTimeout(revealPage, 300);
 });
 
 // ======================
@@ -89,7 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
       timeline.to(loader, { opacity: 0, scale: 0.8, duration: 0.8 }).add(() => loader.remove());
     }
     timeline.add(() => gsap.set(hero, { opacity: 1, pointerEvents: "auto" }));
-    timeline.add(() => runWhenIdle(initHeroAnimation));
   };
   window.addEventListener("load", startAnimation, { once: true });
 });
@@ -203,24 +202,7 @@ gsap.utils.toArray(".gridImg").forEach((img) => {
 // ======================
 // About text reveal
 // ======================
-gsap.utils.toArray(".text-reveal").forEach((section) => {
-  const texts = section.querySelectorAll("h1, h2, h3, h4, h5, h6, p, li, span");
-
-  texts.forEach((el) => {
-    gsap.set(el, { backgroundSize: "0% 100%" });
-
-    gsap.to(el, {
-      backgroundSize: "100% 100%",
-      ease: "none",
-      scrollTrigger: {
-        trigger: section,
-        start: "top center",
-        end: "bottom 50%",
-        scrub: true,
-      },
-    });
-  });
-});
+// Text is shown immediately (no scroll-scrubbed reveal) so it is readable on first view.
 
 // ======================
 // Portfolio cards
